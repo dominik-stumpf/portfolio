@@ -16,17 +16,23 @@ const FontMono = JetBrains_Mono({
   weight: 'variable',
 });
 
-export const dynamic = 'force-dynamic';
 export const metadata: Metadata = {
-  title: 'portfolio',
-  description: "Dominik Stumpf's personal portfoio.",
-  applicationName: 'portfolio',
-  manifest: '/manifest.webmanifest',
-  robots: {
-    follow: true,
-    index: true,
+  title: 'Dominik Stumpf',
+  description: 'Minimalist personal portfolio',
+  applicationName: 'Dominik Stumpf - Portfolio',
+  icons: {
+    icon: '/favicon.svg',
+    apple: '/images/icons/icon-128x128.png',
+    shortcut: '/images/icons/icon-72x72.png',
   },
-  icons: { icon: '/favicon.svg', apple: '/assets/icons/icon-128x128.png' },
+  keywords: ['portfolio', 'resume', 'article'],
+  creator: 'Dominik Stumpf',
+  authors: [
+    {
+      name: 'Dominik Stumpf',
+      url: 'https://dominikstumpf.com',
+    },
+  ],
 };
 
 export const viewport: Viewport = {

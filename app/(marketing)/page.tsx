@@ -248,7 +248,7 @@ export default function LandingPage() {
             </p>
             <ul className="not-prose flex flex-wrap gap-6">
               {platformLinks.map(({ href, Icon, name }) => (
-                <li>
+                <li key={name}>
                   <Link
                     href={href}
                     target="_blank"
