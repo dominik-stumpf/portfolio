@@ -2,7 +2,6 @@ import { useEffect, useState, useMemo } from 'react';
 import { targetTimeZone } from '@/site-data';
 
 const updateFrequencyMs = 1000;
-// const targetTimezone = "Asia/Tokyo";
 
 // source: https://stackoverflow.com/a/74377652
 function getTimeZoneOffsetHour(date: Date, timeZone: string) {

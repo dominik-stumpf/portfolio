@@ -1,17 +1,11 @@
 import { Codewars } from '@/components/icons';
 import { TimeOffsetIndicator } from '@/components/time-offset-indicator';
 import { links, webStack } from '@/site-data';
-import { Codesandbox, Github, Linkedin, Mail } from 'lucide-react';
+import { Codesandbox, Copyright, Github, Linkedin } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const platformLinks = [
-  {
-    href: 'mailto:s.dominik.work@gmail.com',
-    name: 'Email',
-    Icon: Mail,
-    username: 's.dominik.work@gmail.com',
-  },
   {
     href: 'https://github.com/dominik-stumpf',
     name: 'Github',
@@ -38,6 +32,13 @@ const platformLinks = [
   },
 ];
 
+function stripHrefProtocol(href: string) {
+  return href
+    .split(/[a-z]+:(\/\/)?/g)
+    .slice(1)
+    .join('');
+}
+
 export default function LandingPage() {
   return (
     <main className="flex min-h-dvh flex-col items-center overflow-hidden px-3 py-16 saturate-0 sm:px-4 md:px-6 lg:px-8 lg:py-24">
@@ -49,7 +50,8 @@ export default function LandingPage() {
           </div>
         </header>
         <blockquote className="-mt-4 hidden print:block">
-          Note: This is a printed version of my portfolio you can find on{' '}
+          Note: This is a printed version of my portfolio website and some of
+          it's content has been redacted. You can find it on{' '}
           <Link
             href={links.portfolio}
             target="_blank"
@@ -92,18 +94,25 @@ export default function LandingPage() {
           </Link>{' '}
           you are looking at
         </p>
-
         <h2>My web stack</h2>
         <p>
-          These are the technologies I have worked with so far, have experience
-          with:
+          These are the technologies I have worked with so far, they are my
+          daily drivers, my toolbox:
         </p>
         <ul>
           {webStack.map((item) => (
             <li key={item}>{item}</li>
           ))}
         </ul>
-
+        <blockquote>
+          <p>
+            I Write React code, familiarize myself with the ecosystem. Reason
+            being not because I like it, but because of the industry demand. I
+            do have some negative opinion about JSX, virtual DOM and how the
+            framework is. That said, I am open for alternatives.
+          </p>
+        </blockquote>
+        <h2>Beyond the web</h2>
         <figure className="print:hidden">
           <Image
             src="https://picsum.photos/1920/1080"
@@ -115,7 +124,6 @@ export default function LandingPage() {
             Lil' pocket notebook of mine when struggling trough the algorithms.
           </figcaption>
         </figure>
-
         <p>
           When I’m not making websites though, I like to learn new tricks for my
           linux and{' '}
@@ -147,25 +155,96 @@ export default function LandingPage() {
             of Code problem.
           </figcaption>
         </figure>
+        <h2>Bullet of facts & motivation</h2>
+        <p>
+          I have collected a number of bullets for describing what I do, what I
+          do not do and information about this page.
+        </p>
+        <h3>Features of this portfolio:</h3>
+
+        <ul>
+          <li>
+            <Link href="/dominik-stumpf-resume-a4.pdf" target="_blank">
+              Printable.
+            </Link>
+            <p>
+              Hit <kbd>Ctrl</kbd> + <kbd>P</kbd> to try. Enable light mode
+              before that if you value the ink.
+            </p>
+          </li>
+          <li>Accessible.</li>
+          <li>Responsive.</li>
+          <li>Fast. Reaaally fast. - No mobile killer 60fps noise for you!</li>
+          <li>
+            Fabulous UX. - Legible text that is typographically correct.
+            (pleasant to read)
+          </li>
+          <li>Lightweight - I keep my bits, and you keep your money.</li>
+          <li>
+            SEO, LCP, FCP, PWA - I got them all.
+            <p>
+              On Chrome hit <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> or{' '}
+              <kbd>F12</kbd> and run lighthouse to see for yourself.
+            </p>
+          </li>
+        </ul>
+        <p>
+          Expect these from me. You can find additional information in more
+          detail in the{' '}
+          <Link
+            href={links.portfolioRepo}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <code>README.md</code>
+          </Link>{' '}
+          file.
+        </p>
+        <h3>What I do:</h3>
+        <ul>
+          <li>Code for fun. Like this piece of magic.</li>
+          <li>
+            Continue learning anything that makes me excited. <i>*wink*</i>
+          </li>
+        </ul>
+        <h3>What I am not willing to do:</h3>
+        <ul>
+          <li>
+            <strong>Write unsafe or untyped JavaScript code</strong>, TypeScript
+            is the way to go.
+          </li>
+          <li>
+            Touch anything{' '}
+            <abbr title="Internet Explorer" className="">
+              IE
+            </abbr>{' '}
+            related. I don't even know what that is, <em>nor should you</em>.
+          </li>
+          <li>
+            Designing a whole page all by myself. It is a limitation: I am just
+            simply not cut out for it. I do components and logic.
+          </li>
+          <li>
+            Hold you up any longer. <i>*paintbrush drop*</i>
+          </li>
+        </ul>
         <hr />
         <footer>
           <h2>Contact information</h2>
-          <p>
-            Our timezone situation: <TimeOffsetIndicator />
-          </p>
+          <TimeOffsetIndicator />
           <address className="">
-            <p>Written by Dominik Stumpf, you can contact me through:</p>
-            <ul className="not-prose space-y-4">
-              {platformLinks.map(({ name, href, username, Icon }) => (
+            <p>
+              This portfolio was written by{' '}
+              <Copyright className="inline size-4" /> Dominik Stumpf. You can
+              contact me directly through{' '}
+              <Link href={links.email}>{stripHrefProtocol(links.email)}</Link>{' '}
+              or you may also find me on other platforms:
+            </p>
+            <ul className="not-prose flex flex-wrap gap-6">
+              {platformLinks.map(({ href, Icon }) => (
                 <li>
-                  <Link
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-foreground underline"
-                  >
-                    <Icon className="size-5" />
-                    <span>{username}</span>
+                  <Link href={href} target="_blank" rel="noopener noreferrer">
+                    <Icon />
                   </Link>
                 </li>
               ))}
@@ -176,22 +255,3 @@ export default function LandingPage() {
     </main>
   );
 }
-// <div className="grid sm:grid-cols-2 gap-4">
-// 	{platformLinks.map(({ name, href, username, Icon }) => (
-// 		<li key={name}>
-// 			<Link
-// 				key={name}
-// 				href={href}
-// 				target="_blank"
-// 				rel="noopener noreferrer"
-// 				className="flex flex-wrap items-center gap-4 overflow-hidden rounded border p-4 px-8 bg-background"
-// 			>
-// 				<Icon className="dark:stroke-white stroke-black" />
-// 				<div className="flex min-w-0 flex-col whitespace-nowrap leading-snug">
-// 					<div className="font-bold">{username}</div>
-// 					<div className="text-muted-foreground">{name}</div>
-// 				</div>
-// 			</Link>
-// 		</li>
-// 	))}
-// </div>

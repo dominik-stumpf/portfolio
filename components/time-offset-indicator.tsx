@@ -11,9 +11,14 @@ export function TimeOffsetIndicator({ className }: { className?: string }) {
   }
 
   return (
-    <div className={cn('flex flex-wrap gap-2', className)}>
-      <span className="font-mono font-bold">{targetTime}</span>
-      <span>- {timeZoneOffset}</span>
-    </div>
+    <p className="print:hidden">
+      Our time situation:
+      <div className={cn('flex flex-wrap gap-2', className)}>
+        <time className="font-mono font-bold" dateTime={targetTime}>
+          {targetTime}
+        </time>
+        <span>- {timeZoneOffset}</span>
+      </div>
+    </p>
   );
 }
