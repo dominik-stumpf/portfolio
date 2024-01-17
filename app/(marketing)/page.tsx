@@ -138,8 +138,8 @@ export default function LandingPage() {
           <Link href={links.codewars} target="_blank" rel="noopener noreferrer">
             codewars
           </Link>{' '}
-          for good measure. I also enjoy{' '}
-          <em>learning the smart programming language: Rust.</em>
+          for good measure. I also <em>enjoy learning</em> the smart programming
+          language: <i>Rust</i>.
         </p>
         <figure className="print:hidden">
           <video
@@ -164,9 +164,11 @@ export default function LandingPage() {
 
         <ul>
           <li>
-            <Link href="/dominik-stumpf-resume-a4.pdf" target="_blank">
-              Printable.
-            </Link>
+            <p>
+              <Link href="/dominik-stumpf-resume-a4.pdf" target="_blank">
+                Printable.
+              </Link>
+            </p>
             <p>
               Hit <kbd>Ctrl</kbd> + <kbd>P</kbd> to try. Enable light mode
               before that if you value the ink.
@@ -176,12 +178,16 @@ export default function LandingPage() {
           <li>Responsive.</li>
           <li>Fast. Reaaally fast. - No mobile killer 60fps noise for you!</li>
           <li>
-            Fabulous UX. - Legible text that is typographically correct.
-            (pleasant to read)
+            <p>Fabulous UX.</p>
+            <p>
+              Legible text that is typographically correct (pleasant to read). I
+              consider myself a practicioner of typography and I am fascinated
+              by the visual of mere static text.
+            </p>
           </li>
           <li>Lightweight - I keep my bits, and you keep your money.</li>
           <li>
-            SEO, LCP, FCP, PWA - I got them all.
+            <p>SEO, LCP, FCP, PWA - I got them all.</p>
             <p>
               On Chrome hit <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> or{' '}
               <kbd>F12</kbd> and run lighthouse to see for yourself.
