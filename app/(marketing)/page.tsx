@@ -247,9 +247,14 @@ export default function LandingPage() {
               or you may also find me on other platforms:
             </p>
             <ul className="not-prose flex flex-wrap gap-6">
-              {platformLinks.map(({ href, Icon }) => (
+              {platformLinks.map(({ href, Icon, name }) => (
                 <li>
-                  <Link href={href} target="_blank" rel="noopener noreferrer">
+                  <Link
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={name}
+                  >
                     <Icon />
                   </Link>
                 </li>
