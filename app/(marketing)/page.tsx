@@ -2,30 +2,31 @@ import { Codewars } from '@/components/icons';
 import { TimeOffsetIndicator } from '@/components/time-offset-indicator';
 import { links, webStack } from '@/site-data';
 import { Codesandbox, Copyright, Github, Linkedin } from 'lucide-react';
+import notebookImage from '@/public/images/notebook.jpg';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const platformLinks = [
   {
-    href: 'https://github.com/dominik-stumpf',
+    href: links.github,
     name: 'Github',
     Icon: Github,
     username: 'dominik-stumpf',
   },
   {
-    href: 'https://linkedin.com/in/dominik-stumpf',
+    href: links.linkedin,
     name: 'LinkedIn',
     Icon: Linkedin,
     username: 'in/dominik-stumpf',
   },
   {
-    href: 'https://codesandbox.io/u/dominik-stumpf',
+    href: links.codesandbox,
     name: 'CodeSandbox',
     Icon: Codesandbox,
     username: 'u/dominik-stumpf',
   },
   {
-    href: 'https://codewars.com/users/sdomi',
+    href: links.codewars,
     name: 'Codewars',
     Icon: Codewars,
     username: 'users/sdomi',
@@ -51,7 +52,7 @@ export default function LandingPage() {
         </header>
         <blockquote className="-mt-4 hidden print:block">
           Note: This is a printed version of my portfolio website and some of
-          it's content has been redacted. You can find it on{' '}
+          its content has been redacted. You can find it on{' '}
           <Link
             href={links.portfolio}
             target="_blank"
@@ -76,7 +77,7 @@ export default function LandingPage() {
           and graphics programming.
         </p>
         <p>
-          Nowadays I create side projects like this{' '}
+          Nowadays I create projects like this{' '}
           <Link
             href={links.postPaper}
             target="_blank"
@@ -92,7 +93,12 @@ export default function LandingPage() {
           >
             portfolio
           </Link>{' '}
-          you are looking at
+          you are looking at. I am all-in for open source, as such most of the
+          work I do is available on my{' '}
+          <Link href={links.github} target="_blank" rel="noopener noreferrer">
+            Github
+          </Link>
+          .
         </p>
         <h2>My web stack</h2>
         <p>
@@ -109,38 +115,55 @@ export default function LandingPage() {
             I Write React code, familiarize myself with the ecosystem. Reason
             being not because I like it, but because of the industry demand. I
             do have some negative opinion about JSX, virtual DOM and how the
-            framework is. That said, I am open for alternatives.
+            framework is. That said, I am open to alternatives.
           </p>
         </blockquote>
+
+        <figure className="print:hidden">
+          <video
+            src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+            poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+            autoPlay
+            loop
+            muted
+            className="w-full"
+          />
+          <figcaption>
+            The process of designing the logo for this website in Figma.
+          </figcaption>
+        </figure>
         <h2>Beyond the web</h2>
+
+        <p>
+          When I’m not making websites though, I like to learn new tricks for my
+          Linux and{' '}
+          <Link href={links.nvimRepo} target="_blank" rel="noopener noreferrer">
+            Neovim setup
+          </Link>
+          , help out elves at{' '}
+          <Link href={links.aocRepo} target="_blank" rel="noopener noreferrer">
+            Advent of Code
+          </Link>{' '}
+          and sometimes do{' '}
+          <Link href={links.codewars} target="_blank" rel="noopener noreferrer">
+            Codewars
+          </Link>{' '}
+          for good measure. I also <em>enjoy learning</em> the smart programming
+          language: Rust.
+        </p>
         <figure className="print:hidden">
           <Image
-            src="https://picsum.photos/1920/1080"
-            alt="notebook with algorithms in it"
+            src={notebookImage}
+            placeholder="blur"
+            alt="notebook with math and algorithms in it"
             height={1920}
             width={1080}
           />
           <figcaption>
-            Lil' pocket notebook of mine when struggling trough the algorithms.
+            Lil' pocket notebook of mine when struggling through the algorithms.
+            No clue what is in there lol.
           </figcaption>
         </figure>
-        <p>
-          When I’m not making websites though, I like to learn new tricks for my
-          linux and{' '}
-          <Link href={links.nvimRepo} target="_blank" rel="noopener noreferrer">
-            neovim setup
-          </Link>
-          , help out elves at{' '}
-          <Link href={links.aocRepo} target="_blank" rel="noopener noreferrer">
-            advent of code
-          </Link>{' '}
-          and sometimes do{' '}
-          <Link href={links.codewars} target="_blank" rel="noopener noreferrer">
-            codewars
-          </Link>{' '}
-          for good measure. I also <em>enjoy learning</em> the smart programming
-          language: <i>Rust</i>.
-        </p>
         <figure className="print:hidden">
           <video
             src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
@@ -155,48 +178,94 @@ export default function LandingPage() {
             of Code problem.
           </figcaption>
         </figure>
-        <h2>Bullet of facts & motivation</h2>
+        <h2>Motivation & facts I stand by</h2>
         <p>
-          I have collected a number of bullets for describing what I do, what I
-          do not do and information about this page.
+          I have collected several bullets to give you an idea of what I do,
+          what I do not do and some general information about this page.
         </p>
         <h3>Features of this portfolio:</h3>
 
         <ul>
           <li>
             <p>
-              <Link href="/dominik-stumpf-resume-a4.pdf" target="_blank">
-                Printable.
-              </Link>
+              <strong>
+                <Link href="/dominik-stumpf-resume-a4.pdf" target="_blank">
+                  Printable.
+                </Link>
+              </strong>
             </p>
             <p>
               Hit <kbd>Ctrl</kbd> + <kbd>P</kbd> to try. Enable light mode
               before that if you value the ink.
             </p>
           </li>
-          <li>Accessible.</li>
-          <li>Responsive.</li>
-          <li>Fast. Reaaally fast. - No mobile killer 60fps noise for you!</li>
           <li>
-            <p>Fabulous UX.</p>
             <p>
-              Legible text that is typographically correct (pleasant to read). I
-              consider myself a practicioner of typography and I am fascinated
-              by the visual of mere static text.
+              <strong>Accessible & Responsive.</strong>
+            </p>
+            <p>
+              I realize it is just text, but hey, that is a{' '}
+              <strong>benefit of simplicity</strong>. I use{' '}
+              <Link
+                href="https://www.radix-ui.com/primitives"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Radix UI
+              </Link>{' '}
+              to ensure that interactive parts are accessible across platforms
+              and to keep my sanity by avoiding to write <em>very tedious</em>{' '}
+              logic.
             </p>
           </li>
-          <li>Lightweight - I keep my bits, and you keep your money.</li>
           <li>
-            <p>SEO, LCP, FCP, PWA - I got them all.</p>
+            <p>
+              <strong>Fast. Reaaally fast.</strong>
+            </p>
+            <p>No mobile killer 60 FPS noise for you!</p>
+          </li>
+          <li>
+            <p>
+              <strong>Code quality assurance.</strong>
+            </p>
+            <p>
+              I Create my workspace, setup my tools. Doing my best to{' '}
+              <em>keep my work reusable, trackable, maintainable</em>. That is
+              why I use commitlint and pre-commit hook with strict linter and
+              formatter to stay consistent.
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Fabulous UX.</strong>
+            </p>
+            <p>
+              Legible text that is typographically correct (pleasant to read).
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>Lightweight.</strong>
+            </p>
+            <p>
+              I keep my bits, and you keep your money.{' '}
+              <i>*cellular data cheer*</i>
+            </p>
+          </li>
+          <li>
+            <p>
+              <strong>SEO, LCP, FCP, PWA - I got them all.</strong>
+            </p>
             <p>
               On Chrome hit <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> or{' '}
-              <kbd>F12</kbd> and run lighthouse to see for yourself.
+              <kbd>F12</kbd> and on the Lighthouse tab click "Analyze page load"
+              to see for yourself.
             </p>
           </li>
         </ul>
         <p>
-          Expect these from me. You can find additional information in more
-          detail in the{' '}
+          Yes, that is me. You can find additional information in more detail in
+          this{' '}
           <Link
             href={links.portfolioRepo}
             target="_blank"
@@ -209,9 +278,12 @@ export default function LandingPage() {
         <h3>What I do:</h3>
         <ul>
           <li>Code for fun. Like this piece of magic.</li>
+
           <li>
-            Continue learning anything that makes me excited. <i>*wink*</i>
+            Continue learning <em>anything</em> that makes me excited.{' '}
+            <i>*wink*</i>
           </li>
+          <li>Use tailwindcss everywhere.</li>
         </ul>
         <h3>What I am not willing to do:</h3>
         <ul>

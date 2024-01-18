@@ -16,7 +16,7 @@ export const webStack = [
   'React',
   'Nextjs 13+',
   'Supabase (PostgreSQL)',
-  'RadixUI',
+  'Radix UI',
 ] as const;
 
 export const targetTimeZone = 'Europe/Budapest';
