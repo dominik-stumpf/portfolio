@@ -119,19 +119,6 @@ export default function LandingPage() {
           </p>
         </blockquote>
 
-        <figure className="print:hidden">
-          <video
-            src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
-            poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
-            autoPlay
-            loop
-            muted
-            className="w-full"
-          />
-          <figcaption>
-            The process of designing the logo for this website in Figma.
-          </figcaption>
-        </figure>
         <h2>Beyond the web</h2>
 
         <p>
@@ -156,29 +143,23 @@ export default function LandingPage() {
             src={notebookImage}
             placeholder="blur"
             alt="notebook with math and algorithms in it"
-            height={1920}
-            width={1080}
+            sizes="40vw, (min-width: 768px) 768px"
           />
           <figcaption>
             Lil' pocket notebook of mine when struggling through the algorithms.
-            No clue what is in there lol.
+            No clue what is in there.
           </figcaption>
         </figure>
         <figure className="print:hidden">
-          <video
-            src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
-            poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
-            autoPlay
-            loop
-            muted
-            className="w-full"
-          />
+          <video autoPlay loop muted className="w-full" playsInline>
+            <source src="/videos/aoc-visualizer-avc.mp4" type="video/mp4" />
+          </video>
           <figcaption>
             Pathfinder terminal visualization I made to aid myself in an Advent
             of Code problem.
           </figcaption>
         </figure>
-        <h2>Motivation & facts I stand by</h2>
+        <h2>Facts & Motivation</h2>
         <p>
           I have collected several bullets to give you an idea of what I do,
           what I do not do and some general information about this page.
