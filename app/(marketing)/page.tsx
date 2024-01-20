@@ -1,37 +1,9 @@
-import { Codewars } from '@/components/icons';
 import { TimeOffsetIndicator } from '@/components/time-offset-indicator';
 import { links, webStack } from '@/site-data';
-import { Codesandbox, Copyright, Github, Linkedin } from 'lucide-react';
 import notebookImage from '@/public/images/notebook.jpg';
 import Image from 'next/image';
 import Link from 'next/link';
-
-const platformLinks = [
-  {
-    href: links.github,
-    name: 'Github',
-    Icon: Github,
-    username: 'dominik-stumpf',
-  },
-  {
-    href: links.linkedin,
-    name: 'LinkedIn',
-    Icon: Linkedin,
-    username: 'in/dominik-stumpf',
-  },
-  {
-    href: links.codesandbox,
-    name: 'CodeSandbox',
-    Icon: Codesandbox,
-    username: 'u/dominik-stumpf',
-  },
-  {
-    href: links.codewars,
-    name: 'Codewars',
-    Icon: Codewars,
-    username: 'users/sdomi',
-  },
-];
+import { platformLinks } from './platformLinks';
 
 function stripHrefProtocol(href: string) {
   return href
@@ -64,20 +36,19 @@ export default function LandingPage() {
           This file was generated at {new Date().toUTCString()}
         </blockquote>
         <p className="lead">
-          Hi! I am a self-taught computer nerd who has an evergrowing interest
-          in the realm of software engineering, however{' '}
-          <strong>focuses on web development</strong> when it comes to working
-          for others.
+          Hi! I am a self-taught computer nerd who primarily{' '}
+          <strong>focuses on web development</strong> while having an
+          ever-growing interest in the realm of software engineering.
         </p>
         <h2>Let's paint a picture</h2>
         <p>
-          I started as a hobbists, learning Python, hacking my way through
-          terminals, doing goofy stuff. Later it became more serious and I
+          I started as a hobbyist, learning Python, hacking my way through
+          terminals, doing goofy stuff. Later it became more serious, and I
           gained interest in fields like game development, back-end, front-end
           and graphics programming.
         </p>
         <p>
-          Nowadays I create projects like this{' '}
+          Nowadays, I create projects like a{' '}
           <Link
             href={links.postPaper}
             target="_blank"
@@ -85,7 +56,7 @@ export default function LandingPage() {
           >
             posting platform prototype
           </Link>{' '}
-          or the{' '}
+          named PostPaper or the{' '}
           <Link
             href={links.portfolioRepo}
             target="_blank"
@@ -112,10 +83,8 @@ export default function LandingPage() {
         </ul>
         <blockquote>
           <p>
-            I Write React code, familiarize myself with the ecosystem. Reason
-            being not because I like it, but because of the industry demand. I
-            do have some negative opinion about JSX, virtual DOM and how the
-            framework is. That said, I am open to alternatives.
+            I am familiar with React the most, however, I do sometimes favor to
+            use alternatives like SolidJS or Svelte.
           </p>
         </blockquote>
 
@@ -159,13 +128,11 @@ export default function LandingPage() {
             of Code problem.
           </figcaption>
         </figure>
-        <h2>Facts & Motivation</h2>
+        <h2>Features of this portfolio:</h2>
         <p>
-          I have collected several bullets to give you an idea of what I do,
-          what I do not do and some general information about this page.
+          Here are several bullets to give you an idea of how I can make a nice
+          web experience.
         </p>
-        <h3>Features of this portfolio:</h3>
-
         <ul>
           <li>
             <p>
@@ -182,7 +149,7 @@ export default function LandingPage() {
           </li>
           <li>
             <p>
-              <strong>Accessible & Responsive.</strong>
+              <strong>Accessible & responsive.</strong>
             </p>
             <p>
               I realize it is just text, but hey, that is a{' '}
@@ -195,23 +162,37 @@ export default function LandingPage() {
                 Radix UI
               </Link>{' '}
               to ensure that interactive parts are accessible across platforms
-              and to keep my sanity by avoiding to write <em>very tedious</em>{' '}
+              and to keep my sanity by avoiding writing <em>very tedious</em>{' '}
               logic.
             </p>
           </li>
           <li>
             <p>
-              <strong>Fast. Reaaally fast.</strong>
+              <strong>Lightweight & fast.</strong>
             </p>
-            <p>No mobile killer 60 FPS noise for you!</p>
+            <p>
+              No mobile killer 60 FPS noise for you! Image and video assets are{' '}
+              <Link
+                href={links.portfolioRepo}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <em>properly optimized</em>
+              </Link>{' '}
+              for web usage.
+            </p>
+            <p>
+              I keep my bits, and you keep your money.{' '}
+              <i>*cellular data cheer*</i>
+            </p>
           </li>
           <li>
             <p>
               <strong>Code quality assurance.</strong>
             </p>
             <p>
-              I Create my workspace, setup my tools. Doing my best to{' '}
-              <em>keep my work reusable, trackable, maintainable</em>. That is
+              I Create my workspace, setup my tools. Doing my best to keep my
+              work <strong>reusable, trackable, maintainable</strong>. That is
               why I use commitlint and pre-commit hook with strict linter and
               formatter to stay consistent.
             </p>
@@ -226,37 +207,28 @@ export default function LandingPage() {
           </li>
           <li>
             <p>
-              <strong>Lightweight.</strong>
-            </p>
-            <p>
-              I keep my bits, and you keep your money.{' '}
-              <i>*cellular data cheer*</i>
-            </p>
-          </li>
-          <li>
-            <p>
               <strong>SEO, LCP, FCP, PWA - I got them all.</strong>
             </p>
             <p>
-              On Chrome hit <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>C</kbd> or{' '}
+              On Chrome hit <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> or{' '}
               <kbd>F12</kbd> and on the Lighthouse tab click "Analyze page load"
               to see for yourself.
             </p>
           </li>
         </ul>
         <p>
-          Yes, that is me. You can find additional information in more detail in
-          this{' '}
+          You can find additional information in more detail in the project
+          repo's{' '}
           <Link
             href={links.portfolioRepo}
             target="_blank"
             rel="noopener noreferrer"
           >
             <code>README.md</code>
-          </Link>{' '}
-          file.
+          </Link>
+          .
         </p>
-        <h3>What I do:</h3>
+        <h2>What I do:</h2>
         <ul>
           <li>Code for fun. Like this piece of magic.</li>
 
@@ -264,20 +236,33 @@ export default function LandingPage() {
             Continue learning <em>anything</em> that makes me excited.{' '}
             <i>*wink*</i>
           </li>
-          <li>Use tailwindcss everywhere.</li>
         </ul>
-        <h3>What I am not willing to do:</h3>
+        <pre>
+          <code>
+            {`
+ _______________________________________
+/ Hope is a good breakfast, but it is a \\
+| bad supper.                           |
+|                                       |
+\\ -- Francis Bacon                      /
+ ---------------------------------------
+        \\   ^__^
+         \\  (oo)\\_______
+            (__)\\       )\\/\\
+                ||----w |
+                ||     ||
+`}
+          </code>
+        </pre>
+        <h2>What I am not willing to do:</h2>
         <ul>
           <li>
             <strong>Write unsafe or untyped JavaScript code</strong>, TypeScript
             is the way to go.
           </li>
           <li>
-            Touch anything{' '}
-            <abbr title="Internet Explorer" className="">
-              IE
-            </abbr>{' '}
-            related. I don't even know what that is, <em>nor should you</em>.
+            Touch anything <abbr>IE</abbr> related. I don't even know what that
+            is, <em>nor should you</em>.
           </li>
           <li>
             Designing a whole page all by myself. It is a limitation: I am just
@@ -293,10 +278,9 @@ export default function LandingPage() {
           <TimeOffsetIndicator />
           <address className="">
             <p>
-              This portfolio was written by{' '}
-              <Copyright className="inline size-4" /> Dominik Stumpf. You can
-              contact me directly through{' '}
-              <Link href={links.email}>{stripHrefProtocol(links.email)}</Link>{' '}
+              This portfolio was written by Dominik Stumpf. You can contact me
+              directly through{' '}
+              <Link href={links.email}>{stripHrefProtocol(links.email)}</Link>,
               or you may also find me on other platforms:
             </p>
             <ul className="not-prose flex flex-wrap gap-6">

@@ -14,7 +14,7 @@ export const links = {
 export const webStack = [
   'Tailwindcss',
   'React',
-  'Nextjs 13+',
+  'NextJS 13+',
   'Supabase (PostgreSQL)',
   'Radix UI',
 ] as const;
