@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils';
 import '@/styles/globals.css';
 import type { Metadata, Viewport } from 'next';
 import { JetBrains_Mono, Work_Sans } from 'next/font/google';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const FontSans = Work_Sans({
   subsets: ['latin'],
@@ -66,6 +67,7 @@ export default function RootLayout({
         <ThemeProvider>
           <LenisWrapper>{children}</LenisWrapper>
         </ThemeProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
