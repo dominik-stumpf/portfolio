@@ -18,37 +18,42 @@ export default function LandingPage() {
       <article className="prose prose-neutral w-full max-w-prose dark:prose-invert lg:prose-lg print:prose-sm prose-h1:mb-2 prose-blockquote:rounded prose-blockquote:border-border prose-code:before:content-none prose-code:after:content-none prose-pre:rounded prose-pre:border prose-pre:bg-background prose-pre:text-foreground prose-img:rounded prose-img:border prose-video:rounded prose-video:border">
         <header>
           <h1>Dominik Stumpf</h1>
-          <div className="mb-8 lg:mb-10">
-            Software Engineer & Talented Individual
+          <div className="mb-8 text-xl font-extralight lowercase tracking-tight lg:mb-10 lg:text-2xl">
+            software engineer & talented individual
           </div>
         </header>
         <blockquote className="-mt-4 hidden print:block">
           Note: This is a printed version of my portfolio website and some of
-          its content has been redacted. You can find it on{' '}
+          its content has been redacted. You can find the full version on{' '}
           <Link
             href={links.portfolio}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <code>dominikstumpf.com</code>
+            dominikstumpf.com
           </Link>
           <br />
           This file was generated at {new Date().toUTCString()}
         </blockquote>
         <p className="lead">
-          Hi! I am a self-taught computer nerd who primarily{' '}
-          <strong>focuses on web development</strong> while having an
-          ever-growing interest in the realm of software engineering.
+          Hi! I am a self-taught computer nerd who enjoys{' '}
+          <strong>making websites for the internet</strong>, creating{' '}
+          <i>silly things</i>, and learning new technologies by the day.
         </p>
         <h2>Let's paint a picture</h2>
         <p>
-          I started as a hobbyist, learning Python, hacking my way through
-          terminals, doing goofy stuff. Later it became more serious, and I
+          Driven by curiosity, I started programming as a hobbyist, learning
+          Python, hacking my way through terminals, doing goofy stuff. I soon
+          became hooked on the concepts I learned and the{' '}
+          <strong>near endless possibilities</strong> computers deliver.
+        </p>
+        <p>
+          As time went on this hobby along with me became more serious, and I
           gained interest in fields like game development, back-end, front-end
           and graphics programming.
         </p>
         <p>
-          Nowadays, I create projects like a{' '}
+          Nowadays, I create projects like this{' '}
           <Link
             href={links.postPaper}
             target="_blank"
@@ -56,7 +61,7 @@ export default function LandingPage() {
           >
             posting platform prototype
           </Link>{' '}
-          named PostPaper or the{' '}
+          or the{' '}
           <Link
             href={links.portfolioRepo}
             target="_blank"
@@ -64,12 +69,12 @@ export default function LandingPage() {
           >
             portfolio
           </Link>{' '}
-          you are looking at. I am all-in for open source, as such most of the
-          work I do is available on my{' '}
+          you are looking at. Moreover, I am all-in for open source, as such
+          most of the work I do is available on my{' '}
           <Link href={links.github} target="_blank" rel="noopener noreferrer">
             Github
-          </Link>
-          .
+          </Link>{' '}
+          for anyone. <i>*cheer*</i>
         </p>
         <h2>My web stack</h2>
         <p>
@@ -83,13 +88,12 @@ export default function LandingPage() {
         </ul>
         <blockquote>
           <p>
-            I am familiar with React the most, however, I do sometimes favor to
-            use alternatives like SolidJS or Svelte.
+            I am familiar with React the most, however, I am open to
+            alternatives like SolidJS or Svelte when it comes to it.
           </p>
         </blockquote>
-
+        <hr />
         <h2>Beyond the web</h2>
-
         <p>
           When I’m not making websites though, I like to learn new tricks for my
           Linux and{' '}
@@ -116,7 +120,7 @@ export default function LandingPage() {
           />
           <figcaption>
             Lil' pocket notebook of mine when struggling through the algorithms.
-            No clue what is in there.
+            No clue what is in there. ¯\_( ͡❛ ͜ʖ ͡❛)_/¯
           </figcaption>
         </figure>
         <figure className="print:hidden">
@@ -143,8 +147,9 @@ export default function LandingPage() {
               </strong>
             </p>
             <p>
-              Hit <kbd>Ctrl</kbd> + <kbd>P</kbd> to try. Enable light mode
-              before that if you value the ink.
+              Note how some content appear and graphic sections disappear. Hit{' '}
+              <kbd>Ctrl</kbd> + <kbd>P</kbd> to try. Enable light mode before
+              that if you value the ink.
             </p>
           </li>
           <li>
@@ -191,9 +196,15 @@ export default function LandingPage() {
               <strong>Code quality assurance.</strong>
             </p>
             <p>
-              I Create my workspace, setup my tools. Doing my best to keep my
-              work <strong>reusable, trackable, maintainable</strong>. That is
-              why I use commitlint and pre-commit hook with strict linter and
+              I use{' '}
+              <Link
+                href="https://www.conventionalcommits.org/en/v1.0.0/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                conventional commits
+              </Link>{' '}
+              for structural history, pre-commit hooks with strict linter and a
               formatter to stay consistent.
             </p>
           </li>
@@ -233,8 +244,25 @@ export default function LandingPage() {
           <li>Code for fun. Like this piece of magic.</li>
 
           <li>
-            Continue learning <em>anything</em> that makes me excited.{' '}
-            <i>*wink*</i>
+            Continue learning <em>anything</em> that makes me excited.
+          </li>
+        </ul>
+        <h2>What I am not willing to do:</h2>
+        <ul>
+          <li>
+            <strong>Write unsafe or untyped JavaScript code</strong>, TypeScript
+            is the way to go.
+          </li>
+          <li>
+            Touch anything <abbr>IE</abbr> related. I don't even know what that
+            is, <em>nor should you</em>.
+          </li>
+          <li>
+            Designing a whole page all by myself. It is a limitation: I am just
+            simply not cut out for it. I do components and logic.
+          </li>
+          <li>
+            Hold you up any longer. <i>*paintbrush drop*</i>
           </li>
         </ul>
         <pre>
@@ -254,24 +282,6 @@ export default function LandingPage() {
 `}
           </code>
         </pre>
-        <h2>What I am not willing to do:</h2>
-        <ul>
-          <li>
-            <strong>Write unsafe or untyped JavaScript code</strong>, TypeScript
-            is the way to go.
-          </li>
-          <li>
-            Touch anything <abbr>IE</abbr> related. I don't even know what that
-            is, <em>nor should you</em>.
-          </li>
-          <li>
-            Designing a whole page all by myself. It is a limitation: I am just
-            simply not cut out for it. I do components and logic.
-          </li>
-          <li>
-            Hold you up any longer. <i>*paintbrush drop*</i>
-          </li>
-        </ul>
         <hr />
         <footer>
           <h2>Contact information</h2>
