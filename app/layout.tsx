@@ -18,7 +18,7 @@ const FontMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: 'Dominik Stumpf',
-  description: 'Minimalist personal portfolio',
+  description: 'Minimalist personal portfolio.',
   applicationName: 'Dominik Stumpf - Portfolio',
   icons: {
     icon: '/favicon.svg',
