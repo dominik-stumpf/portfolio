@@ -85,3 +85,7 @@
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-foreground/60;
 }
+
+a {
+  @apply inline-flex rounded ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+}
