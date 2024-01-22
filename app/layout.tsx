@@ -59,11 +59,11 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={cn([
-          'min-h-full bg-background font-sans text-foreground antialiased accent-primary selection:bg-foreground selection:text-background',
+        className={cn(
+          'min-h-screen bg-background font-sans text-foreground antialiased accent-primary selection:bg-foreground selection:text-background',
           FontMono.variable,
           FontSans.variable,
-        ])}
+        )}
       >
         <ThemeProvider>
           <LenisWrapper>{children}</LenisWrapper>

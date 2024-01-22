@@ -1,6 +1,7 @@
 import { TimeOffsetIndicator } from '@/components/time-offset-indicator';
-import { links, webStack } from '@/site-data';
 import notebookImage from '@/public/images/notebook.jpg';
+import { links, webStack } from '@/site-data';
+import { Command, Option } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { platformLinks } from './platformLinks';
@@ -14,7 +15,7 @@ function stripHrefProtocol(href: string) {
 
 export default function LandingPage() {
   return (
-    <main className="flex min-h-dvh flex-col items-center overflow-hidden px-3 py-16 saturate-0 sm:px-4 md:px-6 lg:px-8 lg:py-24">
+    <main className="flex min-h-dvh flex-col items-center overflow-hidden px-3 py-16 sm:px-4 md:px-6 lg:px-8 lg:py-24">
       <article className="prose prose-neutral w-full max-w-prose dark:prose-invert lg:prose-lg print:prose-sm prose-h1:mb-2 prose-blockquote:rounded prose-blockquote:border-border prose-code:before:content-none prose-code:after:content-none prose-pre:rounded prose-pre:border prose-pre:bg-background prose-pre:text-foreground prose-img:rounded prose-img:border prose-video:rounded prose-video:border">
         <header>
           <h1>Dominik Stumpf</h1>
@@ -148,8 +149,12 @@ export default function LandingPage() {
             </p>
             <p>
               Note how some content appear and graphic sections disappear. Hit{' '}
-              <kbd>Ctrl</kbd> + <kbd>P</kbd> to try. Enable light mode before
-              that if you value the ink.
+              <kbd>Ctrl</kbd> + <kbd>P</kbd> or{' '}
+              <kbd>
+                <Command className="inline size-4" />
+              </kbd>{' '}
+              + <kbd>P</kbd> (on macOS) to try. Enable light mode before that if
+              you value the ink.
             </p>
           </li>
           <li>
@@ -222,7 +227,18 @@ export default function LandingPage() {
             </p>
             <p>
               On Chrome hit <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> or{' '}
-              <kbd>F12</kbd> and on the Lighthouse tab click "Analyze page load"
+              <kbd>F12</kbd> or{' '}
+              <kbd>
+                <Option className="inline size-4" />
+              </kbd>{' '}
+              +{' '}
+              <kbd>
+                <Command className="inline size-4" />
+              </kbd>{' '}
+              + <kbd>I</kbd> (on macOS) and on the Lighthouse tab click{' '}
+              <samp>
+                <kbd>Analyze page load</kbd>
+              </samp>
               to see for yourself.
             </p>
           </li>
