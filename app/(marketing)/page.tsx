@@ -271,7 +271,7 @@ export default function LandingPage() {
                   <Command className="inline size-4" />
                 </kbd>{' '}
                 + <kbd>I</kbd> (on macOS) and on the Lighthouse tab click{' '}
-                <samp>
+                <samp className="not-prose">
                   <kbd>Analyze page load</kbd>
                 </samp>{' '}
                 to see for yourself.
@@ -364,11 +364,13 @@ export default function LandingPage() {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-4 border px-6 py-4"
+                    className="flex items-center gap-4 border px-6 py-4 not-italic"
                   >
                     <Icon />
                     <div className="flex flex-col leading-snug">
-                      <span className="font-semibold">{name}</span>
+                      <span className="font-semibold text-foreground">
+                        {name}
+                      </span>
                       <span>{username}</span>
                     </div>
                   </Link>
