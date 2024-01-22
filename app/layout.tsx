@@ -5,6 +5,7 @@ import '@/styles/globals.css';
 import type { Metadata, Viewport } from 'next';
 import { JetBrains_Mono, Work_Sans } from 'next/font/google';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/react';
 
 const FontSans = Work_Sans({
   subsets: ['latin'],
@@ -67,6 +68,7 @@ export default function RootLayout({
         <ThemeProvider>
           <LenisWrapper>{children}</LenisWrapper>
         </ThemeProvider>
+        <Analytics />
         <SpeedInsights />
       </body>
     </html>
