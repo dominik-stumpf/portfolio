@@ -1,10 +1,10 @@
 # portfolio
 
-## Video processing
+## Optimization
+
+### Video processing
 
 List ffmpeg commands used for video processing:
-
-### Compression
 
 1. **AVC** - MP4 (most preferred)
 
@@ -29,8 +29,6 @@ ffmpeg -i input.mp4 -c:v libvpx-vp9 -crf 40 -vf scale=728:-2 -deadline best -an 
 ```bash
 ffmpeg -i input.mp4 -c:v libaom-av1 -crf 30 -vf scale=728:-2 -an -r 30 output.mp4
 ```
-
-### Crop and trim
 
 Command for aoc clip:
 
