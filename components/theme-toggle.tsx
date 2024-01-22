@@ -1,7 +1,7 @@
 'use client';
 
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
-import { Computer, Moon, Sun } from 'lucide-react';
+import { Moon, Sun, SunMoon } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
@@ -33,7 +33,7 @@ export function ThemeToggle() {
         <Moon className="size-4" />
       </ToggleGroupItem>
       <ToggleGroupItem value="system" aria-label="Toggle system theme">
-        <Computer className="size-4" />
+        <SunMoon className="size-4" />
       </ToggleGroupItem>
     </ToggleGroup>
   );
