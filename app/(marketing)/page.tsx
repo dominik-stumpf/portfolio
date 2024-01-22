@@ -5,6 +5,7 @@ import { Command, Option } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { platformLinks } from './platformLinks';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 function stripHrefProtocol(href: string) {
   return href
@@ -141,6 +142,19 @@ export default function LandingPage() {
         <ul>
           <li>
             <p>
+              <strong>Multiple themes.</strong>
+            </p>
+            <p>
+              By default, system theme is used and you can have as many as you
+              want using the combination of CSS variables and media queries.
+              Note how the selected theme is maintained between page visits.
+            </p>
+            <div className="inline-flex print:hidden">
+              <ThemeToggle />
+            </div>
+          </li>
+          <li>
+            <p>
               <strong>
                 <Link href="/dominik-stumpf-resume-a4.pdf" target="_blank">
                   Printable.
@@ -148,13 +162,13 @@ export default function LandingPage() {
               </strong>
             </p>
             <p>
-              Note how some content appear and graphic sections disappear. Hit{' '}
-              <kbd>Ctrl</kbd> + <kbd>P</kbd> or{' '}
+              Hit <kbd>Ctrl</kbd> + <kbd>P</kbd> or{' '}
               <kbd>
                 <Command className="inline size-4" />
               </kbd>{' '}
               + <kbd>P</kbd> (on macOS) to try. Enable light mode before that if
-              you value the ink.
+              you value the ink. Note how some content appear and interactive /
+              graphic sections disappear.
             </p>
           </li>
           <li>
