@@ -50,16 +50,16 @@
     --ring: 0 0% 83.1%;
 
     --dimmed-foreground: 210 2% 76%;
-
-    video,
-    img {
-      filter: brightness(0.8) contrast(1.2);
-    }
   }
 
   * {
     @apply border-border;
   }
+}
+
+.dark video,
+.dark img {
+  filter: brightness(0.8) contrast(1.2);
 }
 
 .lenis.lenis-smooth {
