@@ -40,8 +40,8 @@ export default function LandingPage() {
         </blockquote>
         <p className="lead">
           Hi! I am a self-taught computer nerd who enjoys{' '}
-          <strong>making websites for the internet</strong>, creating{' '}
-          <i>silly things</i>, and learning new technologies by the day.
+          <strong>making websites for the internet</strong>, creating silly
+          things, and learning new technologies by the day.
         </p>
         <section id="biography">
           <h2>Let's paint a picture</h2>
@@ -294,7 +294,9 @@ export default function LandingPage() {
         <section id="fyi">
           <h2>What I do:</h2>
           <ul>
-            <li>Code for fun. Like this piece of magic.</li>
+            <li>
+              Code for fun. Like this <em>piece of magic.</em>
+            </li>
 
             <li>
               Continue learning <em>anything</em> that makes me excited.
