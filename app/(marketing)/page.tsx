@@ -136,7 +136,7 @@ export default function LandingPage() {
               src={notebookImage}
               placeholder="blur"
               alt="notebook with math and algorithms in it"
-              sizes="40vw, (min-width: 768px) 768px"
+              sizes="(min-width: 768px) 730px, 85vw"
             />
             <figcaption>
               Lil' pocket notebook of mine when struggling through the
