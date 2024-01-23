@@ -14,7 +14,8 @@
         "noUnusedVariables": "warn"
       },
       "nursery": {
-        "all": true
+        "all": true,
+        "useForOf": "off"
       },
       "suspicious": {
         "noRedundantUseStrict": "off"
