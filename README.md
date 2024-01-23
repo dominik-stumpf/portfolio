@@ -4,7 +4,7 @@
 
 ### Image
 
-```ts
+```tsx
 <Image
   src={notebookImage}
   placeholder="blur"
@@ -23,7 +23,8 @@ iPhone 14 Pro Max (DPR-3):
 
 ![iPhone 14 Pro Max](/showcase/image-scaling-iphone-14-pro-max-dpr-3.png)
 
-> [!Note] Since the iPhone 14 has a DPR of 3, the intrinsic size is also tripled.
+> [!NOTE]
+> Since the iPhone 14 has a DPR of 3, the intrinsic size is also tripled.
 
 ### Video
 
