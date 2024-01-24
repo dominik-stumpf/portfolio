@@ -1,3 +1,4 @@
+import { ThemeToggle } from '@/components/theme-toggle';
 import { TimeOffsetIndicator } from '@/components/time-offset-indicator';
 import notebookImage from '@/public/images/notebook.jpg';
 import { links, webStack } from '@/site-data';
@@ -5,7 +6,6 @@ import { Command, Option } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { platformLinks } from './platformLinks';
-import { ThemeToggle } from '@/components/theme-toggle';
 
 function stripHrefProtocol(href: string) {
   return href
@@ -294,13 +294,8 @@ export default function LandingPage() {
         <section id="fyi">
           <h2>What I do:</h2>
           <ul>
-            <li>
-              Code for fun. Like this <em>piece of magic.</em>
-            </li>
-
-            <li>
-              Continue learning <em>anything</em> that makes me excited.
-            </li>
+            <li>Code for fun.</li>
+            <li>Continue learning anything that makes me excited.</li>
           </ul>
           <h2>What I am not willing to do:</h2>
           <ul>

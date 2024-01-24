@@ -1,5 +1,5 @@
-import { useEffect, useState, useMemo } from 'react';
 import { targetTimeZone } from '@/site-data';
+import { useEffect, useMemo, useState } from 'react';
 
 const updateFrequencyMs = 1000;
 

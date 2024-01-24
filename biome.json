@@ -18,7 +18,8 @@
         "useForOf": "off"
       },
       "suspicious": {
-        "noRedundantUseStrict": "off"
+        "noRedundantUseStrict": "off",
+        "noArrayIndexKey": "off"
       },
       "style": {
         "noImplicitBoolean": "off",
@@ -27,6 +28,9 @@
       "a11y": {
         "noSvgWithoutTitle": "warn",
         "useButtonType": "warn"
+      },
+      "complexity": {
+        "noUselessFragments": "off"
       }
     }
   },

@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils';
-import Image, { type StaticImageData } from 'next/image';
 import CodewarsIcon from '@/public/vectors/codewars.svg';
+import Image, { type StaticImageData } from 'next/image';
 
 function IconTemplate({
   image,

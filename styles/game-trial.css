@@ -1,0 +1,4 @@
+body.kill-cursor * {
+  cursor: none;
+  user-select: none;
+}
