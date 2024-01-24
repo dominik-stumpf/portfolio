@@ -15,7 +15,7 @@ export default function LandingPage() {
       <article className="prose prose-neutral w-full max-w-prose dark:prose-invert lg:prose-lg print:prose-sm prose-h1:mb-2 prose-blockquote:rounded prose-blockquote:border-border prose-code:before:content-none prose-code:after:content-none prose-pre:rounded prose-pre:border prose-pre:bg-background prose-pre:text-foreground prose-img:rounded prose-img:border prose-video:rounded prose-video:border">
         <header>
           <h1>Dominik Stumpf</h1>
-          <div className="mb-8 text-xl font-extralight lowercase tracking-tight lg:mb-10 lg:text-2xl">
+          <div className="mb-8 text-xl font-extralight tracking-tight lg:mb-10 lg:text-2xl">
             software engineer & talented individual
           </div>
         </header>
