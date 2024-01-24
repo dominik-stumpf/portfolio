@@ -1,5 +1,5 @@
 import { Codewars } from '@/components/icons';
-import { links } from '@/site-data';
+import { links } from './site-data';
 import { Codesandbox, Github, Linkedin } from 'lucide-react';
 
 export const platformLinks = [

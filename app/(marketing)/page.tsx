@@ -1,19 +1,13 @@
 import { ThemeToggle } from '@/components/theme-toggle';
 import { TimeOffsetIndicator } from '@/components/time-offset-indicator';
 import notebookImage from '@/public/images/notebook.jpg';
-import { links, webStack } from '@/site-data';
+import { links, webStack } from '@/site-config/site-data';
 import { Command, Option } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { platformLinks } from './platformLinks';
+import { platformLinks } from '@/site-config/platform-links';
 import { SillyModeTrigger } from '@/components/silly-mode-trigger';
-
-function stripHrefProtocol(href: string) {
-  return href
-    .split(/[a-z]+:(\/\/)?/g)
-    .slice(2)
-    .join('');
-}
+import { stripHrefProtocol } from '@/lib/utils';
 
 export default function LandingPage() {
   return (
