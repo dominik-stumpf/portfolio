@@ -6,7 +6,7 @@ export function WavyText({ children }: { children: string }) {
       {[...children].map((char, i) => (
         <span
           key={i}
-          className="inline-block animate-float whitespace-pre"
+          className="inline-block whitespace-pre motion-safe:animate-float print:animate-none"
           style={{
             animationDelay: `${-i * 0.1}s`,
           }}
