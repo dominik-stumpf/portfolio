@@ -6,6 +6,7 @@ import { Command, Option } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { platformLinks } from './platformLinks';
+import { SillyModeTrigger } from '@/components/silly-mode-trigger';
 
 function stripHrefProtocol(href: string) {
   return href
@@ -40,8 +41,8 @@ export default function LandingPage() {
         </blockquote>
         <p className="lead">
           Hi! I am a self-taught computer nerd who enjoys{' '}
-          <strong>making websites for the internet</strong>, creating silly
-          things, and learning new technologies by the day.
+          <strong>making websites for the internet</strong>, creating{' '}
+          <SillyModeTrigger />, and learning new technologies by the day.
         </p>
         <section id="biography">
           <h2>Let's paint a picture</h2>
@@ -153,7 +154,7 @@ export default function LandingPage() {
             </figcaption>
           </figure>
         </section>
-        <section id="features">
+        <section id="features" className="print:hidden">
           <h2>Features of this portfolio:</h2>
           <p>
             Here are several bullets to give you an idea of how I can make a
