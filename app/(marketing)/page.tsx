@@ -20,7 +20,7 @@ export default function LandingPage() {
           </div>
         </header>
         <blockquote className="-mt-4 hidden print:block">
-          Note: This is an abbreviated printed version of my portfolio website,
+          Note: This is an abbreviated printed version of my portfolio website
           that you can find on{' '}
           <Link
             href={links.portfolio}
