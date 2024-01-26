@@ -27,7 +27,7 @@ iPhone 14 Pro Max (DPR-3):
 
 ### Video
 
-Videos are processed using ffmpeg. List commands used:
+Videos are processed by ffmpeg. List of commands used:
 
 1. **AVC** - MP4 (most preferred)
 
