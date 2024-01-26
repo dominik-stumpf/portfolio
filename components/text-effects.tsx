@@ -1,7 +1,8 @@
 'use client';
 
 import '@/styles/animations.css';
-import type { ReactNode, MouseEvent, KeyboardEvent } from 'react';
+import { Slot } from '@radix-ui/react-slot';
+import type { ReactNode, MouseEvent } from 'react';
 
 export function WavyText({ children }: { children: string }) {
   return (
@@ -22,7 +23,7 @@ export function WavyText({ children }: { children: string }) {
 }
 
 export function FlashText({ children }: { children: ReactNode }) {
-  function flash(event: MouseEvent | KeyboardEvent) {
+  function flash(event: MouseEvent) {
     event.currentTarget.animate(
       {
         color: [`hsl(${Math.random() * 360}deg 90% 60%)`, 'inherit'],
@@ -35,12 +36,8 @@ export function FlashText({ children }: { children: ReactNode }) {
     );
   }
   return (
-    <span
-      onClick={flash}
-      onKeyDown={flash}
-      className="inline-block whitespace-pre"
-    >
+    <Slot onClick={flash} className="inline-block whitespace-pre">
       {children}
-    </span>
+    </Slot>
   );
 }
