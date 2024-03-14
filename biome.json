@@ -15,7 +15,7 @@
       },
       "nursery": {
         "all": true,
-        "useForOf": "off"
+        "noUndeclaredDependencies": "off"
       },
       "suspicious": {
         "noRedundantUseStrict": "off",
@@ -41,6 +41,6 @@
     }
   },
   "files": {
-    "ignore": ["node_modules", ".next"]
+    "ignore": ["node_modules", ".svelte-kit"]
   }
 }

@@ -4,7 +4,7 @@ const config = {
     'biome format --write',
     'biome lint --apply',
   ],
-  // '*.{css,html,md,mdx,yml,yaml,json}': ['prettier --write'],
+  '*.{css,html,md,mdx,yml,yaml,json}': ['prettier --write'],
 };
 
 export default config;
