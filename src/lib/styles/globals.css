@@ -1,3 +1,6 @@
+@import "@fontsource-variable/cairo";
+@import "@fontsource-variable/jetbrains-mono";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,8 +17,10 @@
     --ring: 0 0% 3.9%;
 
     --radius: 0.5rem;
-
     --dimmed-foreground: 210 2% 24%;
+    --font-sans-serif: "Cairo Variable", sans-serif;
+    --font-mono: "JetBrains Mono Variable", monospace;
+    --font-serif: serif;
   }
 
   @media (prefers-color-scheme: dark) {

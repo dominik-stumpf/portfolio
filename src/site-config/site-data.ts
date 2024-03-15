@@ -26,4 +26,4 @@ export const routes = {
   weblog: '/weblog',
   experiences: '/experiences',
   projects: '/projects',
-} as const;
+} as const satisfies Record<string, string>;

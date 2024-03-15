@@ -1,6 +1,6 @@
 <script lang="ts">
-import ExternalLink from 'src/lib/components/ExternalLink.svelte';
-import { links } from 'src/site-config/site-data';
+import ExternalLink from '$lib/components/ExternalLink.svelte';
+import { links, routes } from 'src/site-config/site-data';
 </script>
 
 <article class="prose lg:prose-lg dark:prose-invert">
@@ -12,12 +12,10 @@ import { links } from 'src/site-config/site-data';
     I am the creator of
     <ExternalLink href={links.postPaper}>PostPaper</ExternalLink>, a posting
     platform prototype. In my freetime I love fiddling around with
-    <a href="/">computer graphics</a>, game development that usually involves
-    Rust and math. Recently started writing blogs about tech you can
-    <a href="/weblog">check out here</a>. Most of the work I do is open-source
-    and available on
-    <ExternalLink href={links.github}>my GitHub</ExternalLink>, like
-    <ExternalLink href={links.portfolioRepo}>the website</ExternalLink> you are currently
-    on.
+    <a href={routes.weblog}>computer graphics</a> and game development that
+    usually involves Rust and math. Recently started writing
+    <a href="/weblog">blogs here</a>
+    about tech. You can find most of the work I do on
+    <ExternalLink href={links.github}>my GitHub</ExternalLink>. <i>*cheers*</i>
   </p>
 </article>
