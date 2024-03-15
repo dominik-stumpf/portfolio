@@ -1,15 +1,23 @@
-<article class="max-w-prose mx-auto px-4">
+<script lang="ts">
+import ExternalLink from 'src/lib/components/ExternalLink.svelte';
+import { links } from 'src/site-config/site-data';
+</script>
+
+<article class="prose lg:prose-lg dark:prose-invert">
   <h1>
-    Hello! My name is Dominik Stumpf. I'm a fullstack web developer, video game
-    maker and almost a scientist.
+    I'm Dominik Stumpf, a fullstack web developer, video game maker and almost a
+    scientist.
   </h1>
   <p>
-    I am the creator of a posting platform prototype called <a href="/"
-      >PostPaper</a
-    >. I love fiddling around with computer graphics, game development that
-    usually involves math and Rust. Also I recently started writing blogs about
-    tech you can check out here. Most of the work I do in my freetime is
-    open-source and available on my GitHub just like the page you are viewing.
+    I am the creator of
+    <ExternalLink href={links.postPaper}>PostPaper</ExternalLink>, a posting
+    platform prototype. In my freetime I love fiddling around with
+    <a href="/">computer graphics</a>, game development that usually involves
+    Rust and math. Recently started writing blogs about tech you can
+    <a href="/weblog">check out here</a>. Most of the work I do is open-source
+    and available on
+    <ExternalLink href={links.github}>my GitHub</ExternalLink>, like
+    <ExternalLink href={links.portfolioRepo}>the website</ExternalLink> you are currently
+    on.
   </p>
-  <a href="/">open resume</a>
 </article>
