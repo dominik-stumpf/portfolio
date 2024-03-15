@@ -22,8 +22,8 @@ export const webStack = [
 export const targetTimeZone = 'Europe/Budapest';
 
 export const routes = {
-  home: '/',
-  weblog: '/weblog',
+  about: '/',
+  weblogs: '/weblogs',
   experiences: '/experiences',
   projects: '/projects',
 } as const satisfies Record<string, string>;
