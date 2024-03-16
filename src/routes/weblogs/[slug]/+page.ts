@@ -5,7 +5,7 @@ export const prerender = true;
 
 export async function load({ params }: { params: { slug: string } }) {
   try {
-    const weblog = await import(`/src/lib/weblogs/${params.slug}.md`);
+    const weblog = await import(`../../../lib/weblogs/${params.slug}.md`);
     const { title, date } = weblog.metadata;
     const content = weblog.default;
 
