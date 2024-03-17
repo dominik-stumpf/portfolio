@@ -6,6 +6,7 @@ import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import { unified } from 'unified';
 import { parseYamlMatter } from '$lib/unified-utils/retrieve-frontmatter';
+import rehypeHighlight from 'rehype-highlight';
 
 export async function load({ params }: { params: { slug: string } }) {
   try {
@@ -16,6 +17,7 @@ export async function load({ params }: { params: { slug: string } }) {
       .use(parseYamlMatter)
       .use(remarkGfm)
       .use(remarkRehype)
+      .use(rehypeHighlight)
       .use(rehypeStringify)
       .process(weblog.default);
 
