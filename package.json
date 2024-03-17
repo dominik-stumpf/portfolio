@@ -53,5 +53,10 @@
     "svelte-hyperscript-3.59-patch": "^1.2.1",
     "svelte-jsx": "^2.0.0",
     "unist-util-visit": "^5.0.0"
+  },
+  "dependencies": {
+    "vfile": "^6.0.1",
+    "vfile-matter": "^5.0.0",
+    "vite-plugin-markdown": "^2.2.0"
   }
 }
