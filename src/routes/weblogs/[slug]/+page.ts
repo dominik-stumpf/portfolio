@@ -29,6 +29,7 @@ export async function load({ params }: { params: { slug: string } }) {
       .use(remarkGfm)
       .use(remarkMath)
       .use(remarkGemoji)
+      .use(remarkTextr, { options: { locale: 'en-us' }, plugins: textrPlugins })
       .use(remarkRehype)
       .use(rehypeKatex)
       .use(rehypeHighlight)
@@ -39,7 +40,6 @@ export async function load({ params }: { params: { slug: string } }) {
       .use(rehypeStringify)
       .use(rehypeSlug)
       .use(rehypeAutolinkHeadings, { behavior: 'wrap' })
-      .use(remarkTextr, { options: { locale: 'en-us' }, plugins: textrPlugins })
       .process(weblog.default);
 
     return {
