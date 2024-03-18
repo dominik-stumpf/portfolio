@@ -38,7 +38,7 @@ const config: Config = {
               backgroundColor: 'unset',
               overflowX: 'auto',
               fontWeight: '400',
-              border: '1px solid',
+              border: '1px solid hsl(var(--border))',
             },
             'pre code': {
               backgroundColor: 'unset',

@@ -9,13 +9,13 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
+    --foreground: 0 0% 4%;
     --primary: 0 0% 9%;
     --primary-foreground: 0 0% 98%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --border: 0 0% 19.8%;
-    --ring: 0 0% 3.9%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --border: 0 0% 60%;
+    --ring: 0 0% 4%;
 
     --radius: 0.5rem;
     --dimmed-foreground: 210 2% 24%;
@@ -31,13 +31,13 @@
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --background: 0 0% 3.9%;
+      --background: 0 0% 4%;
       --foreground: 0 0% 98%;
       --primary: 0 0% 98%;
       --primary-foreground: 0 0% 9%;
-      --muted: 0 0% 14.9%;
-      --muted-foreground: 0 0% 63.9%;
-      --border: 0 0% 75.9%;
+      --muted: 0 0% 15%;
+      --muted-foreground: 0 0% 64%;
+      --border: 0 0% 40%;
       --ring: 0 0% 83.1%;
 
       --dimmed-foreground: 210 2% 76%;

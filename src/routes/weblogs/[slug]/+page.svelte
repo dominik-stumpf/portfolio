@@ -2,6 +2,7 @@
 import '$lib/styles/gruvbox-light.css';
 import '$lib/styles/gruvbox-dark.css';
 import { applyTypographicBase } from '$lib/utils/apply-typographic-base';
+import Prose from 'src/lib/components/Prose.svelte';
 export let data;
 </script>
 
@@ -12,13 +13,8 @@ export let data;
   />
 </svelte:head>
 
-<article
-  class="prose w-full break-words dark:prose-invert lg:prose-xl
-  prose-pre:p-0 prose-table:block prose-table:overflow-auto prose-a:no-underline
-  prose-a:font-bold lg:prose-pre:text-base"
->
+<Prose>
   <h1>{applyTypographicBase(data.metadata.title)}</h1>
   <p>{data.metadata.date}</p>
   {@html data.content}
-</article>
-
+</Prose>
