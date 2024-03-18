@@ -1,5 +1,5 @@
 import { json } from '@sveltejs/kit';
-import { retrieveFrontmatter } from 'src/lib/unified-utils/retrieve-frontmatter';
+import { retrieveFrontmatter } from '$lib/utils/retrieve-frontmatter';
 import { routes } from 'src/site-config/site-data';
 
 async function fetchMarkdownWeblogs() {
