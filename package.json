@@ -55,6 +55,13 @@
     "unist-util-visit": "^5.0.0"
   },
   "dependencies": {
+    "@fontsource-variable/alegreya": "^5.0.13",
+    "@fontsource-variable/eb-garamond": "^5.0.18",
+    "@fontsource-variable/literata": "^5.0.20",
+    "@fontsource-variable/lora": "^5.0.17",
+    "@fontsource-variable/newsreader": "^5.0.18",
+    "@fontsource-variable/vollkorn": "^5.0.20",
+    "@fontsource/jetbrains-mono": "^5.0.19",
     "rehype-external-links": "^3.0.0",
     "rehype-highlight": "^7.0.0",
     "rehype-katex": "^7.0.0",

@@ -14,10 +14,10 @@ import remarkGemoji from 'remark-gemoji';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
 import rehypeExternalLinks from 'rehype-external-links';
-// @ts-ignore
-import base from 'typographic-base';
+import { applyTypographicBase } from 'src/lib/utils/apply-typographic-base';
 
-const textrPlugins = [base];
+// TODO: modify textr so that it doesn't affect code blocks
+const textrPlugins = [applyTypographicBase];
 
 export async function load({ params }: { params: { slug: string } }) {
   try {

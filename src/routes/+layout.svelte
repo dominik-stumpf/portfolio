@@ -6,7 +6,9 @@ import { platformLinks } from 'src/site-config/platform-links';
 import { links, routes } from 'src/site-config/site-data';
 </script>
 
-<div class="max-w-prose px-3 py-16 sm:px-4 md:px-6 lg:px-8 lg:py-24 mx-auto">
+<div
+  class="max-w-prose text-lg px-3 py-16 sm:px-4 md:px-6 lg:px-8 lg:py-24 mx-auto"
+>
   <nav class="mb-8 flex gap-4">
     <a href={routes.about}>about</a>
     <a href={routes.experiences}>experiences</a>

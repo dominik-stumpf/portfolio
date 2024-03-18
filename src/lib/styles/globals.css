@@ -1,5 +1,6 @@
-@import "@fontsource-variable/cairo";
 @import "@fontsource-variable/jetbrains-mono";
+@import "@fontsource-variable/vollkorn/wght-italic.css";
+@import "@fontsource-variable/vollkorn";
 
 @tailwind base;
 @tailwind components;
@@ -18,9 +19,14 @@
 
     --radius: 0.5rem;
     --dimmed-foreground: 210 2% 24%;
-    --font-sans-serif: "Cairo Variable", sans-serif;
+    --font-sans-serif: "Vollkorn Variable", sans-serif;
     --font-mono: "JetBrains Mono Variable", monospace;
     --font-serif: serif;
+
+    scroll-behavior: smooth;
+    @media (prefers-reduced-motion) {
+      scroll-behavior: auto;
+    }
   }
 
   @media (prefers-color-scheme: dark) {

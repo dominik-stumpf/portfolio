@@ -5,8 +5,8 @@ import { links, routes } from 'src/site-config/site-data';
 
 <article class="prose lg:prose-lg dark:prose-invert">
   <h1>
-    I'm Dominik Stumpf, a fullstack web developer, video game maker and almost a
-    scientist.
+    I'm <i>Dominik Stumpf</i>, a fullstack web developer, video game maker and
+    almost a scientist.
   </h1>
   <p>
     I am the creator of
@@ -14,7 +14,7 @@ import { links, routes } from 'src/site-config/site-data';
     platform prototype. In my freetime I love fiddling around with
     <a href="/">computer graphics</a> and game development that usually involves
     Rust and math. Recently started writing
-    <a href={routes.weblog}>blogs here</a>
+    <a href={routes.weblogs}>blogs here</a>
     about tech. You can find most of the work I do on
     <ExternalLink href={links.github}>my GitHub</ExternalLink>. <i>*cheers*</i>
   </p>
