@@ -22,7 +22,7 @@ function isInPreOrCode(parent: Node | null): boolean {
   return isInPreOrCode(parent.parentNode);
 }
 
-const wrapperRef: HTMLDivElement | null = null;
+let wrapperRef: HTMLDivElement | null = null;
 
 onMount(() => {
   if (wrapperRef) {

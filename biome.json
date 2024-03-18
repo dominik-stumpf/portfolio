@@ -23,7 +23,8 @@
       },
       "style": {
         "noImplicitBoolean": "off",
-        "noNonNullAssertion": "warn"
+        "noNonNullAssertion": "warn",
+        "useConst": "off"
       },
       "a11y": {
         "noSvgWithoutTitle": "warn",
