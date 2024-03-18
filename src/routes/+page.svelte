@@ -2,11 +2,12 @@
 import ExternalLink from '$lib/components/ExternalLink.svelte';
 import Prose from 'src/lib/components/Prose.svelte';
 import { links, routes } from 'src/site-config/site-data';
+import TypographicText from 'src/lib/components/TypographicText.svelte';
 </script>
 
 <Prose>
-  <h1>Introduction</h1>
-  <p class="lead">
+  <TypographicText>
+  <p>
     Hello! I'm Dominik Stumpf, a fullstack web developer, video game maker and
     almost a scientist.
   </p>
@@ -18,5 +19,5 @@ import { links, routes } from 'src/site-config/site-data';
     Rust and math. Recently started writing tech related
     <a href={routes.weblogs}>blogs here</a>.
   </p>
+  </TypographicText>
 </Prose>
-

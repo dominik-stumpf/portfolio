@@ -26,6 +26,5 @@ import { links, routes } from 'src/site-config/site-data';
       {/each}
       <a href={links.email}>Email</a>
     </div>
-    <span>&mdash; Dominik Stumpf</span>
   </footer>
 </div>

@@ -11,7 +11,7 @@ export let data: { weblogs: object[] };
   </p>
   <div class="flex flex-col gap-6 py-4">
     {#each data.weblogs as weblog}
-      <a class="border-border border-b-2" href={weblog.path}
+      <a class="border-border border p-4 rounded" href={weblog.path}
         >{weblog.metadata.title}
       </a>
     {/each}

@@ -1,1 +1,1 @@
-<div class="w-full h-px bg-border my-8" />
+<div class="w-full h-px bg-border my-12" />
