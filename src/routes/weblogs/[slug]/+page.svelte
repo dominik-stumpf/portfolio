@@ -1,6 +1,6 @@
 <script>
-import '$lib/styles/gruvbox-light.css';
 import '$lib/styles/gruvbox-dark.css';
+import '$lib/styles/gruvbox-light.css';
 import { applyTypographicBase } from '$lib/utils/apply-typographic-base';
 import Prose from 'src/lib/components/Prose.svelte';
 export let data;

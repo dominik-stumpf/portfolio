@@ -1,13 +1,13 @@
-import type { Node } from 'unist';
-import type { VFile } from 'vfile';
 import remarkFrontmatter from 'remark-frontmatter';
-import { unified } from 'unified';
-import { matter } from 'vfile-matter';
 import remarkParse from 'remark-parse';
 import remarkStringify from 'remark-stringify';
+import { unified } from 'unified';
+import type { Node } from 'unist';
+import type { VFile } from 'vfile';
+import { matter } from 'vfile-matter';
 
 export function parseYamlMatter() {
-  return (tree: Node, file: VFile) => {
+  return (_tree: Node, file: VFile) => {
     matter(file);
   };
 }

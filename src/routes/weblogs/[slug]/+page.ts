@@ -1,20 +1,20 @@
-import { error } from '@sveltejs/kit';
-import rehypeStringify from 'rehype-stringify';
-import remarkFrontmatter from 'remark-frontmatter';
-import remarkGfm from 'remark-gfm';
-import remarkParse from 'remark-parse';
-import remarkRehype from 'remark-rehype';
-import { unified } from 'unified';
 import { parseYamlMatter } from '$lib/unified-utils/retrieve-frontmatter';
+import { error } from '@sveltejs/kit';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypeExternalLinks from 'rehype-external-links';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeKatex from 'rehype-katex';
-import remarkMath from 'remark-math';
-import remarkTextr from 'remark-textr';
-import remarkGemoji from 'remark-gemoji';
-import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
-import rehypeExternalLinks from 'rehype-external-links';
+import rehypeStringify from 'rehype-stringify';
+import remarkFrontmatter from 'remark-frontmatter';
+import remarkGemoji from 'remark-gemoji';
+import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
+import remarkParse from 'remark-parse';
+import remarkRehype from 'remark-rehype';
+import remarkTextr from 'remark-textr';
 import { applyTypographicBase } from 'src/lib/utils/apply-typographic-base';
+import { unified } from 'unified';
 
 // TODO: modify textr so that it doesn't affect code blocks
 const textrPlugins = [applyTypographicBase];

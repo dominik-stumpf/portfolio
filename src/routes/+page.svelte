@@ -1,8 +1,8 @@
 <script lang="ts">
 import ExternalLink from '$lib/components/ExternalLink.svelte';
 import Prose from 'src/lib/components/Prose.svelte';
-import { links, routes } from 'src/site-config/site-data';
 import TypographicText from 'src/lib/components/TypographicText.svelte';
+import { links, routes } from 'src/site-config/site-data';
 </script>
 
 <Prose>
