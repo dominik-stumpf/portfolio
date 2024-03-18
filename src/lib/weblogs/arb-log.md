@@ -21,10 +21,35 @@ A note[^1]
 
 ~one~ or ~~two~~ tildes.
 
-## Table
+<i style="color: violet">html in md</i>
 
-| a   | b   |   c |  d  |
-| --- | :-- | --: | :-: |
+```tsx
+const App = () => {
+  const [isOn, toggleIsOn] = useToggle(false);
+
+  return (
+    <div>
+      <p>The light is {isOn ? "on" : "off"}</p>
+      <button onClick={toggleIsOn}>Toggle</button>
+    </div>
+  );
+};
+```
+
+## A Handy Reference to React Hooks
+
+| Hook Name     | Description                                                                                   | Use Case                                      |
+| ------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------- |
+| `useState`    | Adds state to functional components, making it possible to manage and update component state. | Managing and displaying component state.      |
+| `useEffect`   | Enables side effects like data fetching, DOM manipulation, and more in functional components. | Handling asynchronous tasks and side effects. |
+| `useContext`  | Accesses the context for data that can be shared across the component tree.                   | Sharing data between components.              |
+| `useRef`      | Creates mutable references to DOM elements or values that persist across renders.             | Managing DOM elements and values.             |
+| `useReducer`  | Manages more complex state logic by using a reducer function and an initial state.            | Handling complex state transitions.           |
+| `useMemo`     | Memoizes the result of a function to optimize performance.                                    | Optimizing expensive calculations.            |
+| `useCallback` | Memoizes callbacks to avoid unnecessary re-renders.                                           | Optimizing callback functions.                |
+| `useHistory`  | Provides access to the browser's history object.                                              | Handling client-side routing.                 |
+
+These are just a few of the built-in Hooks available in React. Each Hook serves a specific purpose, empowering you to build versatile and efficient applications.
 
 ## Tasklist
 

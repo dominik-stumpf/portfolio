@@ -11,7 +11,9 @@ export let data;
   />
 </svelte:head>
 
-<article class="prose dark:prose-invert lg:prose-lg prose-pre:bg-inherit">
+<article
+  class="prose w-full max-w-prose break-words dark:prose-invert lg:prose-lg prose-pre:p-0 prose-table:block prose-table:overflow-auto"
+>
   <h1>{data.metadata.title}</h1>
   <p>{data.metadata.date}</p>
   {@html data.content}
