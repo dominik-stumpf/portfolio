@@ -7,7 +7,7 @@ import type { VFile } from 'vfile';
 import { matter } from 'vfile-matter';
 
 export function parseYamlMatter() {
-  return (_tree: Node, file: VFile) => {
+  return (_: Node, file: VFile) => {
     matter(file);
   };
 }

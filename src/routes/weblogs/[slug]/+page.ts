@@ -1,4 +1,4 @@
-import { parseYamlMatter } from '$lib/unified-utils/retrieve-frontmatter';
+import { parseYamlMatter } from '$lib/utils/retrieve-frontmatter';
 import { error } from '@sveltejs/kit';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeExternalLinks from 'rehype-external-links';
