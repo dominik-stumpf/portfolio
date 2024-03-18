@@ -32,7 +32,26 @@ const config: Config = {
       },
       typography: (theme) => ({
         DEFAULT: {
-          css: {},
+          css: {
+            pre: {
+              color: 'unset',
+              backgroundColor: 'unset',
+              overflowX: 'auto',
+              fontWeight: '400',
+              border: '1px solid',
+            },
+            'pre code': {
+              backgroundColor: 'unset',
+              borderWidth: '0',
+              borderRadius: '0',
+              padding: '0',
+              fontWeight: 'inherit',
+              color: 'inherit',
+              fontSize: 'inherit',
+              fontFamily: 'inherit',
+              lineHeight: 'inherit',
+            },
+          },
         },
       }),
     },
