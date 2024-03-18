@@ -5,10 +5,7 @@ export let data: { weblogs: object[] };
 </script>
 
 <Prose>
-  <h1>Publishing</h1>
-  <p class="lead">
-    Technical articles about my thought processes when I make projects.
-  </p>
+  <p>Technical articles about my thought processes when I make projects.</p>
   <div class="flex flex-col gap-6 py-4">
     {#each data.weblogs as weblog}
       <a class="border-border border p-4 rounded" href={weblog.path}

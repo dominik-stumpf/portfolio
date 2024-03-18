@@ -1,6 +1,6 @@
 <script lang="ts">
-import { onMount } from 'svelte';
 import { applyTypographicBase } from '$lib/utils/apply-typographic-base';
+import { onMount } from 'svelte';
 
 function applyTypographyToTextNodes(node: Node) {
   if (node.nodeType === Node.TEXT_NODE && !isInPreOrCode(node.parentNode)) {

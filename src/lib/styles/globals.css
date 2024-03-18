@@ -10,15 +10,15 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 4%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 180 70% 80%;
+    --primary-foreground: 180 70% 98%;
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
     --border: 0 0% 60%;
     --ring: 0 0% 4%;
 
     --radius: 0.5rem;
-    --dimmed-foreground: 210 2% 24%;
+    --dimmed-foreground: 0 2% 24%;
     --font-sans-serif: "Vollkorn Variable", sans-serif;
     --font-mono: "JetBrains Mono Variable", monospace;
     --font-serif: serif;
@@ -33,19 +33,23 @@
     :root {
       --background: 0 0% 4%;
       --foreground: 0 0% 98%;
-      --primary: 0 0% 98%;
-      --primary-foreground: 0 0% 9%;
+      --primary: 180 25% 60%;
+      --primary-foreground: 180 20% 9%;
       --muted: 0 0% 15%;
       --muted-foreground: 0 0% 64%;
       --border: 0 0% 40%;
-      --ring: 0 0% 83.1%;
+      --ring: 0 0% 83%;
 
-      --dimmed-foreground: 210 2% 76%;
+      --dimmed-foreground: 0 2% 76%;
     }
     video,
     img {
       filter: brightness(0.8) contrast(1.2);
     }
+  }
+
+  a {
+    @apply font-mono text-base uppercase hover:opacity-80;
   }
 
   * {

@@ -1,5 +1,23 @@
 import typography from '@tailwindcss/typography';
 import type { Config } from 'tailwindcss';
+import colors from 'tailwindcss/colors';
+
+// const round = (num: number) =>
+//   num
+//     .toFixed(7)
+//     .replace(/(\.[0-9]+?)0+$/, '$1')
+//     .replace(/\.0$/, '');
+// const rem = (px: number) => `${round(px / 16)}rem`;
+// const em = (px: number, base: number) => `${round(px / base)}em`;
+//
+const hexToRgb = (hex: string) => {
+  let _hex = hex.replace('#', '');
+  _hex = _hex.length === 3 ? _hex.replace(/./g, '$&$&') : _hex;
+  const r = Number.parseInt(_hex.substring(0, 2), 16);
+  const g = Number.parseInt(_hex.substring(2, 4), 16);
+  const b = Number.parseInt(_hex.substring(4, 6), 16);
+  return `${r} ${g} ${b}`;
+};
 
 const config: Config = {
   content: ['./src/**/*.{html,js,svelte,ts}'],
@@ -33,6 +51,13 @@ const config: Config = {
       typography: (_theme) => ({
         DEFAULT: {
           css: {
+            a: {
+              textDecoration: 'none',
+              fontWeight: 'inherit',
+            },
+            'a:hover': {
+              opacity: '0.8',
+            },
             pre: {
               color: 'unset',
               backgroundColor: 'unset',
@@ -51,6 +76,46 @@ const config: Config = {
               fontFamily: 'inherit',
               lineHeight: 'inherit',
             },
+          },
+        },
+        neutral: {
+          css: {
+            '--tw-prose-body': colors.neutral[700],
+            '--tw-prose-headings': colors.neutral[900],
+            '--tw-prose-lead': colors.neutral[600],
+            '--tw-prose-links': colors.neutral[900],
+            '--tw-prose-bold': colors.neutral[900],
+            '--tw-prose-counters': colors.neutral[500],
+            '--tw-prose-bullets': colors.neutral[300],
+            '--tw-prose-hr': colors.neutral[200],
+            '--tw-prose-quotes': colors.neutral[900],
+            '--tw-prose-quote-borders': colors.neutral[200],
+            '--tw-prose-captions': colors.neutral[500],
+            '--tw-prose-kbd': colors.neutral[900],
+            '--tw-prose-kbd-shadows': hexToRgb(colors.neutral[900]),
+            '--tw-prose-code': colors.neutral[900],
+            '--tw-prose-pre-code': colors.neutral[200],
+            '--tw-prose-pre-bg': colors.neutral[800],
+            '--tw-prose-th-borders': colors.neutral[300],
+            '--tw-prose-td-borders': colors.neutral[200],
+            '--tw-prose-invert-body': colors.neutral[300],
+            '--tw-prose-invert-headings': colors.white,
+            '--tw-prose-invert-lead': colors.neutral[400],
+            '--tw-prose-invert-links': colors.white,
+            '--tw-prose-invert-bold': colors.white,
+            '--tw-prose-invert-counters': colors.neutral[400],
+            '--tw-prose-invert-bullets': colors.neutral[600],
+            '--tw-prose-invert-hr': colors.neutral[700],
+            '--tw-prose-invert-quotes': colors.neutral[100],
+            '--tw-prose-invert-quote-borders': colors.neutral[700],
+            '--tw-prose-invert-captions': colors.neutral[400],
+            '--tw-prose-invert-kbd': colors.white,
+            '--tw-prose-invert-kbd-shadows': hexToRgb(colors.white),
+            '--tw-prose-invert-code': colors.white,
+            '--tw-prose-invert-pre-code': colors.neutral[300],
+            '--tw-prose-invert-pre-bg': 'rgb(0 0 0 / 50%)',
+            '--tw-prose-invert-th-borders': colors.neutral[600],
+            '--tw-prose-invert-td-borders': colors.neutral[700],
           },
         },
       }),
