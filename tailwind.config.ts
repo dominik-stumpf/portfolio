@@ -60,13 +60,13 @@ const config: Config = {
             },
             pre: {
               color: 'unset',
-              backgroundColor: 'unset',
+              backgroundColor: 'hsl(var(--card))',
               overflowX: 'auto',
               fontWeight: '400',
               border: '1px solid hsl(var(--border))',
             },
             'pre code': {
-              backgroundColor: 'unset',
+              backgroundColor: 'transparent',
               borderWidth: '0',
               borderRadius: '0',
               padding: '0',
