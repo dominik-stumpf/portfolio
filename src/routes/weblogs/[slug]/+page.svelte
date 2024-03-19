@@ -1,8 +1,9 @@
 <script>
 import '$lib/styles/gruvbox-dark.css';
 import '$lib/styles/gruvbox-light.css';
-import { applyTypographicBase } from '$lib/utils/apply-typographic-base';
-import Prose from 'src/lib/components/Prose.svelte';
+import Prose from '$lib/components/Prose.svelte';
+import TypographicText from '$lib/components/TypographicText.svelte';
+import Separator from 'src/lib/components/Separator.svelte';
 export let data;
 </script>
 
@@ -14,7 +15,12 @@ export let data;
 </svelte:head>
 
 <Prose>
-  <h1>{applyTypographicBase(data.metadata.title)}</h1>
-  <p>{data.metadata.date}</p>
+  <TypographicText>
+    <h1 style:margin-bottom="0">{data.metadata.title}</h1>
+    <div class="flex not-prose mt-2 mb-8 py-2 font-mono text-base font-light">
+      <time>{data.metadata.date}</time>,&nbsp;
+      <span>{data.readingTimeStats.text}</span>
+    </div>
+  </TypographicText>
   {@html data.content}
 </Prose>

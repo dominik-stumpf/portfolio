@@ -15,6 +15,7 @@ import remarkRehype from 'remark-rehype';
 import remarkTextr from 'remark-textr';
 import { applyTypographicBase } from 'src/lib/utils/apply-typographic-base';
 import { unified } from 'unified';
+import readingTime from 'reading-time';
 
 // TODO: modify textr so that it doesn't affect code blocks
 const textrPlugins = [applyTypographicBase];
@@ -22,6 +23,8 @@ const textrPlugins = [applyTypographicBase];
 export async function load({ params }: { params: { slug: string } }) {
   try {
     const weblog = await import(`../../../lib/weblogs/${params.slug}.md?raw`);
+    const readingTimeStats = readingTime(weblog.default);
+
     const file = await unified()
       .use(remarkParse)
       .use(parseYamlMatter)
@@ -45,6 +48,7 @@ export async function load({ params }: { params: { slug: string } }) {
     return {
       content: file.value,
       metadata: file.data.matter,
+      readingTimeStats,
     };
   } catch {
     error(404, 'Weblog not found.');
