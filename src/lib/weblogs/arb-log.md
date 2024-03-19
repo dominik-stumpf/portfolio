@@ -19,6 +19,10 @@ A note[^1]
 
 [^1]: Big note.
 
+## Blockquote
+
+> about time to _have_ **some** formatting
+
 ## Strikethrough
 
 ~one~ or ~~two~~ tildes.

@@ -2,14 +2,14 @@ import typography from '@tailwindcss/typography';
 import type { Config } from 'tailwindcss';
 import colors from 'tailwindcss/colors';
 
-// const round = (num: number) =>
-//   num
-//     .toFixed(7)
-//     .replace(/(\.[0-9]+?)0+$/, '$1')
-//     .replace(/\.0$/, '');
+const round = (num: number) =>
+  num
+    .toFixed(7)
+    .replace(/(\.[0-9]+?)0+$/, '$1')
+    .replace(/\.0$/, '');
 // const rem = (px: number) => `${round(px / 16)}rem`;
-// const em = (px: number, base: number) => `${round(px / base)}em`;
-//
+const em = (px: number, base: number) => `${round(px / base)}em`;
+
 const hexToRgb = (hex: string) => {
   let _hex = hex.replace('#', '');
   _hex = _hex.length === 3 ? _hex.replace(/./g, '$&$&') : _hex;
@@ -76,9 +76,53 @@ const config: Config = {
               fontFamily: 'inherit',
               lineHeight: 'inherit',
             },
+            blockquote: {
+              fontWeight: 'inherit',
+              fontStyle: 'italic',
+              color: 'var(--tw-prose-quotes)',
+              borderLeftWidth: '0.25rem',
+              borderLeftColor: 'var(--tw-prose-quote-borders)',
+              quotes: '"\\201C""\\201D""\\2018""\\2019"',
+            },
+            'blockquote p:first-of-type::before': {
+              content: '',
+            },
+            'blockquote p:last-of-type::after': {
+              content: '',
+            },
+            'code::before': {
+              content: '',
+            },
+            'code::after': {
+              content: '',
+            },
+
+            code: {
+              // color: 'var(--tw-prose-code)',
+              color: 'hsl(var(--card-foreground))',
+              fontWeight: '400',
+              border: '1px solid hsl(var(--border))',
+              borderBottomWidth: '2px',
+              borderRadius: 'var(--radius)',
+              padding: '2px 5px',
+              backgroundColor: 'hsl(var(--card))',
+            },
           },
         },
-        neutral: {
+
+        xl: {
+          css: [
+            {
+              'pre code': {
+                fontSize: em(18, 20),
+              },
+              code: {
+                fontSize: em(15, 20),
+              },
+            },
+          ],
+        },
+        custom: {
           css: {
             '--tw-prose-body': colors.neutral[700],
             '--tw-prose-headings': colors.neutral[900],
