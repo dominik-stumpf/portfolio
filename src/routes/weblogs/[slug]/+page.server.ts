@@ -18,7 +18,6 @@ import { unified } from 'unified';
 import readingTime from 'reading-time';
 import { weblogMetadataSchema } from 'src/lib/validators/weblog';
 
-// TODO: modify textr so that it doesn't affect code blocks
 const textrPlugins = [applyTypographicBase];
 
 export async function load({ params }: { params: { slug: string } }) {
