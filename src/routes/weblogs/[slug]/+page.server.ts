@@ -16,13 +16,16 @@ import remarkTextr from 'remark-textr';
 import { applyTypographicBase } from 'src/lib/utils/apply-typographic-base';
 import { unified } from 'unified';
 import readingTime from 'reading-time';
+import { weblogMetadataSchema } from 'src/lib/validators/weblog';
 
 // TODO: modify textr so that it doesn't affect code blocks
 const textrPlugins = [applyTypographicBase];
 
 export async function load({ params }: { params: { slug: string } }) {
   try {
-    const weblog = await import(`../../../lib/weblogs/${params.slug}.md?raw`);
+    const weblog = await import(
+      `../../../lib/weblogs-md/${params.slug}.md?raw`
+    );
     const readingTimeStats = readingTime(weblog.default);
 
     const file = await unified()
@@ -45,9 +48,11 @@ export async function load({ params }: { params: { slug: string } }) {
       .use(rehypeAutolinkHeadings, { behavior: 'wrap' })
       .process(weblog.default);
 
+    const metadata = weblogMetadataSchema.parse(file.data.matter);
+
     return {
       content: file.value,
-      metadata: file.data.matter,
+      metadata,
       readingTimeStats,
     };
   } catch {

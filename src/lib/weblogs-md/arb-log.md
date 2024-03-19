@@ -1,6 +1,7 @@
 ---
 title: arb-log
-date: 2000-01-22
+publishedAt: 2000-01-12
+lead: The quick brown fox jumps over the lazy dog.
 ---
 
 ## heading

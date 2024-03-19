@@ -4,7 +4,19 @@ import remarkStringify from 'remark-stringify';
 import { unified } from 'unified';
 import type { Node } from 'unist';
 import type { VFile } from 'vfile';
-import { matter } from 'vfile-matter';
+import yaml from 'js-yaml';
+
+function matter(file: VFile) {
+  const regex = /^---(?:\r?\n|\r)(?:([\s\S]*?)(?:\r?\n|\r))?---(?:\r?\n|\r|$)/;
+  let doc = String(file);
+
+  const match = regex.exec(doc);
+  if (match) {
+    file.data.matter = yaml.load(match[1]);
+  } else {
+    file.data.matter = {};
+  }
+}
 
 export function parseYamlMatter() {
   return (_: Node, file: VFile) => {

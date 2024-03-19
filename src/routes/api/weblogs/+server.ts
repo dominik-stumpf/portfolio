@@ -1,9 +1,10 @@
 import { json } from '@sveltejs/kit';
 import { retrieveFrontmatter } from '$lib/utils/retrieve-frontmatter';
 import { routes } from 'src/site-config/site-data';
+import { weblogMetadataSchema } from 'src/lib/validators/weblog';
 
 async function fetchMarkdownWeblogs() {
-  const weblogFiles = import.meta.glob('/src/lib/weblogs/*.md', {
+  const weblogFiles = import.meta.glob('/src/lib/weblogs-md/*.md', {
     query: '?raw',
   });
   const weblogEntries = Object.entries(weblogFiles);
@@ -12,12 +13,19 @@ async function fetchMarkdownWeblogs() {
     weblogEntries.map(async ([fullPath, resolver]) => {
       const md = await resolver();
 
-      // @ts-ignore;
-      const metadata = await retrieveFrontmatter(md.default);
+      if (
+        typeof md !== 'object' ||
+        md === null ||
+        !('default' in md) ||
+        typeof md.default !== 'string'
+      ) {
+        throw new Error(`Failed to resolve markdown file at ${fullPath}`);
+      }
 
-      // TODO: validate using zod.
-      // @ts-ignore;
-      // const { metadata } = await resolver();
+      const frontmatter = await retrieveFrontmatter(md.default);
+      console.log(frontmatter);
+      const metadata = weblogMetadataSchema.parse(frontmatter);
+      console.log(metadata);
       const end = fullPath.lastIndexOf('.');
       const start = fullPath.lastIndexOf('/', end);
       if (start === -1 || end === -1) {
@@ -38,8 +46,7 @@ export const GET = async () => {
   const weblogs = await fetchMarkdownWeblogs();
 
   const sortedWeblogs = weblogs.sort((a, b) => {
-    // @ts-ignore
-    return new Date(b.metadata.date) - new Date(a.metadata.date);
+    return b.metadata.publishedAt.valueOf() - a.metadata.publishedAt.valueOf();
   });
 
   return json(sortedWeblogs);

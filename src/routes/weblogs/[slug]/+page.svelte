@@ -17,7 +17,7 @@ export let data;
   <TypographicText>
     <h1 style:margin-bottom="0">{data.metadata.title}</h1>
     <div class="not-prose mt-2 mb-8 py-2 font-mono text-base font-light">
-      <time datetime={data.metadata.date}>{(new Date(data.metadata.date)).toLocaleDateString('en-US', {year:
+      <time datetime={data.metadata.date}>{(data.metadata.publishedAt).toLocaleDateString('en-US', {year:
         'numeric', month: 'short', day: 'numeric'})}</time> -
       <span>{data.readingTimeStats.text}</span>
     </div>
