@@ -70,7 +70,6 @@ export let data;
       no-repeat center;
     width: 24px;
     height: 24px;
-    scale: 0.8;
     aspect-ratio: 1;
     margin-left: 8px;
   }
