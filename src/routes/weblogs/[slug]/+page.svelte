@@ -3,7 +3,6 @@ import '$lib/styles/gruvbox-dark.css';
 import '$lib/styles/gruvbox-light.css';
 import Prose from '$lib/components/Prose.svelte';
 import TypographicText from '$lib/components/TypographicText.svelte';
-import Separator from 'src/lib/components/Separator.svelte';
 export let data;
 </script>
 
