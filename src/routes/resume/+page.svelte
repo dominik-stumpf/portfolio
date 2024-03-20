@@ -2,11 +2,15 @@
 import Prose from 'src/lib/components/Prose.svelte';
 import Navbar from 'src/lib/components/Navbar.svelte';
 import TypographicText from 'src/lib/components/TypographicText.svelte';
-import { siteData } from 'src/site-config/site-data';
+import { links, siteData } from 'src/site-config/site-data';
+import { platformLinks } from 'src/site-config/platform-links';
+import ExternalLink from 'src/lib/components/ExternalLink.svelte';
+
+const contactLinks = [{ name: 'Email', href: links.email }, ...platformLinks];
 </script>
 
 <svelte:head>
-  <title>Experiences</title>
+  <title>Resume</title>
 </svelte:head>
 
 <header>
@@ -31,14 +35,12 @@ import { siteData } from 'src/site-config/site-data';
       <li>Component framework: React, Svelte</li>
       <li>App framework: NextJS 13+, Sveltekit</li>
       <li>Testing framework: Jest, Storybook</li>
-      <li>
-        <abbr title="Backend as a service">BaaS</abbr>: Supabase (PostgreSQL)
-      </li>
+      <li>Backend as a service: Supabase (PostgreSQL)</li>
     </ul>
+    <h2>Beyond the web</h2>
     <p>
-      Beyond the web, I have experience with <i>Python</i>, networking and
-      GNU/Linux. I'm an avid learner when it comes to programming. I entertain
-      the idea of
+      I have experience with <i>Python</i>, networking and GNU/Linux. I'm an
+      avid learner when it comes to programming. I entertain the idea of
       <em>knowing my tools</em>, consequently improving myself and my workspace.
     </p>
     <h2>Interests</h2>
@@ -46,16 +48,31 @@ import { siteData } from 'src/site-config/site-data';
       Game development, computer graphics, computer science, Rust programming
       language, typography, accessibility
     </p>
+    <div>
+      <h2>Contact links</h2>
+      <div class="flex flex-col">
+        {#each contactLinks as contactLink}
+          <div>
+            {contactLink.name}:
+            <ExternalLink href={contactLink.href}
+              >{new URL(contactLink.href).hostname +
+                new URL(contactLink.href).pathname}</ExternalLink
+            >
+          </div>
+        {/each}
+      </div>
+    </div>
     <p>
       <em>
         Above claims are substantiated by my contributions located on Github.
       </em>
     </p>
-    <blockquote>
+    <blockquote class="hidden print:block">
       Note: This file is a printed version of my homepage
-      <a href={siteData.link}>{new URL(siteData.link).host}</a>, where you can
-      find up to date additional information about me and my works. This file
-      was generated at {new Date().toUTCString()}
+      <ExternalLink href={siteData.link}
+        >{new URL(siteData.link).host}</ExternalLink
+      >, where you can find up to date additional information about me and my
+      works. This file was generated at {new Date().toUTCString()}
     </blockquote>
   </TypographicText>
 </Prose>

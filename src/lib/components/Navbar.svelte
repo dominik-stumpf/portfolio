@@ -4,13 +4,15 @@ import { routes } from 'src/site-config/site-data';
 
 const navlinks = [
   { href: routes.about, name: 'about' },
-  { href: routes.experiences, name: 'experiences' },
+  { href: routes.resume, name: 'resume' },
   { href: routes.projects, name: 'projects' },
   { href: routes.weblogs, name: 'weblogs' },
 ] as const;
 </script>
 
-<nav class="mb-8 flex gap-2 font-mono sm:items-center flex-col sm:flex-row">
+<nav
+  class="mb-8 flex gap-2 font-mono sm:items-center flex-col sm:flex-row print:hidden"
+>
   {#each navlinks as navlink, index}
     <a href={navlink.href} class:selected={$page.url.pathname === navlink.href}
       >{navlink.name}</a

@@ -11,7 +11,7 @@ export const targetTimeZone = 'Europe/Budapest';
 export const routes = {
   about: '/',
   weblogs: '/weblogs',
-  experiences: '/experiences',
+  resume: '/resume',
   projects: '/projects',
 } as const satisfies Record<string, string>;
 

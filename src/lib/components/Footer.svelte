@@ -24,7 +24,7 @@ $: offsetMessageMap = new Map([
 ]);
 </script>
 
-<footer class="mt-8 flex flex-wrap flex-col gap-4 justify-between">
+<footer class="mt-8 flex flex-wrap flex-col gap-4 justify-between print:hidden">
   <div class="flex gap-4 flex-wrap">
     <a href={links.email}>Email</a>
     {#each platformLinks as link}
@@ -41,7 +41,6 @@ $: offsetMessageMap = new Map([
         {$offsetMeasurement.targetTime},
       </time>
       <span
-        class="underline decoration-dotted decoration-muted-foreground underline-offset-4"
         title={`Time zone difference between ${offset.localTimeZone} and ${offset.targetTimeZone}`}
         >{offsetMessageMap.get(offsetState)}</span
       >
