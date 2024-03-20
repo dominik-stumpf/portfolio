@@ -8,6 +8,7 @@ import {
   OffsetState,
 } from '$lib/utils/time-zone-offset';
 import { browser } from '$app/environment';
+import { Rss } from 'lucide-svelte';
 
 let offset = getTimeZoneOffset();
 $: offsetMeasurement = offset.offsetMeasurement;
@@ -29,7 +30,10 @@ $: offsetMessageMap = new Map([
     {#each platformLinks as link}
       <ExternalLink href={link.href}>{link.name}</ExternalLink>
     {/each}
-    <a href="/api/feed">RSS</a>
+    <a href="/api/feed" class="flex items-center"
+      >RSS
+      <Rss class="inline size-4 text-muted-foreground" />
+    </a>
   </div>
   {#if browser}
     <span class="font-mono font-thin text-base">
