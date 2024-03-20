@@ -17,7 +17,10 @@ export let data;
 </header>
 <Prose>
   <TypographicText>
-    <p>Technical articles about my thought processes when I make projects.</p>
+    <p>
+      Technical articles about my floating thought processes while I make
+      software or just sharing my experience on various technologies.
+    </p>
     <div class="flex flex-col gap-6 py-4">
       {#each data.weblogs as weblog}
         <a

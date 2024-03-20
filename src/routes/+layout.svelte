@@ -1,7 +1,6 @@
 <script lang="ts">
 import '$lib/styles/globals.css';
 import Footer from 'src/lib/components/Footer.svelte';
-// import Navbar from "src/lib/components/Navbar.svelte";
 import Separator from 'src/lib/components/Separator.svelte';
 import { siteData } from 'src/site-config/site-data';
 </script>
@@ -44,17 +43,14 @@ import { siteData } from 'src/site-config/site-data';
   <meta name="creator" content={siteData.maintainerName} />
   <meta property="og:url" content={siteData.link} />
   <meta property="og:type" content="website" />
-  <!-- <link rel="manifest" href="/manifest.webmanifest" /> -->
-  <!-- <link rel="shortcut icon" href="/images/icons/icon-72x72.png" /> -->
-  <!-- <link rel="apple-touch-icon" href="/images/icons/icon-128x128.png" /> -->
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="shortcut icon" href="/images/icons/icon-72x72.png" />
+  <link rel="apple-touch-icon" href="/images/icons/icon-128x128.png" />
 </svelte:head>
 
 <div
   class="max-w-prose text-lg px-3 py-16 sm:px-4 md:px-6 lg:px-8 lg:py-24 mx-auto"
 >
-  <!-- <header> -->
-  <!--   <Navbar /> -->
-  <!-- </header> -->
   <main>
     <slot />
   </main>

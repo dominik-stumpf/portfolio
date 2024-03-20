@@ -15,17 +15,23 @@ import Navbar from 'src/lib/components/Navbar.svelte';
 </header>
 <Prose>
   <TypographicText>
+    <h2>
+      Fullstack web developer, publisher, typographer, video game maker and
+      nearly a scientist.
+    </h2>
     <p>
-      Hello! I'm Dominik Stumpf, a fullstack web developer, video game maker and
-      almost a scientist.
+      Hello! I'm Dominik Stumpf, software enginner based in Hungary, I'm the
+      creator of
+      <ExternalLink href={links.postPaper}>PostPaper</ExternalLink>, a posting
+      platform prototype. In my free I love fiddling around with computer
+      graphics and game development that usually involves
+      <strong>Rust and math</strong>. Besides that, not to brag or anything, but
+      I use Arch Linux btw and Neovim btw. I write tech related
+      <a href={routes.weblogs}>blogs here</a>.
     </p>
     <p>
-      I am the creator of
-      <ExternalLink href={links.postPaper}>PostPaper</ExternalLink>, a posting
-      platform prototype. In my freetime I love fiddling around with
-      <a href="/">computer graphics</a> and game development that usually
-      involves Rust and math. Recently started writing tech related
-      <a href={routes.weblogs}>blogs here</a>.
+      When making websites my ideology is keeping things simple and snappy. I
+      always put user experience and accessibilty ahead of the aesthetics.
     </p>
   </TypographicText>
 </Prose>

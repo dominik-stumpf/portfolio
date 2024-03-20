@@ -1,6 +1,7 @@
 <script>
 import Prose from 'src/lib/components/Prose.svelte';
 import Navbar from 'src/lib/components/Navbar.svelte';
+export let data;
 </script>
 
 <svelte:head>
@@ -11,5 +12,7 @@ import Navbar from 'src/lib/components/Navbar.svelte';
   <Navbar />
 </header>
 <Prose>
-  <p>Work</p>
+  <div class="not-prose whitespace-pre font-mono overflow-auto text-sm">
+    {data.wipMessage}
+  </div>
 </Prose>
