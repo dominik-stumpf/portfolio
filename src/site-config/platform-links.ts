@@ -1,23 +1,23 @@
-import { Codesandbox, Github, Linkedin } from 'lucide-svelte';
+// import { Codesandbox, Github, Linkedin } from 'lucide-svelte';
 import { links } from './site-data';
 
 export const platformLinks = [
   {
     href: links.linkedin,
     name: 'LinkedIn',
-    Icon: Linkedin,
+    // Icon: Linkedin,
     username: 'in/dominik-stumpf',
   },
   {
     href: links.github,
     name: 'GitHub',
-    Icon: Github,
+    // Icon: Github,
     username: 'dominik-stumpf',
   },
   {
     href: links.codesandbox,
     name: 'CodeSandbox',
-    Icon: Codesandbox,
+    // Icon: Codesandbox,
     username: 'u/dominik-stumpf',
   },
   // {

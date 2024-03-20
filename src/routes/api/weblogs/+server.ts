@@ -3,7 +3,7 @@ import { retrieveFrontmatter } from '$lib/utils/retrieve-frontmatter';
 import { routes } from 'src/site-config/site-data';
 import { weblogMetadataSchema } from 'src/lib/validators/weblog';
 
-async function fetchMarkdownWeblogs() {
+export async function fetchMarkdownWeblogs() {
   const weblogFiles = import.meta.glob('/src/lib/weblogs-md/*.md', {
     query: '?raw',
   });
