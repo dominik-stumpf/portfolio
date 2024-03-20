@@ -27,7 +27,10 @@ export let data;
 </svelte:head>
 
 <header>
-  <nav class="mb-8 flex gap-2 font-mono sm:items-center flex-col sm:flex-row">
+  <nav
+    class="mb-8 flex gap-2 font-mono sm:items-center flex-col sm:flex-row
+    print:hidden"
+  >
     <a href={routes.weblogs}
       ><span class="text-muted-foreground">&lt;-</span> I&rsquo;ll be back</a
     >

@@ -77,6 +77,7 @@ const config: Config = {
               fontSize: 'inherit',
               fontFamily: 'inherit',
               lineHeight: 'inherit',
+              pageBreakInside: 'avoid',
             },
             blockquote: {
               fontWeight: 'inherit',
