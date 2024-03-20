@@ -3,7 +3,7 @@ import { siteData } from 'src/site-config/site-data';
 
 const { title, description, link, maintainerEmail, maintainerName } = siteData;
 
-function generateRssFeed(posts: Weblogs) {
+function generateRssFeedFrom(weblogs: Weblogs) {
   const siteUrl = new URL(link);
   const maintainer = `${maintainerEmail} (${maintainerName})`;
 
@@ -17,17 +17,17 @@ function generateRssFeed(posts: Weblogs) {
 <managingEditor>${maintainer}</managingEditor>
 <webMaster>${maintainer}</webMaster>
 <atom:link href="${new URL('api/feed', siteUrl)}" rel="self" type="application/rss+xml"/>
-${posts
-  .filter((post) => post.metadata.language.startsWith('en'))
-  .map((post) => {
-    const postUrl = new URL(post.path, siteUrl);
+${weblogs
+  .filter((weblog) => weblog.metadata.language.startsWith('en'))
+  .map((weblog) => {
+    const postUrl = new URL(weblog.path, siteUrl);
     return `<item>
 <guid isPermaLink="true">${postUrl}</guid>
 <link>${postUrl}</link>
 <author>${maintainer}</author>
-<title>${post.metadata.title}</title>
-<description>${post.metadata.lead}</description>
-<pubDate>${post.metadata.publishedAt.toUTCString()}</pubDate>
+<title>${weblog.metadata.title}</title>
+<description>${weblog.metadata.lead}</description>
+<pubDate>${weblog.metadata.publishedAt.toUTCString()}</pubDate>
 </item>`;
   })
   .join('')}
@@ -38,9 +38,9 @@ ${posts
 
 export const GET = async () => {
   const weblogs = await fetchMarkdownWeblogs();
-  const body = generateRssFeed(weblogs);
+  const body = generateRssFeedFrom(weblogs);
   const headers = {
-    'Cache-Control': `max-age=0, s-max-age=${600}`,
+    'Cache-Control': `max-age=0, s-max-age=${3600}`,
     'Content-Type': 'application/xml',
   };
 
