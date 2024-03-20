@@ -13,9 +13,10 @@ import { siteData } from 'src/site-config/site-data';
   <link
     rel="alternate"
     type="application/rss+xml"
-    title={`RSS feed for ${siteData.link}`}
+    title="RSS feed"
     href="/api/feed"
   />
+  <link rel="canonical" href={siteData.link} />
   <meta charset="utf-8" /><meta
     name="viewport"
     content="width=device-width, initial-scale=1"
@@ -42,6 +43,8 @@ import { siteData } from 'src/site-config/site-data';
   <meta name="author" content={siteData.maintainerName} />
   <meta name="keywords" content="resume,weblogs,programming" />
   <meta name="creator" content={siteData.maintainerName} />
+  <meta property="og:url" content={siteData.link} />
+  <meta property="og:type" content="website" />
   <!-- <link rel="manifest" href="/manifest.webmanifest" /> -->
   <!-- <link rel="shortcut icon" href="/images/icons/icon-72x72.png" /> -->
   <!-- <link rel="apple-touch-icon" href="/images/icons/icon-128x128.png" /> -->

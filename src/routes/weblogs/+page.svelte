@@ -3,6 +3,10 @@ import Prose from 'src/lib/components/Prose.svelte';
 export let data;
 </script>
 
+<svelte:head>
+  <title>Weblogs</title>
+</svelte:head>
+
 <Prose>
   <p>Technical articles about my thought processes when I make projects.</p>
   <div class="flex flex-col gap-6 py-4">

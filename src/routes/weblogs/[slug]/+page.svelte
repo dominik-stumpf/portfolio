@@ -3,6 +3,8 @@ import '$lib/styles/gruvbox-dark.css';
 import '$lib/styles/gruvbox-light.css';
 import Prose from '$lib/components/Prose.svelte';
 import TypographicText from '$lib/components/TypographicText.svelte';
+import { page } from '$app/stores';
+
 export let data;
 </script>
 
@@ -11,6 +13,14 @@ export let data;
     href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
     rel="stylesheet"
   />
+  <title>{data.metadata.title}</title>
+  <meta name="description" content={data.metadata.lead} />
+  <meta property="og:type" content="weblog" />
+  <meta property="og:url" content={$page.url.toString()} />
+  <meta property="og:title" content={data.metadata.title} />
+  <meta property="og:description" content={data.metadata.lead} />
+  <meta name="twitter:title" content={data.metadata.title} />
+  <meta name="twitter:description" content={data.metadata.lead} />
 </svelte:head>
 
 <Prose>
