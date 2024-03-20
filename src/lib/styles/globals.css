@@ -21,9 +21,9 @@
 
     --radius: 0.5rem;
     --dimmed-foreground: 0 2% 24%;
-    --font-sans-serif: "Vollkorn Variable", sans-serif;
+    --font-sans-serif: sans-serif;
     --font-mono: "JetBrains Mono Variable", monospace;
-    --font-serif: serif;
+    --font-serif: "Vollkorn Variable", serif;
 
     scroll-behavior: smooth;
     @media (prefers-reduced-motion) {
@@ -33,11 +33,11 @@
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --background: 0 0% 4%;
+      --background: 0 0% 7%;
       --foreground: 0 0% 98%;
       --primary: 180 25% 60%;
       --primary-foreground: 180 20% 9%;
-      --card: 0 0% 7%;
+      --card: 0 0% 9%;
       --card--foreground: 0 0% 98%;
       --muted: 0 0% 15%;
       --muted-foreground: 0 0% 64%;

@@ -5,6 +5,7 @@ import Prose from '$lib/components/Prose.svelte';
 import TypographicText from '$lib/components/TypographicText.svelte';
 import { page } from '$app/stores';
 import { routes } from 'src/site-config/site-data';
+import { formatWeblogDate } from '$lib/utils/format-weblog-date';
 
 export let data;
 </script>
@@ -13,6 +14,7 @@ export let data;
   <link
     href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
     rel="preload stylesheet"
+    as="style"
   />
   <title>{data.metadata.title}</title>
   <meta name="description" content={data.metadata.lead} />
@@ -36,13 +38,9 @@ export let data;
     <h1 style:margin-bottom="0">{data.metadata.title}</h1>
     <div class="not-prose mt-2 mb-8 py-2 font-mono text-base font-light">
       <time datetime={data.metadata.publishedAt.toISOString()}
-        >{data.metadata.publishedAt.toLocaleDateString("en-US", {
-          year: "numeric",
-          month: "short",
-          day: "numeric",
-        })}</time
+        >{formatWeblogDate(data.metadata.publishedAt)}</time
       >
-      -
+      /
       <span>{data.readingTimeStats.text}</span>
     </div>
   </TypographicText>

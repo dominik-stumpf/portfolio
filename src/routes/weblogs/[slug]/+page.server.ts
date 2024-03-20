@@ -29,8 +29,7 @@ export async function load({ params }: ServerLoadEvent) {
     const weblog = await import(
       `../../../lib/weblogs-md/${params.slug}.md?raw`
     );
-    const readingTimeStats = readingTime(weblog.default);
-
+    const readTimeResults = readingTime(weblog.default);
     const file = await unified()
       .use(remarkParse)
       .use(parseYamlMatter)
@@ -56,7 +55,7 @@ export async function load({ params }: ServerLoadEvent) {
     return {
       content: file.value,
       metadata,
-      readingTimeStats,
+      readingTimeStats: readTimeResults,
     };
   } catch {
     error(404, 'Weblog not found.');
