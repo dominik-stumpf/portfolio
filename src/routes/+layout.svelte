@@ -7,7 +7,6 @@ import { siteData } from 'src/site-config/site-data';
 </script>
 
 <svelte:head>
-  <meta charset="utf-8" />
   <link rel="icon" href="/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link
