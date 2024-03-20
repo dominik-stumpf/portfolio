@@ -3,12 +3,16 @@ import ExternalLink from '$lib/components/ExternalLink.svelte';
 import Prose from 'src/lib/components/Prose.svelte';
 import TypographicText from 'src/lib/components/TypographicText.svelte';
 import { links, routes, siteData } from 'src/site-config/site-data';
+import Navbar from 'src/lib/components/Navbar.svelte';
 </script>
 
 <svelte:head>
   <title>{siteData.maintainerName}</title>
 </svelte:head>
 
+<header>
+  <Navbar />
+</header>
 <Prose>
   <TypographicText>
     <p>

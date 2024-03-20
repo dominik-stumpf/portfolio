@@ -4,6 +4,7 @@ import '$lib/styles/gruvbox-light.css';
 import Prose from '$lib/components/Prose.svelte';
 import TypographicText from '$lib/components/TypographicText.svelte';
 import { page } from '$app/stores';
+import { routes } from 'src/site-config/site-data';
 
 export let data;
 </script>
@@ -23,6 +24,13 @@ export let data;
   <meta name="twitter:description" content={data.metadata.lead} />
 </svelte:head>
 
+<header>
+  <nav class="mb-8 flex gap-2 font-mono sm:items-center flex-col sm:flex-row">
+    <a href={routes.weblogs}
+      ><span class="text-muted-foreground">&lt;-</span> I&rsquo;ll be back</a
+    >
+  </nav>
+</header>
 <Prose>
   <TypographicText>
     <h1 style:margin-bottom="0">{data.metadata.title}</h1>

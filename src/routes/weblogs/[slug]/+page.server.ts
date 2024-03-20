@@ -21,6 +21,9 @@ import type { ServerLoadEvent } from '@sveltejs/kit';
 
 const textrPlugins = [applyTypographicBase];
 
+export const csr = false;
+export const prerender = true;
+
 export async function load({ params }: ServerLoadEvent) {
   try {
     const weblog = await import(

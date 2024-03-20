@@ -1,5 +1,7 @@
 <script lang="ts">
 import Prose from 'src/lib/components/Prose.svelte';
+import Navbar from 'src/lib/components/Navbar.svelte';
+
 export let data;
 </script>
 
@@ -7,6 +9,9 @@ export let data;
   <title>Weblogs</title>
 </svelte:head>
 
+<header>
+  <Navbar />
+</header>
 <Prose>
   <p>Technical articles about my thought processes when I make projects.</p>
   <div class="flex flex-col gap-6 py-4">
