@@ -4,9 +4,9 @@ import { routes } from 'src/site-config/site-data';
 
 const navlinks = [
   { href: routes.about, name: 'about' },
-  { href: routes.resume, name: 'resume' },
-  { href: routes.projects, name: 'projects' },
   { href: routes.weblogs, name: 'weblogs' },
+  { href: routes.projects, name: 'projects' },
+  { href: routes.resume, name: 'resume' },
 ] as const;
 </script>
 
