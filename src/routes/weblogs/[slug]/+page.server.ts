@@ -17,10 +17,11 @@ import { applyTypographicBase } from 'src/lib/utils/apply-typographic-base';
 import { unified } from 'unified';
 import readingTime from 'reading-time';
 import { weblogMetadataSchema } from 'src/lib/validators/weblog';
+import type { ServerLoadEvent } from '@sveltejs/kit';
 
 const textrPlugins = [applyTypographicBase];
 
-export async function load({ params }: { params: { slug: string } }) {
+export async function load({ params }: ServerLoadEvent) {
   try {
     const weblog = await import(
       `../../../lib/weblogs-md/${params.slug}.md?raw`

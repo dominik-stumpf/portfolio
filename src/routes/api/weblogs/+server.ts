@@ -23,9 +23,7 @@ async function fetchMarkdownWeblogs() {
       }
 
       const frontmatter = await retrieveFrontmatter(md.default);
-      console.log(frontmatter);
       const metadata = weblogMetadataSchema.parse(frontmatter);
-      console.log(metadata);
       const end = fullPath.lastIndexOf('.');
       const start = fullPath.lastIndexOf('/', end);
       if (start === -1 || end === -1) {
@@ -41,6 +39,11 @@ async function fetchMarkdownWeblogs() {
 
   return weblogs;
 }
+
+type ExtractFromPromise<T> = T extends Promise<infer U> ? U : T;
+export type Weblogs = ExtractFromPromise<
+  ReturnType<typeof fetchMarkdownWeblogs>
+>;
 
 export const GET = async () => {
   const weblogs = await fetchMarkdownWeblogs();

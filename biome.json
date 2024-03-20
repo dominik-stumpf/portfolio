@@ -20,7 +20,8 @@
       "suspicious": {
         "noRedundantUseStrict": "off",
         "noArrayIndexKey": "off",
-        "noConfusingLabels": "off"
+        "noConfusingLabels": "off",
+        "noImplicitAnyLet": "off"
       },
       "style": {
         "noImplicitBoolean": "off",

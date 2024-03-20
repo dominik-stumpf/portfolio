@@ -1,7 +1,6 @@
 <script lang="ts">
 import Prose from 'src/lib/components/Prose.svelte';
-
-export let data: { weblogs: object[] };
+export let data;
 </script>
 
 <Prose>
