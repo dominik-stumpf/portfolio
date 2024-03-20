@@ -1,5 +1,6 @@
-import { fetchMarkdownWeblogs, type Weblogs } from '../weblogs/+server';
+import type { Weblogs } from '../weblogs/+server';
 import { siteData } from 'src/site-config/site-data';
+import { getMarkdownWeblogs } from '../weblogs/get-markdown-weblogs';
 
 const { title, description, link, maintainerEmail, maintainerName } = siteData;
 
@@ -37,7 +38,7 @@ ${weblogs
 }
 
 export const GET = async () => {
-  const weblogs = await fetchMarkdownWeblogs();
+  const weblogs = await getMarkdownWeblogs();
   const body = generateRssFeedFrom(weblogs);
   const headers = {
     'Cache-Control': `max-age=0, s-max-age=${3600}`,

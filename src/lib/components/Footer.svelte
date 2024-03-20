@@ -25,10 +25,11 @@ $: offsetMessageMap = new Map([
 
 <footer class="mt-8 flex flex-wrap flex-col gap-4 justify-between">
   <div class="flex gap-4 flex-wrap">
+    <a href={links.email}>Email</a>
     {#each platformLinks as link}
       <ExternalLink href={link.href}>{link.name}</ExternalLink>
     {/each}
-    <a href={links.email}>Email</a>
+    <a href="/api/feed">RSS</a>
   </div>
   {#if browser}
     <span class="font-mono font-thin text-base">
