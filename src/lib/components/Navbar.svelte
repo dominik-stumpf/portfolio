@@ -11,10 +11,15 @@ const navlinks = [
 </script>
 
 <nav
-  class="mb-8 flex gap-2 font-mono sm:items-center flex-col sm:flex-row print:hidden"
+  class="mb-8 flex gap-2 font-mono sm:items-center flex-col sm:flex-row
+  print:hidden"
 >
   {#each navlinks as navlink, index}
-    <a href={navlink.href} class:selected={$page.url.pathname === navlink.href}
+    <a
+      href={navlink.href}
+      data-active={$page.url.pathname === navlink.href}
+      class="data-[active=true]:opacity-60
+      data-[active=true]:pointer-events-none data-[active=true]:font-extralight"
       >{navlink.name}</a
     >
     {#if index !== navlinks.length - 1}
@@ -22,11 +27,3 @@ const navlinks = [
     {/if}
   {/each}
 </nav>
-
-<style>
-  .selected {
-    opacity: 0.6;
-    pointer-events: none;
-    font-weight: 200;
-  }
-</style>
