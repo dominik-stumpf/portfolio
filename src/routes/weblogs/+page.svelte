@@ -2,7 +2,6 @@
 import Navbar from '$lib/components/Navbar.svelte';
 import Prose from '$lib/components/Prose.svelte';
 import { formatWeblogDate } from '$lib/utils/format-weblog-date';
-import { ArrowUpRight } from 'lucide-svelte';
 import ExternalLink from 'src/lib/components/ExternalLink.svelte';
 import TypographicText from 'src/lib/components/TypographicText.svelte';
 import { links } from 'src/site-config/site-data';
@@ -30,16 +29,22 @@ export let data;
         font-serif"
           href={weblog.path}
         >
-          <div class="flex gap-1">
-            <h3 style:margin="0">{weblog.metadata.title}</h3>
-            <ArrowUpRight class="size-5 text-muted-foreground" />
-          </div>
-          <div class="font-mono text-sm text-muted-foreground pt-1">
+          <h3 style:margin="0">{weblog.metadata.title}</h3>
+          <p class="line-clamp-2 not-prose mt-3 text-muted-foreground">
+            {weblog.metadata.lead}
+          </p>
+          <div class="font-mono text-sm text-muted-foreground pt-3">
             <time datetime={new Date(weblog.metadata.publishedAt).toISOString()}
               >{formatWeblogDate(weblog.metadata.publishedAt)}</time
             >
             /
             <span>{weblog.readTimeResults.text}</span>
+            /
+            <span class="space-x-2">
+              {#each weblog.metadata.keywords?.slice(0, 2) ?? [] as keyword}
+                <code class="inline-block">{keyword}</code>
+              {/each}
+            </span>
           </div>
         </a>
       {/each}

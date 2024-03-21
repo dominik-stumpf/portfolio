@@ -39,7 +39,6 @@ import { siteData } from 'src/site-config/site-data';
   <meta name="application-name" content={siteData.title} />
   <link rel="author" href={siteData.link} />
   <meta name="author" content={siteData.maintainerName} />
-  <meta name="keywords" content="resume,weblogs,programming" />
   <meta name="creator" content={siteData.maintainerName} />
   <meta property="og:url" content={siteData.link} />
   <meta property="og:type" content="website" />

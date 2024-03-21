@@ -24,6 +24,9 @@ export let data;
   <meta property="og:description" content={data.metadata.lead} />
   <meta name="twitter:title" content={data.metadata.title} />
   <meta name="twitter:description" content={data.metadata.lead} />
+  {#if data.metadata.keywords}
+    <meta name="keywords" content={data.metadata.keywords.join(",")} />
+  {/if}
 </svelte:head>
 
 <header>
@@ -41,7 +44,7 @@ export let data;
     <h1 style:margin-bottom="0" class="text-pretty hyphens-auto">
       {data.metadata.title}
     </h1>
-    <div class="not-prose mt-2 mb-8 py-2 font-mono text-base font-light">
+    <div class="not-prose mb-8 py-2 font-mono text-base font-light">
       <time datetime={data.metadata.publishedAt.toISOString()}
         >{formatWeblogDate(data.metadata.publishedAt)}</time
       >
