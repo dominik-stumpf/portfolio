@@ -110,12 +110,6 @@ const config: Config = {
               cursor: 'none',
               transform: 'scale(2.0)',
               position: 'relative',
-              // position: 'fixed',
-              // left: '50%',
-              // top: '50%',
-              // translate: '-50% -50%',
-              // width: 'min(100dvw, 1080px)',
-              // height: 'auto',
               zIndex: '1',
             },
             video: {
