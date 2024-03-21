@@ -99,7 +99,29 @@ const config: Config = {
             'code::after': {
               content: '',
             },
-
+            img: {
+              border: '2px solid hsl(var(--border))',
+              borderRadius: 'var(--radius)',
+            },
+            'img[tabindex="0"]': {
+              cursor: 'zoom-in',
+            },
+            'img:focus-visible, img:active': {
+              cursor: 'none',
+              transform: 'scale(2.0)',
+              position: 'relative',
+              // position: 'fixed',
+              // left: '50%',
+              // top: '50%',
+              // translate: '-50% -50%',
+              // width: 'min(100dvw, 1080px)',
+              // height: 'auto',
+              zIndex: '1',
+            },
+            video: {
+              border: '2px solid hsl(var(--border))',
+              borderRadius: 'var(--radius)',
+            },
             code: {
               // color: 'var(--tw-prose-code)',
               color: 'hsl(var(--card-foreground))',
@@ -110,6 +132,9 @@ const config: Config = {
               padding: '2px 5px',
               backgroundColor: 'hsl(var(--card))',
             },
+            figcaption: {
+              textAlign: 'center',
+            },
           },
         },
 
@@ -118,6 +143,9 @@ const config: Config = {
             {
               'pre code': {
                 fontSize: em(18, 20),
+              },
+              figcaption: {
+                fontSize: em(15, 20),
               },
               code: {
                 fontSize: em(15, 20),

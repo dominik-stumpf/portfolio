@@ -1,6 +1,6 @@
-import type { Weblogs } from '../weblogs/+server';
+import type { Weblogs } from 'src/routes/api/weblogs/+server';
+import { getMarkdownWeblogs } from 'src/routes/api/weblogs/get-markdown-weblogs';
 import { siteData } from 'src/site-config/site-data';
-import { getMarkdownWeblogs } from '../weblogs/get-markdown-weblogs';
 
 const { title, description, link, maintainerEmail, maintainerName } = siteData;
 

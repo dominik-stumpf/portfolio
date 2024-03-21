@@ -1,6 +1,6 @@
 <script>
-import Prose from 'src/lib/components/Prose.svelte';
 import Navbar from 'src/lib/components/Navbar.svelte';
+import Prose from 'src/lib/components/Prose.svelte';
 export let data;
 </script>
 

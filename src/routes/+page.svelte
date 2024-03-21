@@ -1,9 +1,9 @@
 <script lang="ts">
 import ExternalLink from '$lib/components/ExternalLink.svelte';
+import Navbar from 'src/lib/components/Navbar.svelte';
 import Prose from 'src/lib/components/Prose.svelte';
 import TypographicText from 'src/lib/components/TypographicText.svelte';
 import { links, routes, siteData } from 'src/site-config/site-data';
-import Navbar from 'src/lib/components/Navbar.svelte';
 </script>
 
 <svelte:head>
@@ -22,10 +22,11 @@ import Navbar from 'src/lib/components/Navbar.svelte';
     <p>
       Hello! I'm Dominik Stumpf, software enginner based in Hungary, I'm the
       creator of
-      <ExternalLink href={links.postPaper}>PostPaper</ExternalLink>, a posting
-      platform prototype. In my free I love fiddling around with computer
-      graphics and game development that usually involves
-      <strong>Rust and math</strong>. Besides that, not to brag or anything, but
+      <ExternalLink href={links.postPaper}>PostPaper</ExternalLink>, a Rust
+      <abbr title="WebAssembly">WASM</abbr>
+      and Vim motion driven posting platform prototype. In my free I love fiddling
+      around with computer graphics and <strong>game development</strong> that
+      usually involves Rust and math. Besides that, not to brag or anything, but
       I use Arch Linux btw and Neovim btw. I write tech related
       <a href={routes.weblogs}>blogs here</a>.
     </p>

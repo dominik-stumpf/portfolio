@@ -1,10 +1,10 @@
 <script>
-import Prose from 'src/lib/components/Prose.svelte';
-import Navbar from 'src/lib/components/Navbar.svelte';
-import TypographicText from 'src/lib/components/TypographicText.svelte';
-import { links, siteData } from 'src/site-config/site-data';
-import { platformLinks } from 'src/site-config/platform-links';
 import ExternalLink from 'src/lib/components/ExternalLink.svelte';
+import Navbar from 'src/lib/components/Navbar.svelte';
+import Prose from 'src/lib/components/Prose.svelte';
+import TypographicText from 'src/lib/components/TypographicText.svelte';
+import { platformLinks } from 'src/site-config/platform-links';
+import { links, siteData } from 'src/site-config/site-data';
 
 const contactLinks = [{ name: 'Email', href: links.email }, ...platformLinks];
 </script>

@@ -1,10 +1,10 @@
+import yaml from 'js-yaml';
 import remarkFrontmatter from 'remark-frontmatter';
 import remarkParse from 'remark-parse';
 import remarkStringify from 'remark-stringify';
 import { unified } from 'unified';
 import type { Node } from 'unist';
 import type { VFile } from 'vfile';
-import yaml from 'js-yaml';
 
 function matter(file: VFile) {
   const regex = /^---(?:\r?\n|\r)(?:([\s\S]*?)(?:\r?\n|\r))?---(?:\r?\n|\r|$)/;

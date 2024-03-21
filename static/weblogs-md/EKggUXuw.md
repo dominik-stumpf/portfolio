@@ -6,11 +6,18 @@ lead: "Even the smallest but noticeable Cumulative Layout Shift (CLS) can distra
 
 Remember that small **or large** flicker that can happen on some sites when fonts are not yet cached and the system font is used?
 
-![video of large flickering on first page load]()
+<figure>
+  <video src="/videos/cls-without-preload-no-throttle.mp4" autoplay loop muted playsinline controls></video>
+  <figcaption>
+    Large flickering on first page load
+  </figcaption>
+</figure>
 
-\*\*yikes\*\*
+_yikes_
 
-I do and if you are the perfectionist like me, then you know we must do something about that.
+I do remember and if you are the perfectionist like me, then you know we must do something about that.
+
+---
 
 ## The solution
 
@@ -40,20 +47,32 @@ This tells the browser that you prioritize this font, and after this just create
 
 After this you should be good to go.
 
-> Good to know: This delays your css and as a result your First Contentful Paint (FCP) by a negligible amount. Your layout shifts won't actually disappear, but should be unnoticeable under normal conditions, which is our goal here.
+> Good to know: This delays your css and as a result your First Contentful Paint (FCP) by a negligible amount. Your layout shifts won't actually disappear, but should become unnoticeable under normal conditions, which is our goal here.
 
 ## Edge case
 
-![video of throttled network causing CLS]()
-_Network conditions can in fact still cause the shift._
+<figure>
+  <video src="/videos/cls-with-preload-throttled.mp4" muted playsinline controls></video>
+<figcaption>
+Network conditions can in fact still cause the shift.
+</figcaption>
+</figure>
 
-This is because we definitely **don't** want to stall our page load by font files (browsers know this of course), just start to load them a bit earlier like this.
+Shift occurs and the only way to fix this is to stall our page by font file load. We definitely **don't** want that (browsers know this of course), just start to load them a bit earlier like this.
 
-![devtools waterfall with preload]()
-_Example with preload_
+<figure>
+  <img src="/images/cls-waterfall-with-preload.png" alt="devtools waterfall with preload"/>
+<figcaption>
+Resource load with preload
+</figcaption>
+</figure>
 
-![devtools waterfall without preload]()
-_Example without preload, note the difference in delay_
+<figure>
+  <img src="/images/cls-waterfall-without-preload.png" alt="devtools waterfall without preload"/>
+<figcaption>
+Resource load without preload, note the difference in delay
+</figcaption>
+</figure>
 
 As there is nothing we can do about slower networks, we are forced to let this case pass...
 
@@ -64,10 +83,10 @@ As there is nothing we can do about slower networks, we are forced to let this c
 - Obvious, but only download fonts you really use. Generally you don't need more than one.
 - **Don't overdo your preload requests.** Use for only fonts that cause the shift. Remember the more request you have, the more time it takes to process those.
 - If you are using Google Fonts, there is a good alternative called [fontsource](https://fontsource.org). Much clearer UI with better namings for font files, CDN and fonts bundled as packages.
-- Careful when relying on external font dependency resolutions. You don't know what they are placing in your css until you look at them. Meaning they can just clutter you with unnecessary `@font-face` declarations.
+- Careful when relying on external font dependency resolutions. You don't know what they are placing in your css until you look at them. Meaning they can just clutter you with unnecessary `@font-face` declarations anytime.
 
 ## Personal case
 
 The flicker was exceptionally large, since I used the relative length `ch` as my page max width boundary which yields really diverse widths depending on the typefaces used.
 
-I just switched from NextJS to SvelteKit, that automatically had done this for me as it has a built-in abstraction layer for fonts. This website is written in Svelte and applies this solution you can [check here](https://github.com/dominik-stumpf/portfolio). _This solution works regardless of framework._
+I just switched from NextJS to SvelteKit, that automatically had done this preload for me as it has a built-in abstraction layer for fonts. This website is written in Svelte and applies this solution you can [check here](https://github.com/dominik-stumpf/portfolio). _This solution works regardless of framework._

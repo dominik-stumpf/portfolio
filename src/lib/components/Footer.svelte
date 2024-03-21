@@ -1,14 +1,14 @@
 <script lang="ts">
+import { browser } from '$app/environment';
 import ExternalLink from '$lib/components/ExternalLink.svelte';
+import {
+  OffsetState,
+  determineTimeZoneOffsetState,
+  getTimeZoneOffset,
+} from '$lib/utils/time-zone-offset';
+import { Rss } from 'lucide-svelte';
 import { platformLinks } from 'src/site-config/platform-links';
 import { links } from 'src/site-config/site-data';
-import {
-  getTimeZoneOffset,
-  determineTimeZoneOffsetState,
-  OffsetState,
-} from '$lib/utils/time-zone-offset';
-import { browser } from '$app/environment';
-import { Rss } from 'lucide-svelte';
 
 let offset = getTimeZoneOffset();
 $: offsetMeasurement = offset.offsetMeasurement;

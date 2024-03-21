@@ -84,12 +84,16 @@
     }
   }
 
+  img {
+    @apply motion-safe:transition;
+  }
+
   a {
     @apply font-mono text-base uppercase hover:opacity-80 print:text-xs;
   }
 
   *[title] {
-    @apply underline decoration-dotted decoration-muted-foreground underline-offset-4;
+    @apply underline decoration-dotted decoration-muted-foreground underline-offset-4 cursor-help;
   }
 
   * {

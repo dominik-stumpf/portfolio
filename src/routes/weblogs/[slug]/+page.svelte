@@ -1,11 +1,11 @@
 <script>
-import '$lib/styles/gruvbox-dark.css';
-import '$lib/styles/gruvbox-light.css';
+import { page } from '$app/stores';
 import Prose from '$lib/components/Prose.svelte';
 import TypographicText from '$lib/components/TypographicText.svelte';
-import { page } from '$app/stores';
-import { routes } from 'src/site-config/site-data';
+import '$lib/styles/gruvbox-dark.css';
+import '$lib/styles/gruvbox-light.css';
 import { formatWeblogDate } from '$lib/utils/format-weblog-date';
+import { routes } from 'src/site-config/site-data';
 
 export let data;
 </script>

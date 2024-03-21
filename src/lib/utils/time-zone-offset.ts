@@ -1,5 +1,5 @@
 import { targetTimeZone } from 'src/site-config/site-data';
-import { readable, derived } from 'svelte/store';
+import { derived, readable } from 'svelte/store';
 
 const updateFrequencyMs = 1000;
 

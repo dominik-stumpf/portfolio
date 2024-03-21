@@ -1,7 +1,7 @@
+import readingTime from 'reading-time';
 import { retrieveFrontmatter } from 'src/lib/utils/retrieve-frontmatter';
 import { weblogMetadataSchema } from 'src/lib/validators/weblog';
 import { routes } from 'src/site-config/site-data';
-import readingTime from 'reading-time';
 
 export async function getMarkdownWeblogs() {
   const weblogFiles = import.meta.glob('/static/weblogs-md/*.md', {
