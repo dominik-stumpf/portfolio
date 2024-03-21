@@ -113,6 +113,7 @@ const config: Config = {
               zIndex: '1',
             },
             video: {
+              width: '100%',
               border: '2px solid hsl(var(--border))',
               borderRadius: 'var(--radius)',
             },
