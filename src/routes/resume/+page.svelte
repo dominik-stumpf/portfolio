@@ -36,6 +36,7 @@ const contactLinks = [{ name: 'Email', href: links.email }, ...platformLinks];
       <li>App framework: NextJS 13+, Sveltekit</li>
       <li>Testing framework: Jest, Storybook</li>
       <li>Backend as a service: Supabase (PostgreSQL)</li>
+      <li>State management: Zustand</li>
     </ul>
     <h2>Beyond the web</h2>
     <p>
