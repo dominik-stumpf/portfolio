@@ -6,7 +6,7 @@ If you are looking for info about me as a programmer, this is the place where yo
 
 ## Weblogs
 
-If you are looking for the markdown weblogs, you can find them in the `/static/weblog-md/` folder.
+If you are looking for the markdown weblogs, you can find them in the `/static/weblogs-md/` folder.
 
 Why _weblogs_? I could have used blog, but I always fail to remember the word and where it originated from. Maybe we are in the same boat?
 
