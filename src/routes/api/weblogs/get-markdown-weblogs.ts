@@ -4,7 +4,7 @@ import { routes } from 'src/site-config/site-data';
 import readingTime from 'reading-time';
 
 export async function getMarkdownWeblogs() {
-  const weblogFiles = import.meta.glob('/src/lib/weblogs-md/*.md', {
+  const weblogFiles = import.meta.glob('/static/weblogs-md/*.md', {
     query: '?raw',
   });
   const weblogEntries = Object.entries(weblogFiles);

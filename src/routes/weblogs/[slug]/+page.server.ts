@@ -27,7 +27,7 @@ export const prerender = true;
 export async function load({ params }: ServerLoadEvent) {
   try {
     const weblog = await import(
-      `../../../lib/weblogs-md/${params.slug}.md?raw`
+      `../../../../static/weblogs-md/${params.slug}.md?raw`
     );
     const readTimeResults = readingTime(weblog.default);
     const file = await unified()
