@@ -2,7 +2,8 @@ export const siteData = {
   title: 'Dominik Stumpf',
   maintainerName: 'Dominik Stumpf',
   maintainerEmail: 's.dominik.work@gmail.com',
-  description: 'Minimalist personal homepage.',
+  description:
+    'Fullstack web developer, publisher, typographer, video game maker and nearly a scientist.',
   link: 'https://dominikstumpf.com',
 } as const;
 
