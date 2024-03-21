@@ -33,5 +33,13 @@ import Navbar from 'src/lib/components/Navbar.svelte';
       When making websites my ideology is keeping things simple and snappy. I
       always put user experience and accessibilty ahead of the aesthetics.
     </p>
+    <small>
+      <p>
+        This page was made with Svelte, Tailwindcss, powered by the unified.js
+        collective, using the <i>Vollkorn</i>,
+        <i>JetBrains Mono</i>
+        typefaces and <i>Lucide</i> icons. Props to them!
+      </p>
+    </small>
   </TypographicText>
 </Prose>

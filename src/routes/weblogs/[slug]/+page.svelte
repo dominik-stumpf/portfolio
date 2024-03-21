@@ -38,7 +38,9 @@ export let data;
 </header>
 <Prose>
   <TypographicText>
-    <h1 style:margin-bottom="0">{data.metadata.title}</h1>
+    <h1 style:margin-bottom="0" class="text-pretty hyphens-auto">
+      {data.metadata.title}
+    </h1>
     <div class="not-prose mt-2 mb-8 py-2 font-mono text-base font-light">
       <time datetime={data.metadata.publishedAt.toISOString()}
         >{formatWeblogDate(data.metadata.publishedAt)}</time
@@ -46,6 +48,7 @@ export let data;
       /
       <span>{data.readingTimeStats.text}</span>
     </div>
+    <p class="lead">{data.metadata.lead}</p>
   </TypographicText>
   {@html data.content}
 </Prose>
