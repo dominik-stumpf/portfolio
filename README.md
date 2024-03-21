@@ -14,4 +14,4 @@ Why _weblogs_? I could have used blog, but I always fail to remember the word an
 
 Except where explicitly stated (in individual files) otherwise, all contributions in this repository is licensed under:
 
-Attribution-NonCommercial-NoDerivs 4.0 International, (CC BY-NC-ND 4.0)[https://creativecommons.org/licenses/by-nc-nd/4.0/]
+Attribution-NonCommercial-NoDerivs 4.0 International, [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)
