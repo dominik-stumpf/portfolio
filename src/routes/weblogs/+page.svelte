@@ -39,7 +39,9 @@ export let data;
             >
             /
             <span>{weblog.readTimeResults.text}</span>
-            /
+            {#if weblog.metadata.keywords}
+              /
+            {/if}
             <span class="space-x-2">
               {#each weblog.metadata.keywords?.slice(0, 2) ?? [] as keyword}
                 <code class="inline-block">{keyword}</code>
