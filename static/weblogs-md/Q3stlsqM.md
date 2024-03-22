@@ -13,7 +13,7 @@ Instead I thought I would just share my _first impressions_ on Svelte, SvelteKit
 
 My first goal with the switch was remaking my homepage (the page you are likely on) which would showcase me as a programmer and host my articles.
 
-For this all I need a **static site generator (SSG)** because the only important content I want to serve would reside in my source code and I want all my clients to receive the same. I wrote _"important"_ because it would be also nice to have some dynamic content optionally as well later.
+For this all I need is a **static site generator (SSG)** because the only important content I want to serve would reside in my source code and I want all my clients to receive the same. I wrote _"important"_ because it would be also nice to have some dynamic content optionally as well later.
 
 Svelte was proven to be effective for this job. It's minimal, provides a wide set of tools by default and as it later turns out it is easy to work with.
 
