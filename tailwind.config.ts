@@ -117,8 +117,12 @@ const config: Config = {
               border: '2px solid hsl(var(--border))',
               borderRadius: 'var(--radius)',
             },
-            code: {
+            p: {
+              textWrap: 'pretty',
+            },
+            ':not(pre) > code': {
               // color: 'var(--tw-prose-code)',
+              whiteSpace: 'nowrap',
               color: 'hsl(var(--card-foreground))',
               fontWeight: '400',
               border: '1px solid hsl(var(--border))',
