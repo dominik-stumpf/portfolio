@@ -24,7 +24,7 @@ import { links, routes, siteData } from 'src/site-config/site-data';
       creator of
       <ExternalLink href={links.postPaper}>PostPaper</ExternalLink>, a Rust
       <abbr title="WebAssembly">WASM</abbr>
-      and Vim motion driven posting platform prototype. In my free I love fiddling
+      and Vim motion driven posting platform prototype. In my freetime I love fiddling
       around with computer graphics and <strong>game development</strong> that
       usually involves Rust and math. Besides that, not to brag or anything, but
       I use Arch Linux btw and Neovim btw. I write tech related

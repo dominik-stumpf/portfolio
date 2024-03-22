@@ -67,7 +67,8 @@ const contactLinks = [{ name: 'Email', href: links.email }, ...platformLinks];
       </div>
       <p>
         <em>
-          Above claims are substantiated by my contributions located on Github.
+          The above claims are substantiated by my contributions located on
+          Github.
         </em>
       </p>
       <blockquote class="hidden print:block">
