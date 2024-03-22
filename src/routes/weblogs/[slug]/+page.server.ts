@@ -1,3 +1,4 @@
+import { dev } from '$app/environment';
 import { parseYamlMatter } from '$lib/utils/retrieve-frontmatter';
 import { error } from '@sveltejs/kit';
 import type { ServerLoadEvent } from '@sveltejs/kit';
@@ -24,7 +25,7 @@ import { type BuildVisitor, CONTINUE, visit } from 'unist-util-visit';
 
 const textrPlugins = [applyTypographicBase];
 
-export const csr = false;
+export const csr = dev;
 export const prerender = true;
 
 type HastVisitor = BuildVisitor<HastRoot>;
