@@ -34,6 +34,12 @@ import { links, routes, siteData } from 'src/site-config/site-data';
       When making websites my ideology is keeping things simple and snappy. I
       always put user experience and accessibilty ahead of the aesthetics.
     </p>
+    <p>
+      If for some reason you are pondering how I cope with the algorithms I
+      suggest you see <ExternalLink href={links.aocRepo}
+        >my advent of code solutions</ExternalLink
+      >.
+    </p>
     <small>
       <p>
         This page was made with Svelte, Tailwindcss, powered by the unified.js
