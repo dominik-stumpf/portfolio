@@ -44,7 +44,7 @@ const contactLinks = [{ name: 'Email', href: links.email }, ...platformLinks];
         I have experience with <i>Python</i>, networking and GNU/Linux. I'm an
         avid learner when it comes to programming. I entertain the idea of
         <em>knowing my tools</em>, consequently improving myself and my
-        workspace.
+        workspace. As far as design tooling goes, I use Figma.
       </p>
       <h2>Interests</h2>
       <p>
