@@ -11,8 +11,10 @@ export let data;
 <header>
   <Navbar />
 </header>
-<Prose>
-  <div class="not-prose whitespace-pre font-mono overflow-auto text-sm">
-    {data.wipMessage}
-  </div>
-</Prose>
+<main>
+  <Prose>
+    <div class="not-prose whitespace-pre font-mono overflow-auto text-sm">
+      {data.wipMessage}
+    </div>
+  </Prose>
+</main>
