@@ -33,17 +33,14 @@ export let data;
             <p class="line-clamp-2 not-prose mt-3 text-muted-foreground">
               {weblog.metadata.lead}
             </p>
-            <div class="font-mono text-sm text-muted-foreground pt-3">
+            <div class="font-mono text-sm text-muted-foreground mt-3">
               <time
                 datetime={new Date(weblog.metadata.publishedAt).toISOString()}
                 >{formatWeblogDate(weblog.metadata.publishedAt)}</time
               >
               /
               <span>{weblog.readTimeResults.text}</span>
-              {#if weblog.metadata.keywords}
-                /
-              {/if}
-              <span class="space-x-2">
+              <span class="ml-1 inline-flex flex-wrap flex-row gap-2 mt-2">
                 {#each weblog.metadata.keywords?.slice(0, 2) ?? [] as keyword}
                   <code class="inline-block">{keyword}</code>
                 {/each}
