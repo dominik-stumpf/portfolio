@@ -33,7 +33,7 @@ The first apparent thing was how close Svelte stands to vanilla JS and doesn't h
 
 Svelte solves state management by having a built in state management module which is a bliss to someone who have seen the _horrors of piling up boilerplates._
 
-Moving on, I was introduced to SvelteKit a metaframework for Svelte **by Svelte**, similar to NextJS (framework I use with react) because as I found out they inspired each other.
+Moving on, I was introduced to SvelteKit, a metaframework for Svelte **by Svelte**, similar to NextJS (framework I use with react) because as I found out they inspired each other.
 
 My reaction:
 
@@ -49,7 +49,7 @@ It was easy to start. After setup, I got into a flow state, basically I was just
 
 Importing components and getting it to work with typescript posed some problems. The Svelte creators made a convenient VSC\*de extension providing inferred type safety between your `+page.ts` (loader) and `+page.svelte` (route endpoint), advertising ["Zero-effort type safety"](https://svelte.dev/blog/zero-config-type-safety).
 
-It sound real great... But for someone as elevated as me who uses Neovim as a daily driver, I can't afford to touch my mouse every few seconds so I guess I will just type them out myself _duh_.
+It sounds real great... But for someone as elevated as me who uses Neovim as a daily driver, I can't afford to touch my mouse every few seconds so I guess I will just type them out myself _duh_.
 
 ```ts
 import type { ServerLoadEvent } from "@sveltejs/kit";
