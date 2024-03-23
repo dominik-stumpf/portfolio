@@ -1,10 +1,10 @@
 <script>
 import { page } from '$app/stores';
 import Prose from '$lib/components/Prose.svelte';
-import TypographicText from '$lib/components/TypographicText.svelte';
 import '$lib/styles/gruvbox-dark.css';
 import '$lib/styles/gruvbox-light.css';
 import { formatWeblogDate } from '$lib/utils/format-weblog-date';
+import { applyTypographicBase } from 'src/lib/utils/apply-typographic-base';
 import { routes } from 'src/site-config/site-data';
 
 export let data;
@@ -40,19 +40,17 @@ export let data;
   </nav>
 </header>
 <Prose>
-  <TypographicText>
-    <h1 style:margin-bottom="0" class="text-pretty hyphens-auto">
-      {data.metadata.title}
-    </h1>
-    <div class="not-prose mb-8 py-2 font-mono text-base font-light">
-      <time datetime={data.metadata.publishedAt.toISOString()}
-        >{formatWeblogDate(data.metadata.publishedAt)}</time
-      >
-      /
-      <span>{data.readingTimeStats.text}</span>
-    </div>
-    <p class="lead">{data.metadata.lead}</p>
-  </TypographicText>
+  <h1 style:margin-bottom="0" class="text-pretty hyphens-auto">
+    {applyTypographicBase(data.metadata.title)}
+  </h1>
+  <div class="not-prose mb-8 py-2 font-mono text-base font-light">
+    <time datetime={data.metadata.publishedAt.toISOString()}
+      >{formatWeblogDate(data.metadata.publishedAt)}</time
+    >
+    /
+    <span>{data.readingTimeStats.text}</span>
+  </div>
+  <p class="lead">{applyTypographicBase(data.metadata.lead)}</p>
   {@html data.content}
 </Prose>
 

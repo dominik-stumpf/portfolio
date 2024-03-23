@@ -2,6 +2,10 @@
 import { applyTypographicBase } from '$lib/utils/apply-typographic-base';
 import { onMount } from 'svelte';
 
+/**
+ * applies typographic base recursively
+ * works only in client side rendering
+ */
 function applyTypographyToTextNodes(node: Node) {
   if (node.nodeType === Node.TEXT_NODE && !isInPreOrCode(node.parentNode)) {
     const textNode = node as Text;
