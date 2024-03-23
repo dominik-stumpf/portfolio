@@ -40,7 +40,7 @@ export let data;
               >
               /
               <span>{weblog.readTimeResults.text}</span>
-              <span class="ml-1 inline-flex flex-wrap flex-row gap-2 mt-2">
+              <span class="inline-flex flex-wrap flex-row gap-2 mt-2">
                 {#each weblog.metadata.keywords?.slice(0, 2) ?? [] as keyword}
                   <code class="inline-block">{keyword}</code>
                 {/each}
