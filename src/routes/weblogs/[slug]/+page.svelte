@@ -19,7 +19,7 @@ export let data;
   />
   <title>{data.metadata.title}</title>
   <meta name="description" content={data.metadata.lead} />
-  <meta property="og:type" content="weblog" />
+  <meta property="og:type" content="article" />
   <meta property="og:url" content={$page.url.toString()} />
   <meta property="og:title" content={data.metadata.title} />
   <meta property="og:description" content={data.metadata.lead} />
