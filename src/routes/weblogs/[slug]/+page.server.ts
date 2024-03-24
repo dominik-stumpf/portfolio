@@ -22,8 +22,31 @@ import { applyTypographicBase } from 'src/lib/utils/apply-typographic-base';
 import { weblogMetadataSchema } from 'src/lib/validators/weblog';
 import { unified } from 'unified';
 import { type BuildVisitor, CONTINUE, visit } from 'unist-util-visit';
+import remarkRetext from 'remark-retext';
+import retextEnglish from 'retext-english';
+import { reporter } from 'vfile-reporter';
+import dictionaryEn from 'dictionary-en';
+import retextSpell from 'retext-spell';
+import retextReadability from 'retext-readability';
+import retextKeywords from 'retext-keywords';
+import retextPos from 'retext-pos';
+import retextIndefiniteArticle from 'retext-indefinite-article';
+// import { toString as nlcstToString } from 'nlcst-to-string'
+import abbrs from 'case-police/dict/abbreviates.json';
+import brands from 'case-police/dict/brands.json';
+import general from 'case-police/dict/general.json';
+import products from 'case-police/dict/products.json';
+import softwares from 'case-police/dict/softwares.json';
 
-const textrPlugins = [applyTypographicBase];
+const casePoliceDictionary = Object.entries({
+  ...abbrs,
+  ...brands,
+  ...general,
+  ...products,
+  ...softwares,
+})
+  .map(([key]) => key)
+  .join('\n');
 
 export const csr = dev;
 export const prerender = true;
@@ -50,15 +73,35 @@ export async function load({ params }: ServerLoadEvent) {
     const weblog = await import(
       `../../../../static/weblogs-md/${params.slug}.md?raw`
     );
+    const personalDictionary = (await import('./personal-dictionary?raw'))
+      .default;
     const readTimeResults = readingTime(weblog.default);
     const file = await unified()
       .use(remarkParse)
+      .use(
+        remarkRetext,
+        // @ts-ignore
+        dev &&
+          unified()
+            .use(retextEnglish)
+            .use(retextReadability)
+            .use(retextSpell, {
+              dictionary: dictionaryEn,
+              personal: `${casePoliceDictionary}\n${personalDictionary}`,
+            })
+            .use(retextIndefiniteArticle)
+            .use(retextPos)
+            .use(retextKeywords),
+      )
       .use(parseYamlMatter)
       .use(remarkFrontmatter, ['yaml'])
       .use(remarkGfm)
       .use(remarkMath)
       .use(remarkGemoji)
-      .use(remarkTextr, { options: { locale: 'en-us' }, plugins: textrPlugins })
+      .use(remarkTextr, {
+        options: { locale: 'en-us' },
+        plugins: [applyTypographicBase],
+      })
       .use(remarkRehype, { allowDangerousHtml: true })
       .use(rehypeRaw)
       .use(rehypeMakeImagesInteractable)
@@ -72,6 +115,26 @@ export async function load({ params }: ServerLoadEvent) {
       .use(rehypeSlug)
       .use(rehypeAutolinkHeadings, { behavior: 'wrap' })
       .process(weblog.default);
+
+    if (dev) {
+      // console.log('keywords:\n');
+      //
+      // if (file.data.keywords) {
+      //   for (const keyword of file.data.keywords) {
+      //     console.log(nlcstToString(keyword.matches[0].node))
+      //   }
+      // }
+      //
+      // console.log('\nkeyphrases:\n');
+      //
+      // if (file.data.keyphrases) {
+      //   for (const phrase of file.data.keyphrases) {
+      //     console.log(nlcstToString(phrase.matches[0].nodes))
+      //   }
+      // }
+
+      console.warn(reporter(file));
+    }
 
     const metadata = weblogMetadataSchema.parse(file.data.matter);
 

@@ -15,7 +15,8 @@
       },
       "nursery": {
         "all": true,
-        "noUndeclaredDependencies": "off"
+        "noUndeclaredDependencies": "off",
+        "noConsole": "off"
       },
       "suspicious": {
         "noRedundantUseStrict": "off",

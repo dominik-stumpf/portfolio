@@ -31,8 +31,9 @@ import { links, routes, siteData } from 'src/site-config/site-data';
       <a href={routes.weblogs}>blogs here</a>.
     </p>
     <p>
-      When making websites my ideology is keeping things simple and snappy. I
-      always put user experience and accessibilty ahead of the aesthetics.
+      When making websites my ideology is <b>keeping things simple</b> and snappy.
+      I always put user experience and accessibilty ahead of the aesthetics and I
+      care how the page gets indexed by search engines.
     </p>
     <p>
       If for some reason you are pondering how I cope with the algorithms I
@@ -42,7 +43,7 @@ import { links, routes, siteData } from 'src/site-config/site-data';
     </p>
     <small>
       <p>
-        This page was made with Svelte, Tailwindcss, powered by the unified.js
+        This page was made with Svelte, TailwindCSS, powered by the unifiedJS
         collective, using the <i>Vollkorn</i>,
         <i>JetBrains Mono</i>
         typefaces and <i>Lucide</i> icons. Props to them!

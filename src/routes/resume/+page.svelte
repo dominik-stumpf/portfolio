@@ -26,13 +26,13 @@ const contactLinks = [{ name: 'Email', href: links.email }, ...platformLinks];
       <h2>Web related</h2>
       <p>
         Javascript (+Typescript) user for more than 2 years, experienced in
-        writing responsive CSS and semantic, search engine indexable HTML. I can
-        make progressive webapps that support printing, is accessible and
-        typographically correct. The following list is
+        writing responsive CSS and semantic HTML. I can make progressive webapps
+        that support printing, is accessible and typographically correct. The
+        following list is
         <strong>my web stack</strong>, common technologies I have used:
       </p>
       <ul>
-        <li>CSS framework: Tailwindcss</li>
+        <li>CSS framework: TailwindCSS</li>
         <li>Component framework: React, Svelte</li>
         <li>App framework: NextJS 13+, Sveltekit</li>
         <li>Testing framework: Jest, Storybook</li>
@@ -65,12 +65,6 @@ const contactLinks = [{ name: 'Email', href: links.email }, ...platformLinks];
           {/each}
         </div>
       </div>
-      <p>
-        <em>
-          The above claims are substantiated by my contributions located on
-          Github.
-        </em>
-      </p>
       <blockquote class="hidden print:block">
         Note: This file is a printed version of my homepage
         <ExternalLink href={siteData.link}
