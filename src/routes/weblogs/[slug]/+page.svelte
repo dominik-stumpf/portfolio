@@ -4,6 +4,7 @@ import Prose from '$lib/components/Prose.svelte';
 import '$lib/styles/gruvbox-dark.css';
 import '$lib/styles/gruvbox-light.css';
 import { formatWeblogDate } from '$lib/utils/format-weblog-date';
+import Separator from 'src/lib/components/Separator.svelte';
 import { applyTypographicBase } from 'src/lib/utils/apply-typographic-base';
 import { routes } from 'src/site-config/site-data';
 
@@ -43,14 +44,15 @@ export let data;
   <h1 style:margin-bottom="0" class="text-pretty hyphens-auto">
     {applyTypographicBase(data.metadata.title)}
   </h1>
-  <div class="not-prose mb-8 py-2 font-mono text-base font-light">
+  <p class="lead">{applyTypographicBase(data.metadata.lead)}</p>
+  <div class="not-prose font-mono text-sm text-muted-foreground">
     <time datetime={data.metadata.publishedAt.toISOString()}
-      >{formatWeblogDate(data.metadata.publishedAt)}</time
+      >Published {formatWeblogDate(data.metadata.publishedAt)}</time
     >
     /
     <span>{data.readingTimeStats.text}</span>
   </div>
-  <p class="lead">{applyTypographicBase(data.metadata.lead)}</p>
+  <Separator />
   {@html data.content}
 </Prose>
 
