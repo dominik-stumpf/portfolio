@@ -24,8 +24,8 @@ export let data;
   <meta property="og:description" content={data.metadata.lead} />
   <meta name="twitter:title" content={data.metadata.title} />
   <meta name="twitter:description" content={data.metadata.lead} />
-  {#if data.metadata.keywords}
-    <meta name="keywords" content={data.metadata.keywords.join(",")} />
+  {#if data.metadata.keyphrases}
+    <meta name="keywords" content={data.metadata.keyphrases.join(",")} />
   {/if}
 </svelte:head>
 

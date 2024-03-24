@@ -2,7 +2,8 @@
 title: "How to avoid page load CLS caused by unloaded font"
 publishedAt: 2024-03-21 07:25:00
 lead: "Even the smallest but noticeable Cumulative Layout Shift (CLS) can distract the user and cause bad experience. For that I have prepared a solution."
-keywords: ["guide", "cumulative layout shift", "font loading", "core web vital"]
+keyphrases:
+  ["guide", "cumulative layout shift", "font loading", "core web vital"]
 ---
 
 Remember that small **or large** flicker that can happen on some sites when fonts are not yet cached and the system font is used?

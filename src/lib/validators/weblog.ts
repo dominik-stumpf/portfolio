@@ -13,6 +13,6 @@ export const weblogMetadataSchema = z.object({
   publishedAt: z.date(),
   splashImage: z.string().url('Splash image must be a valid URL').optional(),
   thumbnailImage: z.string().url().optional(),
-  keywords: z.string().min(1).max(24).array().optional(),
+  keyphrases: z.string().min(1).max(24).array().optional(),
   language: z.string().default('en'),
 });

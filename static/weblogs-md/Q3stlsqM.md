@@ -2,7 +2,7 @@
 title: "Switching to Svelte"
 publishedAt: 2024-03-22 09:33:00
 lead: '"Taking the first step is hard, but it can be greatly rewarding." -- Said by a React dev'
-keywords: ["web frameworks", "personal opinion", "svelte"]
+keyphrases: ["web frameworks", "personal opinion", "svelte"]
 ---
 
 After about two years of using react I decided to switch it down and try something else out. I feel like we already are full of takes why react is suboptimal, so I decided to spare you from that.

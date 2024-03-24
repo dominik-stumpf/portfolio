@@ -40,7 +40,7 @@ ${sortedWeblogs
 <title>${weblog.metadata.title}</title>
 <description>${weblog.metadata.lead} ${
       weblog.readTimeResults.text
-    }.${parseKeywords(weblog.metadata.keywords)}</description>
+    }.${parseKeywords(weblog.metadata.keyphrases)}</description>
 <pubDate>${weblog.metadata.publishedAt.toUTCString()}</pubDate>
 </item>`;
   })
