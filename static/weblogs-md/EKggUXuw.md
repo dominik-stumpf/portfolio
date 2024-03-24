@@ -22,7 +22,7 @@ I do remember and if you are a perfectionist like me, then you know we must do s
 
 ## The solution
 
-What you ideally want to achieve is to initiate your font request before your css, which can be just a single line inside your `<head>` tag in the html.
+What you ideally want to achieve is to initiate your font request before your CSS, which can be just a single line inside your `<head>` tag in the HTML.
 
 ```html
 <link
@@ -34,7 +34,7 @@ What you ideally want to achieve is to initiate your font request before your cs
 />
 ```
 
-This tells the browser that you prioritize this font, and after this just create your `@font-face` declaration like you normally would in your css:
+This tells the browser that you prioritize this font, and after this just create your `@font-face` declaration like you normally would in your CSS:
 
 ```css
 @font-face {
@@ -48,7 +48,7 @@ This tells the browser that you prioritize this font, and after this just create
 
 After this you should be good to go.
 
-> Good to know: This delays your css and as a result your First Contentful Paint (FCP) by a negligible amount. Your layout shifts won't actually disappear, but should become unnoticeable under normal conditions, which is our goal here.
+> Good to know: This delays your CSS and as a result your First Contentful Paint (FCP) by a negligible amount. Your layout shifts won't actually disappear, but should become unnoticeable under normal conditions, which is our goal here.
 
 ## Edge case
 
@@ -59,7 +59,7 @@ Network conditions can in fact still cause the shift.
 </figcaption>
 </figure>
 
-Shift occurs and the only way to fix this is to stall our page by font file load. We definitely **don't** want that (browsers know this of course), just start to load them a bit earlier like this.
+Shift occurs and the only way to fix this is to stall our page by waiting for font file to load. We don't want that, just start to load them a bit earlier like this.
 
 <figure>
   <img src="/images/cls-waterfall-with-preload.png" alt="devtools waterfall with preload"/>
@@ -81,10 +81,10 @@ As there is nothing we can do about slower networks, we are forced to let this c
 
 - Use `.woff2` format, better compression.
 - Prefer variable fonts as they are smaller in size.
-- Obvious, but only download fonts you really use. Generally you don't need more than one.
+- Download fonts you really use. Generally you don't need more than one.
 - **Don't overdo your preload requests.** Use for only fonts that cause the shift. Remember the more request you have, the more time it takes to process those.
 - If you are using Google Fonts, there is a good alternative called [fontsource](https://fontsource.org). Much clearer UI with better namings for font files, CDN and fonts bundled as packages.
-- Careful when relying on external font dependency resolutions. You don't know what they are placing in your css until you look at them. Meaning they can just clutter you with unnecessary `@font-face` declarations anytime.
+- Careful when relying on external font dependency resolutions. You don't know what they are placing in your CSS until you look at them. Meaning they can just clutter you with unnecessary `@font-face` declarations anytime.
 
 ## Personal case
 
