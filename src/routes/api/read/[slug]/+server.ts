@@ -1,14 +1,22 @@
-import { constants, accessSync } from 'node:fs';
-import { resolve } from 'node:path';
 import { supabase } from '$lib/supabase-client';
 import type { RequestHandler } from '@sveltejs/kit';
+import { extractIdFromMdPath } from 'src/routes/api/weblogs/get-markdown-weblogs';
+
+const weblogFiles = import.meta.glob('/static/weblogs-md/*.md', {});
+
+const weblogIds = Object.entries(weblogFiles).map(([path]) =>
+  extractIdFromMdPath(path),
+);
 
 export const GET: RequestHandler = async ({ params: { slug: id } }) => {
-  const weblogPath = resolve('static', 'weblogs-md', `${id}.md`);
-  try {
-    accessSync(weblogPath, constants.F_OK);
-  } catch {
-    console.error("File doesn't exist at path", weblogPath);
+  if (id === undefined) {
+    return new Response(undefined, {
+      status: 400,
+    });
+  }
+
+  if (!weblogIds.includes(id)) {
+    console.error("File doesn't exist with id", id);
     return new Response(undefined, {
       status: 400,
     });

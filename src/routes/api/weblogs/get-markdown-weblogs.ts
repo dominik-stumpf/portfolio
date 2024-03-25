@@ -3,6 +3,17 @@ import { retrieveFrontmatter } from 'src/lib/utils/retrieve-frontmatter';
 import { weblogMetadataSchema } from 'src/lib/validators/weblog';
 import { routes } from 'src/site-config/site-data';
 
+export function extractIdFromMdPath(fullPath: string) {
+  const end = fullPath.lastIndexOf('.');
+  const start = fullPath.lastIndexOf('/', end);
+  if (start === -1 || end === -1) {
+    throw new Error('Failed to parse weblog routes.');
+  }
+  const id = fullPath.slice(start + 1, end);
+
+  return id;
+}
+
 export async function getMarkdownWeblogs() {
   const weblogFiles = import.meta.glob('/static/weblogs-md/*.md', {
     query: '?raw',
@@ -24,12 +35,7 @@ export async function getMarkdownWeblogs() {
 
       const frontmatter = await retrieveFrontmatter(md.default);
       const metadata = weblogMetadataSchema.parse(frontmatter);
-      const end = fullPath.lastIndexOf('.');
-      const start = fullPath.lastIndexOf('/', end);
-      if (start === -1 || end === -1) {
-        throw new Error('Failed to parse weblog routes.');
-      }
-      const id = fullPath.slice(start + 1, end);
+      const id = extractIdFromMdPath(fullPath);
       const path = `${routes.weblogs}/${id}`;
       return {
         metadata,
