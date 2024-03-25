@@ -25,26 +25,28 @@ const contactLinks = [{ name: 'Email', href: links.email }, ...platformLinks];
       </h1>
       <h2>Web related</h2>
       <p>
-        Javascript (+Typescript) user for more than 2 years, experienced in
+        Javascript (+Typescript) user for more than 3 years, experienced in
         writing responsive CSS and semantic HTML. I can make progressive webapps
         that support printing, is accessible and typographically correct. The
         following list is
-        <strong>my web stack</strong>, common technologies I have used:
+        <strong>my web stack</strong>, common technologies and tools I use:
       </p>
       <ul>
-        <li>CSS framework: TailwindCSS</li>
-        <li>Component framework: React, Svelte</li>
-        <li>App framework: NextJS 13+, Sveltekit</li>
-        <li>Testing framework: Jest, Storybook</li>
-        <li>Backend as a service: Supabase (PostgreSQL)</li>
-        <li>State management: Zustand</li>
+        <li>TailwindCSS -> CSS framework</li>
+        <li>React, Svelte -> Component framework</li>
+        <li>NextJS 13+, Sveltekit -> App framework</li>
+        <li>Jest, Storybook -> Testing framework</li>
+        <li>Supabase (PostgreSQL) -> Backend as a service</li>
+        <li>Zustand -> State management</li>
+        <li>Postman -> API platform</li>
+        <li>Figma -> UI design tool</li>
       </ul>
       <h2>Beyond the web</h2>
       <p>
         I have experience with <i>Python</i>, networking and GNU/Linux. I'm an
         avid learner when it comes to programming. I entertain the idea of
         <em>knowing my tools</em>, consequently improving myself and my
-        workspace. As far as design tooling goes, I use Figma.
+        workspace.
       </p>
       <h2>Interests</h2>
       <p>
