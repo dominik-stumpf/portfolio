@@ -2,7 +2,9 @@ import { supabase } from '$lib/supabase-client';
 import type { RequestHandler } from '@sveltejs/kit';
 import { extractIdFromMdPath } from 'src/routes/api/weblogs/get-markdown-weblogs';
 
-const weblogFiles = import.meta.glob('/static/weblogs-md/*.md', {});
+const weblogFiles = import.meta.glob('/static/weblogs-md/*.md', {
+  query: '?raw',
+});
 
 const weblogIds = Object.entries(weblogFiles).map(([path]) =>
   extractIdFromMdPath(path),
