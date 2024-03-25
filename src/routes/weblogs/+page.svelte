@@ -50,7 +50,7 @@ onMount(() => {
       {#each data.weblogs as weblog}
         <a href={weblog.path}>
           <section
-            class="border-border border p-4 rounded bg-card normal-case
+            class="border-border border p-6 rounded bg-card normal-case
         font-serif"
           >
             <h3 style:margin="0">{weblog.metadata.title}</h3>
