@@ -2,7 +2,7 @@
 import Navbar from '$lib/components/Navbar.svelte';
 import Prose from '$lib/components/Prose.svelte';
 import { formatWeblogDate } from '$lib/utils/format-weblog-date';
-import { Eye, MousePointerClick } from 'lucide-svelte';
+import { MousePointerClick } from 'lucide-svelte';
 import ExternalLink from 'src/lib/components/ExternalLink.svelte';
 import TypographicText from 'src/lib/components/TypographicText.svelte';
 import { links } from 'src/site-config/site-data';

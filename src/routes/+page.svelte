@@ -32,8 +32,7 @@ import { links, routes, siteData } from 'src/site-config/site-data';
     </p>
     <p>
       When making websites my ideology is <b>keeping things simple</b> and snappy.
-      I always put user experience and accessibilty ahead of the aesthetics and I
-      care how the page gets indexed by search engines.
+      I always put user experience and accessibilty ahead of the aesthetics.
     </p>
     <p>
       If for some reason you are pondering how I cope with the algorithms I
