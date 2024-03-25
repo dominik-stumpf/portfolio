@@ -2,7 +2,7 @@
 import Navbar from '$lib/components/Navbar.svelte';
 import Prose from '$lib/components/Prose.svelte';
 import { formatWeblogDate } from '$lib/utils/format-weblog-date';
-import { Eye } from 'lucide-svelte';
+import { Eye, MousePointerClick } from 'lucide-svelte';
 import ExternalLink from 'src/lib/components/ExternalLink.svelte';
 import TypographicText from 'src/lib/components/TypographicText.svelte';
 import { links } from 'src/site-config/site-data';
@@ -70,13 +70,16 @@ onMount(() => {
               {#if weblog.metadata.keyphrases}
                 ::
                 {#each weblog.metadata.keyphrases.slice(0, 2) ?? [] as keyword}
-                  <code class="inline-block">{keyword}</code>
+                  <code>{keyword}</code>
                 {/each}
               {/if}
               {#if views !== undefined}
                 ::
-                <span class="inline-flex items-center gap-2">
-                  <Eye class="size-4" />
+                <span
+                  class="inline-flex items-center gap-1"
+                  title={`${views.find(({ id }) => id === weblog.id)?.views} Unique views`}
+                >
+                  <MousePointerClick class="size-4 text-dimmed-foreground" />
                   {formatToCompactNumber(
                     // @ts-expect-error ids are validated already
                     views.find(({ id }) => id === weblog.id).views,
