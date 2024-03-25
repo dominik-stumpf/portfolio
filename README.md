@@ -1,8 +1,8 @@
-# Personal homepage, portfolio
+# Personal homepage, portfolio - Dominik Stumpf
 
 ![frontpage of the website](/showcase/frontpage-demo.png)
 
-If you are looking for info about me as a programmer, this is the place where you can find it [dominikstumpf.com](https://dominikstumpf.com).
+Check it live here: [dominikstumpf.com](https://dominikstumpf.com)
 
 ## Weblogs
 
@@ -12,6 +12,6 @@ Why _weblogs_? I could have used blog, but I always fail to remember the word an
 
 ## License
 
-Except where explicitly stated (in individual files) otherwise, all contributions in this repository is licensed under:
+Except where explicitly stated (in individual files) otherwise, all contributions in this repository are licensed under:
 
 Attribution-NonCommercial-NoDerivs 4.0 International, [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)
