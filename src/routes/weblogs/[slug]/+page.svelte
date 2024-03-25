@@ -28,6 +28,12 @@ export let data;
   {#if data.metadata.keyphrases}
     <meta name="keywords" content={data.metadata.keyphrases.join(",")} />
   {/if}
+  <link
+    as="fetch"
+    href={`/api/read/${data.id}`}
+    crossorigin="anonymous"
+    rel="preload"
+  />
 </svelte:head>
 
 <header>

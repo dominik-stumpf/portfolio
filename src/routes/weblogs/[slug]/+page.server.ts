@@ -142,6 +142,7 @@ export async function load({ params }: ServerLoadEvent) {
       content: file.value,
       metadata,
       readingTimeStats: readTimeResults,
+      id: params.slug,
     };
   } catch {
     error(404, 'Weblog not found.');

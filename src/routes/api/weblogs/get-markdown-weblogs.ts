@@ -29,11 +29,13 @@ export async function getMarkdownWeblogs() {
       if (start === -1 || end === -1) {
         throw new Error('Failed to parse weblog routes.');
       }
-      const path = `${routes.weblogs}/${fullPath.slice(start + 1, end)}`;
+      const id = fullPath.slice(start + 1, end);
+      const path = `${routes.weblogs}/${id}`;
       return {
         metadata,
         readTimeResults: readingTime(md.default),
         path,
+        id,
       };
     }),
   );

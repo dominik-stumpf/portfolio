@@ -2,11 +2,35 @@
 import Navbar from '$lib/components/Navbar.svelte';
 import Prose from '$lib/components/Prose.svelte';
 import { formatWeblogDate } from '$lib/utils/format-weblog-date';
+import { Eye } from 'lucide-svelte';
 import ExternalLink from 'src/lib/components/ExternalLink.svelte';
 import TypographicText from 'src/lib/components/TypographicText.svelte';
 import { links } from 'src/site-config/site-data';
+import { onMount } from 'svelte';
+import { formatToCompactNumber } from '$lib/utils/format-to-compact-number';
 
+type Views = { id: string; views: number };
 export let data;
+let views: undefined | Views[];
+$: validIds = data.weblogs.map(({ id }) => id);
+
+async function fetchViews() {
+  const payload = Object.entries(data.weblogs).map(([_, value]) => value.id);
+
+  const response = await fetch('/api/views', {
+    body: JSON.stringify(payload),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    method: 'POST',
+  });
+  views = (await response.json()) as Views[];
+  views = views.filter(({ id }) => validIds.includes(id));
+}
+
+onMount(() => {
+  fetchViews();
+});
 </script>
 
 <svelte:head>
@@ -30,21 +54,35 @@ export let data;
         font-serif"
           >
             <h3 style:margin="0">{weblog.metadata.title}</h3>
-            <p class="line-clamp-2 not-prose mt-3 text-muted-foreground">
+            <p class="line-clamp-2 not-prose mt-3 text-dimmed-foreground">
               {weblog.metadata.lead}
             </p>
-            <div class="font-mono text-sm text-muted-foreground mt-3">
+            <div
+              class="font-mono text-xs text-muted-foreground mt-3 flex
+              flex-wrap items-center gap-2"
+            >
               <time
                 datetime={new Date(weblog.metadata.publishedAt).toISOString()}
                 >{formatWeblogDate(weblog.metadata.publishedAt)}</time
               >
               /
               <span>{weblog.readTimeResults.text}</span>
-              <span class="inline-flex flex-wrap flex-row gap-2 mt-2">
-                {#each weblog.metadata.keyphrases?.slice(0, 2) ?? [] as keyword}
+              {#if weblog.metadata.keyphrases}
+                ::
+                {#each weblog.metadata.keyphrases.slice(0, 2) ?? [] as keyword}
                   <code class="inline-block">{keyword}</code>
                 {/each}
-              </span>
+              {/if}
+              {#if views !== undefined}
+                ::
+                <span class="inline-flex items-center gap-2">
+                  <Eye class="size-4" />
+                  {formatToCompactNumber(
+                    // @ts-expect-error ids are validated already
+                    views.find(({ id }) => id === weblog.id).views,
+                  )}</span
+                >
+              {/if}
             </div>
           </section>
         </a>
