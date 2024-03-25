@@ -1,5 +1,5 @@
-import { json, type RequestHandler } from '@sveltejs/kit';
 import { supabaseAnon } from '$lib/supabase-client';
+import { type RequestHandler, json } from '@sveltejs/kit';
 import z from 'zod';
 
 export const POST: RequestHandler = async ({ request }) => {

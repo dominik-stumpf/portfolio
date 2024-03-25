@@ -1,7 +1,7 @@
-import type { RequestHandler } from '@sveltejs/kit';
-import { supabase } from '$lib/supabase-client';
-import { accessSync, constants } from 'node:fs';
+import { constants, accessSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { supabase } from '$lib/supabase-client';
+import type { RequestHandler } from '@sveltejs/kit';
 
 export const GET: RequestHandler = async ({ params: { slug: id } }) => {
   const weblogPath = resolve('static', 'weblogs-md', `${id}.md`);

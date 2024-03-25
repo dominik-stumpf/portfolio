@@ -1,13 +1,13 @@
 <script lang="ts">
 import Navbar from '$lib/components/Navbar.svelte';
 import Prose from '$lib/components/Prose.svelte';
+import { formatToCompactNumber } from '$lib/utils/format-to-compact-number';
 import { formatWeblogDate } from '$lib/utils/format-weblog-date';
 import { MousePointerClick } from 'lucide-svelte';
 import ExternalLink from 'src/lib/components/ExternalLink.svelte';
 import TypographicText from 'src/lib/components/TypographicText.svelte';
 import { links } from 'src/site-config/site-data';
 import { onMount } from 'svelte';
-import { formatToCompactNumber } from '$lib/utils/format-to-compact-number';
 
 type Views = { id: string; views: number };
 export let data;

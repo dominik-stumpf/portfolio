@@ -2,6 +2,13 @@ import { dev } from '$app/environment';
 import { parseYamlMatter } from '$lib/utils/retrieve-frontmatter';
 import { error } from '@sveltejs/kit';
 import type { ServerLoadEvent } from '@sveltejs/kit';
+// import { toString as nlcstToString } from 'nlcst-to-string'
+import abbrs from 'case-police/dict/abbreviates.json';
+import brands from 'case-police/dict/brands.json';
+import general from 'case-police/dict/general.json';
+import products from 'case-police/dict/products.json';
+import softwares from 'case-police/dict/softwares.json';
+import dictionaryEn from 'dictionary-en';
 import type { Nodes as HastNodes, Root as HastRoot } from 'hast';
 import readingTime from 'reading-time';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
@@ -17,26 +24,19 @@ import remarkGfm from 'remark-gfm';
 import remarkMath from 'remark-math';
 import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
+import remarkRetext from 'remark-retext';
 import remarkTextr from 'remark-textr';
+import retextEnglish from 'retext-english';
+import retextIndefiniteArticle from 'retext-indefinite-article';
+import retextKeywords from 'retext-keywords';
+import retextPos from 'retext-pos';
+import retextReadability from 'retext-readability';
+import retextSpell from 'retext-spell';
 import { applyTypographicBase } from 'src/lib/utils/apply-typographic-base';
 import { weblogMetadataSchema } from 'src/lib/validators/weblog';
 import { unified } from 'unified';
 import { type BuildVisitor, CONTINUE, visit } from 'unist-util-visit';
-import remarkRetext from 'remark-retext';
-import retextEnglish from 'retext-english';
 import { reporter } from 'vfile-reporter';
-import dictionaryEn from 'dictionary-en';
-import retextSpell from 'retext-spell';
-import retextReadability from 'retext-readability';
-import retextKeywords from 'retext-keywords';
-import retextPos from 'retext-pos';
-import retextIndefiniteArticle from 'retext-indefinite-article';
-// import { toString as nlcstToString } from 'nlcst-to-string'
-import abbrs from 'case-police/dict/abbreviates.json';
-import brands from 'case-police/dict/brands.json';
-import general from 'case-police/dict/general.json';
-import products from 'case-police/dict/products.json';
-import softwares from 'case-police/dict/softwares.json';
 
 const casePoliceDictionary = Object.entries({
   ...abbrs,
