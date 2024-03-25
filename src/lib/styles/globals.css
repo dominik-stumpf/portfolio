@@ -111,7 +111,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-foreground/30;
+  @apply bg-foreground/20;
 }
 
 ::-webkit-scrollbar-thumb:hover {
