@@ -11,6 +11,9 @@
     "prepare": "husky install",
     "apply-ci": "biome check --apply-unsafe . && biome format --write ."
   },
+  "engines": {
+    "node": "^20.0.0"
+  },
   "type": "module",
   "devDependencies": {
     "@biomejs/biome": "latest",
@@ -48,6 +51,7 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.40.0",
+    "@sveltejs/adapter-vercel": "^5.2.0",
     "case-police": "^0.6.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
