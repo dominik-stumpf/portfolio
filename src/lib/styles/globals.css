@@ -89,7 +89,7 @@
   }
 
   a {
-    @apply font-mono text-base uppercase hover:opacity-80 print:text-xs;
+    @apply font-mono lg:text-lg uppercase hover:opacity-80 print:text-xs;
   }
 
   *[title] {

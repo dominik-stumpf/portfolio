@@ -4,6 +4,7 @@ import Prose from '$lib/components/Prose.svelte';
 import '$lib/styles/gruvbox-dark.css';
 import '$lib/styles/gruvbox-light.css';
 import { formatWeblogDate } from '$lib/utils/format-weblog-date';
+import Header from 'src/lib/components/Header.svelte';
 import Separator from 'src/lib/components/Separator.svelte';
 import { applyTypographicBase } from 'src/lib/utils/apply-typographic-base';
 import { routes } from 'src/site-config/site-data';
@@ -36,16 +37,13 @@ export let data;
   />
 </svelte:head>
 
-<header>
-  <nav
-    class="mb-8 flex gap-2 font-mono sm:items-center flex-col sm:flex-row
-    print:hidden"
-  >
+<Header>
+  <nav class="flex gap-2 font-mono sm:items-center flex-col sm:flex-row">
     <a href={routes.weblogs}
       ><span class="text-muted-foreground">&lt;-</span> I&rsquo;ll be back</a
     >
   </nav>
-</header>
+</Header>
 <Prose>
   <h1 style:margin-bottom="0" class="text-pretty hyphens-auto">
     {applyTypographicBase(data.metadata.title)}

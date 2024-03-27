@@ -1,29 +1,43 @@
 <script lang="ts">
 import { page } from '$app/stores';
 import { routes } from 'src/site-config/site-data';
+import PageMargin from './PageMargin.svelte';
 
 const navlinks = [
   { href: routes.about, name: 'about' },
   { href: routes.weblogs, name: 'weblogs' },
   { href: routes.projects, name: 'projects' },
-  { href: routes.resume, name: 'resume' },
+  { href: routes.resume, name: 'résumé' },
 ] as const;
 </script>
 
-<nav
-  class="mb-8 flex gap-2 font-mono sm:items-center flex-col sm:flex-row
-  print:hidden"
->
-  {#each navlinks as navlink, index}
+<div class="absolute inset-x-0 h-96 top-0 overflow-hidden -z-50" aria-hidden>
+  <PageMargin class="h-full">
+    <div class="font-serif max-w-prose mx-auto">
+      <div
+        class="font-mono text-foreground/5 capitalize text-[clamp(190px,8vw,250px)]
+          font-extrabold relative -top-8 sm:top-0 w-full tracking-tight"
+      >
+        {navlinks.find(({ href }) => href === $page.url.pathname)?.name}
+      </div>
+    </div>
+  </PageMargin>
+</div>
+<nav class="text-center grid grid-cols-2 whitespace-pre">
+  {#each navlinks as navlink}
+    {@const isActive = $page.url.pathname === navlink.href}
     <a
       href={navlink.href}
-      data-active={$page.url.pathname === navlink.href}
+      data-active={isActive}
+      aria-disabled={isActive}
+      tabindex={isActive ? "-1" : "0"}
       class="data-[active=true]:opacity-60
-      data-[active=true]:pointer-events-none data-[active=true]:font-extralight"
-      >{navlink.name}</a
+      data-[active=true]:pointer-events-none data-[active=true]:font-extralight
+      px-6 py-3 hover:ring-1 ring-border"
     >
-    {#if index !== navlinks.length - 1}
-      <span class="select-none text-muted-foreground hidden sm:block">:</span>
-    {/if}
+      <span class="text-muted-foreground">(</span>{navlink.name}<span
+        class="text-muted-foreground">)</span
+      >
+    </a>
   {/each}
 </nav>

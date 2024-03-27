@@ -1,6 +1,7 @@
 <script lang="ts">
 import '$lib/styles/globals.css';
 import Footer from 'src/lib/components/Footer.svelte';
+import PageMargin from 'src/lib/components/PageMargin.svelte';
 import Separator from 'src/lib/components/Separator.svelte';
 import { siteData } from 'src/site-config/site-data';
 </script>
@@ -47,10 +48,11 @@ import { siteData } from 'src/site-config/site-data';
   <link rel="apple-touch-icon" href="/images/icons/icon-128x128.png" />
 </svelte:head>
 
-<div
-  class="max-w-prose text-lg px-3 py-16 sm:px-4 md:px-6 lg:px-8 lg:py-24 mx-auto"
->
-  <slot />
-  <Separator />
-  <Footer />
-</div>
+<!-- px-3 py-16 sm:px-4 md:px-6 lg:px-8 lg:py-24  -->
+<PageMargin verticalMargin>
+  <div class="max-w-prose mx-auto">
+    <slot />
+    <Separator />
+    <Footer />
+  </div>
+</PageMargin>

@@ -1,5 +1,6 @@
 <script>
 import ExternalLink from 'src/lib/components/ExternalLink.svelte';
+import Header from 'src/lib/components/Header.svelte';
 import Navbar from 'src/lib/components/Navbar.svelte';
 import Prose from 'src/lib/components/Prose.svelte';
 import TypographicText from 'src/lib/components/TypographicText.svelte';
@@ -13,9 +14,9 @@ const contactLinks = [{ name: 'Email', href: links.email }, ...platformLinks];
   <title>Resume</title>
 </svelte:head>
 
-<header>
+<Header>
   <Navbar />
-</header>
+</Header>
 <main>
   <Prose>
     <TypographicText>

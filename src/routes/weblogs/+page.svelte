@@ -5,6 +5,7 @@ import { formatToCompactNumber } from '$lib/utils/format-to-compact-number';
 import { formatWeblogDate } from '$lib/utils/format-weblog-date';
 import { MousePointerClick } from 'lucide-svelte';
 import ExternalLink from 'src/lib/components/ExternalLink.svelte';
+import Header from 'src/lib/components/Header.svelte';
 import TypographicText from 'src/lib/components/TypographicText.svelte';
 import { links } from 'src/site-config/site-data';
 import { onMount } from 'svelte';
@@ -37,9 +38,9 @@ onMount(() => {
   <title>Weblogs</title>
 </svelte:head>
 
-<header>
+<Header>
   <Navbar />
-</header>
+</Header>
 <Prose>
   <TypographicText>
     <p>

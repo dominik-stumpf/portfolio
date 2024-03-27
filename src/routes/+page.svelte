@@ -1,5 +1,6 @@
 <script lang="ts">
 import ExternalLink from '$lib/components/ExternalLink.svelte';
+import Header from 'src/lib/components/Header.svelte';
 import Navbar from 'src/lib/components/Navbar.svelte';
 import Prose from 'src/lib/components/Prose.svelte';
 import TypographicText from 'src/lib/components/TypographicText.svelte';
@@ -10,9 +11,9 @@ import { links, routes, siteData } from 'src/site-config/site-data';
   <title>{siteData.maintainerName}</title>
 </svelte:head>
 
-<header>
+<Header>
   <Navbar />
-</header>
+</Header>
 <Prose>
   <TypographicText>
     <h2>
