@@ -33,7 +33,8 @@ const navlinks = [
       tabindex={isActive ? -1 : 0}
       class="data-[active=true]:opacity-60
       data-[active=true]:pointer-events-none data-[active=true]:font-extralight
-      px-6 py-3 hover:border hover:-m-px rounded border-border"
+      px-6 py-3 hover:border hover:-m-px rounded border-border
+      active:border-transparent"
     >
       <span class="text-muted-foreground">(</span>{navlink.name}<span
         class="text-muted-foreground">)</span
