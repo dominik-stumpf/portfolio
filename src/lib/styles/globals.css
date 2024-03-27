@@ -96,6 +96,10 @@
     @apply underline decoration-dotted decoration-muted-foreground underline-offset-4 cursor-help;
   }
 
+  :focus-visible {
+    @apply outline-0 ring-dimmed-foreground ring rounded ring-offset-4 ring-offset-background;
+  }
+
   * {
     @apply border-border;
   }
