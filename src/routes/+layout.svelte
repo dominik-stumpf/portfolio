@@ -13,7 +13,7 @@ import { siteData } from 'src/site-config/site-data';
     rel="alternate"
     type="application/rss+xml"
     title="RSS feed"
-    href="/api/feed"
+    href="/api/feed.xml"
   />
   <link rel="canonical" href={siteData.link} />
   <meta charset="utf-8" /><meta
