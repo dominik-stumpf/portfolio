@@ -33,14 +33,14 @@ const contactLinks = [{ name: 'Email', href: links.email }, ...platformLinks];
         <strong>my web stack</strong>, common technologies and tools I use:
       </p>
       <ul>
-        <li>TailwindCSS -> CSS framework</li>
-        <li>React, Svelte -> Component framework</li>
-        <li>NextJS 13+, Sveltekit -> App framework</li>
-        <li>Jest, Storybook -> Testing framework</li>
-        <li>Supabase (PostgreSQL) -> Backend as a service</li>
-        <li>Zustand -> State management</li>
-        <li>Postman -> API platform</li>
-        <li>Figma -> UI design tool</li>
+        <li>TailwindCSS -- CSS framework</li>
+        <li>React, Svelte -- Component framework</li>
+        <li>NextJS 13+, Sveltekit -- App framework</li>
+        <li>Jest, Storybook -- Testing framework</li>
+        <li>Supabase (PostgreSQL) -- Backend as a service</li>
+        <li>Zustand -- State management</li>
+        <li>Postman -- API platform</li>
+        <li>Figma -- UI design tool</li>
       </ul>
       <h2>Beyond the web</h2>
       <p>
