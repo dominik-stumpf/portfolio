@@ -30,10 +30,10 @@ const navlinks = [
       href={navlink.href}
       data-active={isActive}
       aria-disabled={isActive}
-      tabindex={isActive ? "-1" : "0"}
+      tabindex={isActive ? -1 : 0}
       class="data-[active=true]:opacity-60
       data-[active=true]:pointer-events-none data-[active=true]:font-extralight
-      px-6 py-3 hover:ring-1 ring-border"
+      px-6 py-3 hover:border hover:-m-px rounded border-border"
     >
       <span class="text-muted-foreground">(</span>{navlink.name}<span
         class="text-muted-foreground">)</span
