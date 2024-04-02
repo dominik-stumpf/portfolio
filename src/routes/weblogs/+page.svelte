@@ -7,6 +7,7 @@ import { MousePointerClick } from 'lucide-svelte';
 import ExternalLink from 'src/lib/components/ExternalLink.svelte';
 import Header from 'src/lib/components/Header.svelte';
 import TypographicText from 'src/lib/components/TypographicText.svelte';
+import { resolveClass } from 'src/lib/utils/resolve-class';
 import { links } from 'src/site-config/site-data';
 import { onMount } from 'svelte';
 
@@ -74,8 +75,8 @@ onMount(() => {
                   <code>{keyword}</code>
                 {/each}
               {/if}
-              {#if views !== undefined}
-                ::
+              <span class={views ? "visible" : "invisible"}>::</span>
+              {#if views}
                 <span
                   class="inline-flex items-center gap-1"
                   title={`${views.find(({ id }) => id === weblog.id)?.views} Unique views`}
@@ -85,6 +86,11 @@ onMount(() => {
                     // @ts-expect-error ids are validated already
                     views.find(({ id }) => id === weblog.id).views,
                   )}</span
+                >
+              {:else}
+                <span class="inline-flex items-center gap-1 invisible">
+                  <MousePointerClick class="size-4 text-dimmed-foreground" />
+                  ---</span
                 >
               {/if}
             </div>
