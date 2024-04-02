@@ -79,7 +79,7 @@ FFmpeg commands with metadata in a table for your convenience. The results were 
 
 | Codec        | Filesize (MiB) | Bitrate (kb/s) | Processed videos                        |
 | ------------ | -------------- | -------------- | --------------------------------------- |
-| H.254 (AVC)  | 16.9           | 222            | [inspect quality](/videos/bbb-h264.mp4) |
+| H.264 (AVC)  | 16.9           | 222            | [inspect quality](/videos/bbb-h264.mp4) |
 | H.265 (HEVC) | 19.4           | 254            | [inspect quality](/videos/bbb-h265.mp4) |
 | VP9          | 27.7           | 345            | [inspect quality](/videos/bbb-vp9.webm) |
 | AV1          | -              | -              | -                                       |
