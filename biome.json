@@ -46,6 +46,6 @@
     }
   },
   "files": {
-    "ignore": ["node_modules", ".svelte-kit"]
+    "ignore": ["node_modules", ".svelte-kit", ".vercel"]
   }
 }
