@@ -1,6 +1,6 @@
+import rss from 'rss';
 import { getMarkdownWeblogs } from 'src/routes/api/weblogs/get-markdown-weblogs';
 import { siteData } from 'src/site-config/site-data';
-import rss from 'rss';
 
 const { title, description, link, maintainerEmail, maintainerName } = siteData;
 

@@ -7,7 +7,6 @@ import { MousePointerClick } from 'lucide-svelte';
 import ExternalLink from 'src/lib/components/ExternalLink.svelte';
 import Header from 'src/lib/components/Header.svelte';
 import TypographicText from 'src/lib/components/TypographicText.svelte';
-import { resolveClass } from 'src/lib/utils/resolve-class';
 import { links } from 'src/site-config/site-data';
 import { onMount } from 'svelte';
 
