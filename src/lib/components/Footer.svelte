@@ -24,7 +24,7 @@ $: offsetMessageMap = new Map([
 ]);
 </script>
 
-<footer class="mt-8 flex flex-wrap flex-col gap-4 justify-between print:hidden">
+<footer class="mt-8 flex flex-wrap flex-col gap-8 justify-between print:hidden">
   <div class="flex gap-4 flex-wrap">
     <a href={links.email}>Email</a>
     {#each platformLinks as link}
