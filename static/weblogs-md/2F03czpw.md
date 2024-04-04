@@ -72,7 +72,7 @@ Github uses HTML in Markdown, even CommonMark does. Nesting HTML is fine as long
 
 ## Reinforcing my point
 
-I really believe it's not worth it. After reading the points of [MDXJS](https://mdxjs.com) and thinking about them, I found that the disadvantages outweigh the advantages. The quotes are retrieved from their homepage.
+I really believe it's not worth it. After reading the features of [MDXJS](https://mdxjs.com) and thinking about them, I found that the disadvantages outweigh the advantages. The quotes were retrieved from their landing page.
 
 > "Powerful: MDX blends markdown and JSX syntax to fit perfectly in JSX-based projects"
 

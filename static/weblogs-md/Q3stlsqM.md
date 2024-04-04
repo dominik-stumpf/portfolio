@@ -1,11 +1,11 @@
 ---
 title: "Switching to Svelte"
 publishedAt: 2024-03-22 09:33:00
-lead: '"Taking the first step is hard, but it can be greatly rewarding." -- Said by a React dev'
+lead: '"Taking the first step is always the hardest." -- Said by a React dev'
 keyphrases: ["web frameworks", "personal opinion", "svelte"]
 ---
 
-After about two years of using react I decided to switch it down and try something else out. I feel like we already are full of takes why react is suboptimal, so I decided to spare you from that.
+After about two years of using react I decided to switch it up and try something else out. I feel like we already are full of takes why react is not optimal as a web fr\*mework, so I decided to spare you from that.
 
 Instead I thought I would just share my _first impressions_ on Svelte, SvelteKit and my experience on taking this leap. Maybe you are on the other side preparing to do the same.
 
