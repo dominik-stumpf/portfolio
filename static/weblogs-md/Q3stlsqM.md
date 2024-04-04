@@ -1,7 +1,7 @@
 ---
 title: "Switching to Svelte"
 publishedAt: 2024-03-22 09:33:00
-lead: '"Taking the first step is always the hardest." -- Said by a React dev'
+lead: '"Taking the first step is always the hardest." -- Said by a React developer.'
 keyphrases: ["web frameworks", "personal opinion", "svelte"]
 ---
 
