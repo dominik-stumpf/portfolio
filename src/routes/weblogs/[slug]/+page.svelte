@@ -109,4 +109,13 @@ export let data;
     aspect-ratio: 1;
     margin-left: 8px;
   }
+
+  :global(.data-footnote-backref) {
+    visibility: hidden;
+  }
+
+  :global(.data-footnote-backref::before) {
+    content: "^";
+    visibility: visible;
+  }
 </style>
