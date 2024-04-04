@@ -63,7 +63,6 @@ import { siteData } from 'src/site-config/site-data';
     sizes="48x48"
     href="/images/icons/favicon-48x48.png"
   />
-  <link rel="manifest" href="/images/icons/manifest.webmanifest" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="theme-color" content="#fff" />
   <meta name="application-name" content="Dominik Stumpf" />
@@ -130,7 +129,6 @@ import { siteData } from 'src/site-config/site-data';
   <meta name="apple-mobile-web-app-title" content="Dominik Stumpf" />
 </svelte:head>
 
-<!-- px-3 py-16 sm:px-4 md:px-6 lg:px-8 lg:py-24  -->
 <PageMargin verticalMargin>
   <div class="max-w-prose mx-auto">
     <slot />
