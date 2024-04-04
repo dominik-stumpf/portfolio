@@ -89,7 +89,7 @@
   }
 
   a {
-    @apply font-mono lg:text-base uppercase hover:opacity-80 print:text-xs active:font-extralight;
+    @apply font-mono lg:text-base uppercase hover:opacity-80 print:text-xs;
   }
 
   *[title] {
@@ -97,7 +97,12 @@
   }
 
   :focus-visible {
-    @apply outline-0 ring-dimmed-foreground ring rounded ring-offset-4 ring-offset-background;
+    outline: 0;
+    @apply ring-foreground/30 ring rounded ring-offset-2 ring-offset-background;
+  }
+
+  body {
+    @apply min-h-screen bg-background text-foreground antialiased selection:bg-foreground accent-primary selection:text-background font-serif overflow-scroll;
   }
 
   * {
