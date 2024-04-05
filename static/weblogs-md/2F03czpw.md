@@ -137,4 +137,4 @@ I would love to see more discussions about this topic or arguments against my po
 **My mind:** No Javascript where it doesn't belong, keep things simple, avoid the overheads and stay close to the standards!
 
 [^what-is-markdown]: [Markdown introduction](https://daringfireball.net/projects/markdown) - Daring Fireball. [archived version](https://web.archive.org/web/20040402182332/http://daringfireball.net/projects/markdown), stated first at `2004-04-02`.
-[^mdxjs-first-capture]: [archived source](https://web.archive.org/web/20181025171803/https://mdxjs.com/) of the first capture of MDXJS at `2018-10-25`.
+[^mdxjs-first-capture]: [archived source](https://web.archive.org/web/20181025171803/https://mdxjs.com/) of the first capture of MDXJS in `2018-10-25`.
