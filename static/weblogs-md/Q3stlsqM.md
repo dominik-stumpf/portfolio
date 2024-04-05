@@ -3,6 +3,7 @@ title: "Switching to Svelte"
 publishedAt: 2024-03-22 09:33:00
 lead: '"Taking the first step is always the hardest." -- Said by a React developer.'
 keyphrases: ["web frameworks", "personal opinion", "svelte"]
+splashImage: "/images/switching-to-svelte-splash.png"
 ---
 
 After about two years of using react I decided to switch it up and try something else out. I feel like we already are full of takes why react is not optimal as a web fr\*mework, so I decided to spare you from that.

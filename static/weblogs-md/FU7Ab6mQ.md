@@ -3,6 +3,7 @@ title: "Processing videos for the web -- A complete guide"
 publishedAt: 2024-03-31 16:54:00
 lead: "Compressing images and resizing them are easy enough, videos on the other hand can pose some challenges. I'm here to discuss how to tackle them."
 keyphrases: ["guide", "ffmpeg", "video compression", "web optimization"]
+splashImage: "/images/ffmpeg-in-action.png"
 ---
 
 > Here is a [TLDR](#tldr) if you are in a hurry.

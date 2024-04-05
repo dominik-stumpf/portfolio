@@ -3,6 +3,7 @@ title: "Javascript in Markdown. Is it any good?"
 publishedAt: 2024-04-04 09:15:00
 lead: "Javascript is everywhere. We do this to enhance our Markdown, but is it really an enchancement?"
 keyphrases: ["MDX", "trends", "discussion"]
+splashImage: "/images/javascript-is-everwhere.png"
 ---
 
 ![pouring Javascript out of a teapot](/images/javascript-is-everwhere.png)
