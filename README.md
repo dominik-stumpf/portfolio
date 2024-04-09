@@ -1,6 +1,6 @@
 # Personal homepage, portfolio - Dominik Stumpf
 
-![frontpage of the website](/showcase/frontpage-demo.png)
+![splash of the website](/static/images/homepage-splash.png)
 
 Check it live here: [dominikstumpf.com](https://dominikstumpf.com)
 

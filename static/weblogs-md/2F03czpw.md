@@ -126,15 +126,13 @@ const hashtagNoAmbiguity =
 
 Even in strong disagreement, I would like to mention I don't mean any harm or offense to the contributors of MDXJS.
 
-## My Gains
+## The Gains
 
 Hundred years later when the foretold Skynet takes over the world, the people in the resistance won't have time _or npm for that matter_ to build my outdated repo, but guess what. **They still will be able to read my articles.** Isn't that cool?
 
 ## Final words
 
-I would love to see more discussions about this topic or arguments against my points that would shift my mind and the statements in this piece of work along with it.
+My ideas extracted are the following: no Javascript where it doesn't belong, keep things simple, avoid the overheads and stay close to the standards!
 
-**My mind:** No Javascript where it doesn't belong, keep things simple, avoid the overheads and stay close to the standards!
-
-[^what-is-markdown]: [Markdown introduction](https://daringfireball.net/projects/markdown) - Daring Fireball. [archived version](https://web.archive.org/web/20040402182332/http://daringfireball.net/projects/markdown), stated first at `2004-04-02`.
+[^what-is-markdown]: [Markdown introduction](https://daringfireball.net/projects/markdown) - Daring Fireball. [archived version](https://web.archive.org/web/20040402182332/http://daringfireball.net/projects/markdown), stated first in `2004-04-02`.
 [^mdxjs-first-capture]: [archived source](https://web.archive.org/web/20181025171803/https://mdxjs.com/) of the first capture of MDXJS in `2018-10-25`.

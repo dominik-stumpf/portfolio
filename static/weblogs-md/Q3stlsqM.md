@@ -32,7 +32,7 @@ While reading through the documents I was presented with so many amazing design 
 
 The first apparent thing was how close Svelte stands to vanilla JS and doesn't have large abstractions -- It looks like if I was just writing HTML. I guess benefit of not having a virtual DOM.
 
-Svelte solves state management by having a built in state management module which is a bliss to someone who have seen the _horrors of piling up boilerplates._
+Svelte solves state management by having a built in state management module which is beyond convenient in my opinion.
 
 Then I was introduced to SvelteKit, a meta-framework for Svelte **by Svelte**, similar to NextJS (framework I use with react) because as I found out they inspired each other.
 
