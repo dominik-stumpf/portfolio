@@ -10,9 +10,10 @@ import { applyTypographicBase } from 'src/lib/utils/apply-typographic-base';
 import { routes, siteData } from 'src/site-config/site-data';
 
 export let data;
-$: absoluteSplashImage =
-  data.metadata.splashImage &&
-  new URL(data.metadata.splashImage, siteData.link).toString();
+$: absoluteSplashImage = new URL(
+  data.metadata.splashImage,
+  siteData.link,
+).toString();
 </script>
 
 <svelte:head>
