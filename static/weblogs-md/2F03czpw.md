@@ -37,15 +37,15 @@ Here is a list of benefits and drawbacks of having Javascript and Markdown coloc
 
 ## The benefits
 
-- Dynamic content generation. This goes for styles as well. Allow for import and export of variables making your documents less hard coded.
+- Dynamic content generation. This goes for styles as well. Allow for import and export of variables making your documents less hard coded. -- This is also closely related to a drawback.
 
 - Rich interactivity by external components or by utilizing Javascript on HTML elements inside the document.
 
-- Component reusability. The Markdown can blend in well with the rest of the design system.
+- Component reusability. -- The Markdown can blend in well with the rest of the design system.
 
 ## The drawbacks
 
-- If `import` happens, the document will become something called a collaborator, a thing that requires dependencies to function. -- The Markdown file is **no longer stand-alone.**
+- If `import` happens, the document will become a _collaborator_, a thing that requires dependencies to function. -- The Markdown file is **no longer stand-alone.**
 
 - You need to have programming and Javascript knowledge to be able to fully understand the document. -- This is against the original philosophy of Markdown.
 
@@ -73,7 +73,7 @@ Github uses HTML in Markdown, even CommonMark does. Nesting HTML is fine as long
 
 ## Reinforcing my point
 
-I really believe it's not worth it. After reading the features of [MDXJS](https://mdxjs.com) and thinking about them, I found that the disadvantages outweigh the advantages. The quotes were retrieved from their landing page.
+I really believe it's not worth it. After reading the features of [MDXJS](https://mdxjs.com) and thinking about them, I found that the disadvantages outweigh the advantages. The quotes were retrieved from their landing page[^mdxjs-first-capture].
 
 > "Powerful: MDX blends markdown and JSX syntax to fit perfectly in JSX-based projects"
 
@@ -110,7 +110,7 @@ const hashtagNoAmbiguity =
 
 > "Everything is a component: Use existing components in your MDX and import other MDX files as components"
 
-**2. Argument:** Debatable advantage, since the same can be done with JSX without the problems of argument 1.
+**2. Argument:** Debatable advantage, since the same can be done with JSX without the problems of the first argument.
 
 > "Customizable: Decide which component is rendered for each markdown construct `({h1: MyHeading})`"
 
