@@ -11,7 +11,7 @@ export const weblogMetadataSchema = z.object({
     .min(8, 'Lead paragraph must be at least 8 characters long')
     .max(256, 'Lead paragraph must be at most 256 characters long'),
   publishedAt: z.date(),
-  splashImage: z.string().optional(),
+  splashImage: z.string(),
   keyphrases: z.string().min(1).max(24).array().optional(),
   language: z.string().default('en'),
 });
