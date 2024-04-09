@@ -5,6 +5,8 @@ export const siteData = {
   description:
     'Fullstack web developer, publisher, typographer, video game maker and nearly a scientist.',
   link: 'https://dominikstumpf.com',
+  splashImageAbsolutePath:
+    'https://dominikstumpf.com/images/homepage-splash.png',
 } as const;
 
 export const targetTimeZone = 'Europe/Budapest';

@@ -15,14 +15,17 @@ import { siteData } from 'src/site-config/site-data';
     href="/api/feed.xml"
   />
   <link rel="canonical" href={siteData.link} />
-  <meta charset="utf-8" /><meta
-    name="viewport"
-    content="width=device-width, initial-scale=1"
-  />
+  <link rel="author" href={siteData.link} />
+  <meta charset="utf-8" />
   <meta
     name="google-site-verification"
     content="VSU4j-HwrTFTdEKECQOMKDBmWSdo9nQmUZWjdbEn_Uo"
   />
+
+  <meta name="application-name" content={siteData.title} />
+  <meta name="author" content={siteData.maintainerName} />
+  <meta name="creator" content={siteData.maintainerName} />
+
   <meta
     name="theme-color"
     media="(prefers-color-scheme: dark)"
@@ -34,16 +37,7 @@ import { siteData } from 'src/site-config/site-data';
     content="#ffffff"
   />
   <meta name="color-scheme" content="dark light" />
-  <title>{siteData.title}</title>
-  <meta name="description" content={siteData.description} />
-  <meta name="application-name" content={siteData.title} />
-  <link rel="author" href={siteData.link} />
-  <meta name="author" content={siteData.maintainerName} />
-  <meta name="creator" content={siteData.maintainerName} />
-  <meta property="og:url" content={siteData.link} />
-  <meta property="og:type" content="website" />
   <link rel="manifest" href="/manifest.webmanifest" />
-
   <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico" />
   <link
     rel="icon"

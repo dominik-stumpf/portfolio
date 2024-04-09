@@ -5,7 +5,10 @@ import Navbar from 'src/lib/components/Navbar.svelte';
 import Prose from 'src/lib/components/Prose.svelte';
 import TypographicText from 'src/lib/components/TypographicText.svelte';
 import { links, routes, siteData } from 'src/site-config/site-data';
+import DynamicMetadata from 'src/lib/components/DynamicMetadata.svelte';
 </script>
+
+<DynamicMetadata />
 
 <svelte:head>
   <title>{siteData.maintainerName}</title>

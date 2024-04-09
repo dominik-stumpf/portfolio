@@ -6,9 +6,12 @@ import Prose from 'src/lib/components/Prose.svelte';
 import TypographicText from 'src/lib/components/TypographicText.svelte';
 import { platformLinks } from 'src/site-config/platform-links';
 import { links, siteData } from 'src/site-config/site-data';
+import DynamicMetadata from 'src/lib/components/DynamicMetadata.svelte';
 
 const contactLinks = [{ name: 'Email', href: links.email }, ...platformLinks];
 </script>
+
+<DynamicMetadata />
 
 <svelte:head>
   <title>Resume</title>

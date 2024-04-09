@@ -9,6 +9,7 @@ import Header from 'src/lib/components/Header.svelte';
 import TypographicText from 'src/lib/components/TypographicText.svelte';
 import { links } from 'src/site-config/site-data';
 import { onMount } from 'svelte';
+import DynamicMetadata from 'src/lib/components/DynamicMetadata.svelte';
 
 type Views = { id: string; views: number };
 export let data;
@@ -33,6 +34,8 @@ onMount(() => {
   fetchViews();
 });
 </script>
+
+<DynamicMetadata />
 
 <svelte:head>
   <title>Weblogs</title>

@@ -7,9 +7,12 @@ import { formatWeblogDate } from '$lib/utils/format-weblog-date';
 import Header from 'src/lib/components/Header.svelte';
 import Separator from 'src/lib/components/Separator.svelte';
 import { applyTypographicBase } from 'src/lib/utils/apply-typographic-base';
-import { routes } from 'src/site-config/site-data';
+import { routes, siteData } from 'src/site-config/site-data';
 
 export let data;
+$: absoluteSplashImage =
+  data.metadata.splashImage &&
+  new URL(data.metadata.splashImage, siteData.link).toString();
 </script>
 
 <svelte:head>
@@ -18,14 +21,25 @@ export let data;
     rel="preload stylesheet"
     as="style"
   />
+
   <title>{data.metadata.title}</title>
   <meta name="description" content={data.metadata.lead} />
-  <meta property="og:type" content="article" />
+
+  <meta itemprop="name" content={data.metadata.title} />
+  <meta itemprop="description" content={data.metadata.lead} />
+  <meta itemprop="image" content={absoluteSplashImage} />
+
   <meta property="og:url" content={$page.url.toString()} />
+  <meta property="og:type" content="article" />
   <meta property="og:title" content={data.metadata.title} />
   <meta property="og:description" content={data.metadata.lead} />
+  <meta property="og:image" content={absoluteSplashImage} />
+
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={data.metadata.title} />
   <meta name="twitter:description" content={data.metadata.lead} />
+  <meta name="twitter:image" content={absoluteSplashImage} />
+
   {#if data.metadata.keyphrases}
     <meta name="keywords" content={data.metadata.keyphrases.join(",")} />
   {/if}
