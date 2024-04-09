@@ -44,6 +44,7 @@ const contactLinks = [{ name: 'Email', href: links.email }, ...platformLinks];
         <li>Zustand -- State management</li>
         <li>Postman -- API platform</li>
         <li>Figma -- UI design tool</li>
+        <li>...</li>
       </ul>
       <h2>Beyond the web</h2>
       <p>
@@ -73,7 +74,7 @@ const contactLinks = [{ name: 'Email', href: links.email }, ...platformLinks];
         </div>
       </div>
       <blockquote class="hidden print:block">
-        Note: This file is a printed version of my homepage
+        Note: This is a printed version of my homepage
         <ExternalLink href={siteData.link}
           >{new URL(siteData.link).host}</ExternalLink
         >, where you can find up to date additional information about me and my
