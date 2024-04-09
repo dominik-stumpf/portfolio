@@ -28,5 +28,6 @@ export const links = {
   codesandbox: 'https://codesandbox.io/u/dominik-stumpf',
   codewars: 'https://codewars.com/users/sdomi',
   postPaper: 'https://post-paper.vercel.app',
+  codepen: 'https://codepen.io/dominik-stumpf',
   email: `mailto:${siteData.maintainerEmail}`,
 } as const;

@@ -47,8 +47,9 @@ const contactLinks = [{ name: 'Email', href: links.email }, ...platformLinks];
       </ul>
       <h2>Beyond the web</h2>
       <p>
-        I have experience with <i>Python</i>, networking and GNU/Linux. I'm an
-        avid learner when it comes to programming. I entertain the idea of
+        I have experience with <i>Python</i>, web scraping, networking and
+        GNU/Linux. I'm an avid learner when it comes to programming. I entertain
+        the idea of
         <em>knowing my tools</em>, consequently improving myself and my
         workspace.
       </p>
