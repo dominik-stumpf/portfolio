@@ -127,6 +127,7 @@ $: absoluteSplashImage = new URL(
 
   :global(.data-footnote-backref) {
     visibility: hidden;
+    margin-right: -12px;
   }
 
   :global(.data-footnote-backref::before) {
