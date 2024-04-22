@@ -46,5 +46,5 @@ export async function getMarkdownWeblogs() {
     }),
   );
 
-  return weblogs;
+  return weblogs.filter(({ metadata }) => !metadata.hidden);
 }

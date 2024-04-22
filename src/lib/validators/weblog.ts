@@ -14,4 +14,5 @@ export const weblogMetadataSchema = z.object({
   splashImage: z.string(),
   keyphrases: z.string().min(1).max(24).array().optional(),
   language: z.string().default('en'),
+  hidden: z.boolean().default(false),
 });

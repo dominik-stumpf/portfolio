@@ -38,12 +38,6 @@ import DynamicMetadata from 'src/lib/components/DynamicMetadata.svelte';
       When making websites my ideology is <b>keeping things simple</b> and snappy.
       I always put user experience and accessibilty ahead of the aesthetics.
     </p>
-    <p>
-      If for some reason you are pondering how I cope with the algorithms I
-      suggest you see <ExternalLink href={links.aocRepo}
-        >my advent of code solutions</ExternalLink
-      >.
-    </p>
     <small>
       <p>
         This page was made with Svelte, TailwindCSS, powered by the unifiedJS

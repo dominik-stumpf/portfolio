@@ -4,6 +4,7 @@ publishedAt: 2024-04-04 09:15:00
 lead: "Javascript is everywhere. We do this to enhance our Markdown, but is it really an enchancement?"
 keyphrases: ["MDX", "trends", "discussion"]
 splashImage: "/images/javascript-is-everwhere.png"
+hidden: true
 ---
 
 ![pouring Javascript out of a teapot](/images/javascript-is-everwhere.png)
@@ -31,7 +32,7 @@ That is right. It's way easier to write Markdown than HTML. No indentation, no a
 
 Since then Markdown has evolved, gained popularity among writers and programmers and it has been standardized by [CommonMark](https://spec.commonmark.org). Other extensions have been written for it, most notably [Github Flavored Markdown](https://github.github.com/gfm) (GFM), we use all the time when writing `README.md` files for our repos.
 
-Later JSX became popular; an XML like syntax extension for Javascript. And with that around 2018[^mdxjs-first-capture] Markdown parser adaptations with JSX extension became a thing. It is popular among programmers to this day, with at the time of writing the [MDXJS](https://github.com/mdx-js/mdx) repo having ~340k dependents.
+Later JSX became popular; an XML like syntax extension for Javascript. And with that around 2018 Markdown parser adaptations with JSX extension became a thing. It is popular among programmers to this day, with at the time of writing the [MDXJS](https://github.com/mdx-js/mdx) repo having ~340k dependents.
 
 Here is a list of benefits and drawbacks of having Javascript and Markdown colocated in a file according to me:
 
@@ -73,7 +74,7 @@ Github uses HTML in Markdown, even CommonMark does. Nesting HTML is fine as long
 
 ## Reinforcing my point
 
-I really believe it's not worth it. After reading the features of [MDXJS](https://mdxjs.com) and thinking about them, I found that the disadvantages outweigh the advantages. The quotes were retrieved from their landing page[^mdxjs-first-capture].
+I really believe it's not worth it. After reading the features of [MDXJS](https://mdxjs.com) and thinking about them, I found that the disadvantages outweigh the advantages. The quotes were retrieved from their landing page.
 
 > "Powerful: MDX blends markdown and JSX syntax to fit perfectly in JSX-based projects"
 
@@ -134,5 +135,4 @@ Hundred years later when the foretold Skynet takes over the world, the people in
 
 My ideas extracted are the following: no Javascript where it doesn't belong, keep things simple, avoid the overheads and stay close to the standards!
 
-[^what-is-markdown]: [Markdown introduction](https://daringfireball.net/projects/markdown) - Daring Fireball. [archived version](https://web.archive.org/web/20040402182332/http://daringfireball.net/projects/markdown), stated first in `2004-04-02`.
-[^mdxjs-first-capture]: [archived source](https://web.archive.org/web/20181025171803/https://mdxjs.com/) of the first capture of MDXJS in `2018-10-25`.
+[^what-is-markdown]: [Markdown introduction](https://daringfireball.net/projects/markdown) - Daring Fireball.
